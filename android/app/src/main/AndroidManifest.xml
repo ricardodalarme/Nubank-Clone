@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nubank_clone">
    <application
-        android:label="nubank_clone"
-        android:icon="@mipmap/ic_launcher">
+        android:label="Nubank Clone"
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
