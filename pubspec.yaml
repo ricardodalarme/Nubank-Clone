@@ -17,3 +17,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family:  NuIcons
+      fonts:
+        - asset: assets/fonts/NuIcons.ttf
