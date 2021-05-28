@@ -13,7 +13,7 @@ class NuCard extends StatelessWidget {
     return Container(
       height: 150,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(3)),
+          borderRadius: BorderRadius.all(Radius.circular(2)),
           color: Colors.white),
       margin: EdgeInsets.symmetric(vertical: 8),
       child: Padding(

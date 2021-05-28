@@ -16,7 +16,7 @@ class NuMenu extends StatelessWidget {
         borderRadius: BorderRadius.all(Radius.circular(3)),
         color: kSecondaryColor,
       ),
-      margin: EdgeInsets.all(4),
+      margin: EdgeInsets.symmetric(horizontal: 4, vertical: 15),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
