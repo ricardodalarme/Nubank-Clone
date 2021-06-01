@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:nubank_clone/ui/screens/home/home_screen.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 
@@ -9,5 +10,10 @@ void main() {
       primaryColor: kPrimaryColor,
     ),
     home: HomeScreen(),
+  ));
+
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: kPrimaryColor,
+    statusBarBrightness: Brightness.light,
   ));
 }

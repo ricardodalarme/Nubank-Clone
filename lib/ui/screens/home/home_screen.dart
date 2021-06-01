@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Row(
                     children: [
-                      CircleButton(NuIcons.ic_cc_balance_visible),
+                      CircleButton(NuIcons.ic_cc_balance_invisible),
                       CircleButton(Icons.settings),
                     ],
                   )
