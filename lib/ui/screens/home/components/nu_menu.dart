@@ -10,13 +10,13 @@ class NuMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 85,
+      width: 88,
       height: 95,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(3)),
         color: kSecondaryColor,
       ),
-      margin: EdgeInsets.symmetric(horizontal: 4, vertical: 15),
+      margin: EdgeInsets.only(right: 8, top: 15),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
