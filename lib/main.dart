@@ -4,11 +4,9 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: 'NuIcons',
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       primaryColor: kPrimaryColor,
-      primarySwatch: Colors.blue,
     ),
     home: HomeScreen(),
   ));

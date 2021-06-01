@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/constants.dart';
+import 'package:nubank_clone/ui/screens/home/cards/account_card.dart';
+import 'package:nubank_clone/ui/screens/home/cards/credit_card.dart';
+import 'package:nubank_clone/ui/screens/home/cards/easynvest_card.dart';
+import 'package:nubank_clone/ui/screens/home/cards/google_card.dart';
+import 'package:nubank_clone/ui/screens/home/cards/insurance_card.dart';
+import 'package:nubank_clone/ui/screens/home/cards/loan_card.dart';
+import 'package:nubank_clone/ui/screens/home/cards/rewards_card.dart';
 import 'package:nubank_clone/ui/screens/home/components/nucard.dart';
 import 'package:nubank_clone/ui/screens/home/components/numenu.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
@@ -11,6 +18,32 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final _menu = [
+    NuMenu('Pix', NuIcons.rewards_ic_empty_state_other),
+    NuMenu('Pagar', NuIcons.ic_savings_global_action_pay),
+    NuMenu('Indicar amigos', NuIcons.ic_refer_friend),
+    NuMenu('Transferir', NuIcons.ic_savings_global_action_transfer_out),
+    NuMenu('Depositar', NuIcons.ic_savings_global_action_transfer_in),
+    NuMenu('Empréstimos', NuIcons.nuds_ic_personal_loan),
+    NuMenu('Cartão virtual', NuIcons.ic_virtual_card),
+    NuMenu('Recarga de celular', NuIcons.ic_phone),
+    NuMenu('Ajustar limite', NuIcons.cc_ic_limit_adjustment),
+    NuMenu('Bloquear cartão', NuIcons.ic_virtual_card_blocked),
+    NuMenu('Cobrar', NuIcons.nuds_ic_request_money),
+    NuMenu('Doação', NuIcons.nuds_ic_personal_loan),
+    NuMenu('Me ajuda', NuIcons.help),
+  ];
+
+  final _cards = [
+    CreditCard(),
+    AccountCard(),
+    LoanCard(),
+    InsuranceCard(),
+    RewardsCard(),
+    EasynvestCard(),
+    GoogleCard(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -51,44 +84,12 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Expanded(
                 child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      NuCard(
-                          'Cartão de Crédito', NuIcons.ic_card_nu, Container()),
-                      NuCard('Conta', NuIcons.ic_money_coins, Container()),
-                      NuCard('Empréstimo', NuIcons.nuds_ic_personal_loan,
-                          Container()),
-                      NuCard(
-                          'Seguro de vida', Icons.card_giftcard, Container()),
-                      NuCard('Rewards', Icons.card_giftcard, Container()),
-                      NuCard('Investimento Easynvest', NuIcons.ic_yield,
-                          Container()),
-                      NuCard('Google Pay', NuIcons.ic_card_nu, Container()),
-                    ],
-                  ),
+                  child: Column(children: _cards),
                 ),
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    NuMenu('Pix', NuIcons.rewards_ic_empty_state_other),
-                    NuMenu('Pagar', NuIcons.ic_savings_global_action_pay),
-                    NuMenu('Indicar amigos', NuIcons.ic_refer_friend),
-                    NuMenu('Transferir',
-                        NuIcons.ic_savings_global_action_transfer_out),
-                    NuMenu('Depositar',
-                        NuIcons.ic_savings_global_action_transfer_in),
-                    NuMenu('Empréstimos', NuIcons.nuds_ic_personal_loan),
-                    NuMenu('Cartão virtual', NuIcons.ic_virtual_card),
-                    NuMenu('Recarga de celular', NuIcons.ic_phone),
-                    NuMenu('Ajustar limite', NuIcons.cc_ic_limit_adjustment),
-                    NuMenu('Bloquear cartão', NuIcons.ic_virtual_card_blocked),
-                    NuMenu('Cobrar', NuIcons.nuds_ic_request_money),
-                    NuMenu('Doação', NuIcons.nuds_ic_personal_loan),
-                    NuMenu('Me ajuda', NuIcons.help),
-                  ],
-                ),
+                child: Row(children: _menu),
               ),
             ],
           ),
