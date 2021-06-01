@@ -12,6 +12,8 @@ import 'package:nubank_clone/ui/screens/home/components/numenu.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
+import 'components/circle_button.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -66,18 +68,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Row(
                     children: [
-                      IconButton(
-                          onPressed: null,
-                          icon: Icon(
-                            NuIcons.ic_cc_balance_visible,
-                            color: Colors.white,
-                          )),
-                      IconButton(
-                        onPressed: null,
-                        icon: Icon(Icons.settings, color: Colors.white),
-                        splashColor: kSecondaryColor,
-                        splashRadius: 50,
-                      ),
+                      CircleButton(NuIcons.ic_cc_balance_visible),
+                      CircleButton(Icons.settings),
                     ],
                   )
                 ],
