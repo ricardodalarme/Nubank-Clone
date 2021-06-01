@@ -15,7 +15,7 @@ class CreditCard extends StatelessWidget {
           'Fatura atual',
           style: TextStyle(color: kSecondaryTextColor),
         ),
-        SizedBox(height: 15),
+        SizedBox(height: 10),
         Text(
           'R\$ $kInvoce',
           style: TextStyle(
@@ -24,7 +24,7 @@ class CreditCard extends StatelessWidget {
             fontWeight: FontWeight.w800,
           ),
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 5),
         Text(
           'Limite disponível R\$ $kLimit',
           style: TextStyle(color: kTextColor),

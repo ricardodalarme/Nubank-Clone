@@ -12,6 +12,7 @@ class LoanCard extends StatelessWidget {
       'Empréstimo',
       NuIcons.nuds_ic_personal_loan,
       [
+        SizedBox(height: 10),
         Text(
           'Valor disponível de até',
           style: TextStyle(
@@ -28,7 +29,7 @@ class LoanCard extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(height: 15),
+        SizedBox(height: 10),
         NuOutlinedButton('Simular empréstimo'),
       ],
     );

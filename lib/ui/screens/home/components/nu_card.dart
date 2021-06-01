@@ -16,7 +16,7 @@ class NuCard extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(3)),
           color: Colors.white),
-      margin: EdgeInsets.symmetric(vertical: 8),
+      margin: EdgeInsets.only(bottom: 15),
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
@@ -35,7 +35,7 @@ class NuCard extends StatelessWidget {
                         : kSubTitleStyle),
               ],
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             ...body,
           ],
         ),

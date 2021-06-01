@@ -17,7 +17,7 @@ class AccountCard extends StatelessWidget {
             color: kSecondaryTextColor,
           ),
         ),
-        SizedBox(height: 15),
+        SizedBox(height: 10),
         Text(
           'R\$ $kBalance',
           style: TextStyle(
