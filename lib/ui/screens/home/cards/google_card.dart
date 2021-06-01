@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/home/components/nucard.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
@@ -11,9 +10,7 @@ class GoogleCard extends StatelessWidget {
       NuIcons.ic_card_nu,
       Column(
         children: [
-          Text('Fatura atual'),
-          Text('R\$ $kInvoce'),
-          Text('Limite disponível $kLimit'),
+          Text('Use o Google Pay com seus cartões Nubank'),
         ],
       ),
     );

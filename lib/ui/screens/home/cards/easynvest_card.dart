@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/home/components/nucard.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
@@ -11,9 +10,8 @@ class EasynvestCard extends StatelessWidget {
       NuIcons.ic_yield,
       Column(
         children: [
-          Text('Fatura atual'),
-          Text('R\$ $kInvoce'),
-          Text('Limite disponível $kLimit', style: TextStyle(fontWeight: FontWeight.normal),),
+          Text(
+              'Conheça a Easynvest e invista com taxa zero de corretagem e sem burocracias!'),
         ],
       ),
     );

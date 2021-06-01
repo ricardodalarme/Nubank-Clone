@@ -7,12 +7,12 @@ class AccountCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NuCard(
-    'Conta', NuIcons.ic_money_coins,
+      'Conta',
+      NuIcons.ic_money_coins,
       Column(
         children: [
-          Text('Fatura atual'),
-          Text('R\$ $kInvoce'),
-          Text('Limite disponível $kLimit'),
+          Text('Saldo disponível'),
+          Text('R\$ $kBalance'),
         ],
       ),
     );

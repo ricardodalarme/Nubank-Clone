@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/home/components/nucard.dart';
-import 'package:nubank_clone/ui/theme/icons.dart';
 
 class InsuranceCard extends StatelessWidget {
   @override
@@ -11,9 +9,7 @@ class InsuranceCard extends StatelessWidget {
       Icons.card_giftcard,
       Column(
         children: [
-          Text('Fatura atual'),
-          Text('R\$ $kInvoce'),
-          Text('Limite disponível $kLimit'),
+          Text('Conheça Nubank Vida: um seguro simples que cabe no seu bolso.'),
         ],
       ),
     );

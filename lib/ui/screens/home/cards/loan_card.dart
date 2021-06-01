@@ -7,13 +7,12 @@ class LoanCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NuCard(
-     'Empréstimo',
+      'Empréstimo',
       NuIcons.nuds_ic_personal_loan,
       Column(
         children: [
-          Text('Fatura atual'),
-          Text('R\$ $kInvoce'),
-          Text('Limite disponível $kLimit'),
+          Text('Valor disponível de até'),
+          Text('R\$ $kLoan'),
         ],
       ),
     );
