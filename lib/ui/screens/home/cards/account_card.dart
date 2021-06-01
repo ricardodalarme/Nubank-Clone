@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/core/constants.dart';
-import 'package:nubank_clone/ui/screens/home/components/nucard.dart';
+import 'package:nubank_clone/ui/screens/home/components/nu_card.dart';
+import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
+import 'package:nubank_clone/core/constants.dart';
 
 class AccountCard extends StatelessWidget {
   @override
@@ -9,12 +10,23 @@ class AccountCard extends StatelessWidget {
     return NuCard(
       'Conta',
       NuIcons.ic_money_coins,
-      Column(
-        children: [
-          Text('Saldo disponível'),
-          Text('R\$ $kBalance'),
-        ],
-      ),
+      [
+        Text(
+          'Saldo disponível',
+          style: TextStyle(
+            color: kSecondaryTextColor,
+          ),
+        ),
+        SizedBox(height: 15),
+        Text(
+          'R\$ $kBalance',
+          style: TextStyle(
+            color: kTextColor,
+            fontSize: 28,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+      ],
     );
   }
 }

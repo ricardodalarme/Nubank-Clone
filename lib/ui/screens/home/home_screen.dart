@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/home/cards/account_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/credit_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/easynvest_card.dart';
@@ -7,8 +6,7 @@ import 'package:nubank_clone/ui/screens/home/cards/google_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/insurance_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/loan_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/rewards_card.dart';
-import 'package:nubank_clone/ui/screens/home/components/nucard.dart';
-import 'package:nubank_clone/ui/screens/home/components/numenu.dart';
+import 'package:nubank_clone/ui/screens/home/components/nu_menu.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
@@ -60,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Olá, $kUsername',
+                    'Olá, Ricardo',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 28,
@@ -74,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ],
               ),
+              SizedBox(height: 15),
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(children: _cards),

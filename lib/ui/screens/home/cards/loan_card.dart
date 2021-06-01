@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/core/constants.dart';
-import 'package:nubank_clone/ui/screens/home/components/nucard.dart';
+import 'package:nubank_clone/ui/screens/home/components/nu_card.dart';
+import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
+import 'package:nubank_clone/ui/screens/home/components/nu_outlined_button.dart';
+import 'package:nubank_clone/core/constants.dart';
 
 class LoanCard extends StatelessWidget {
   @override
@@ -9,12 +11,26 @@ class LoanCard extends StatelessWidget {
     return NuCard(
       'Empréstimo',
       NuIcons.nuds_ic_personal_loan,
-      Column(
-        children: [
-          Text('Valor disponível de até'),
-          Text('R\$ $kLoan'),
-        ],
-      ),
+      [
+        Text(
+          'Valor disponível de até',
+          style: TextStyle(
+            color: kTextColor,
+            fontSize: 16,
+          ),
+        ),
+        SizedBox(height: 5),
+        Text(
+          'R\$ $kLoan',
+          style: TextStyle(
+            color: kTextColor,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        SizedBox(height: 15),
+        NuOutlinedButton('Simular empréstimo'),
+      ],
     );
   }
 }

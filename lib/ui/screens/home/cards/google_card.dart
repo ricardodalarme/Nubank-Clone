@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/ui/screens/home/components/nucard.dart';
+import 'package:nubank_clone/ui/screens/home/components/nu_outlined_button.dart';
+import 'package:nubank_clone/ui/screens/home/components/nu_card.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
 class GoogleCard extends StatelessWidget {
@@ -8,11 +9,12 @@ class GoogleCard extends StatelessWidget {
     return NuCard(
       'Google Pay',
       NuIcons.ic_card_nu,
-      Column(
-        children: [
+      [
           Text('Use o Google Pay com seus cartões Nubank'),
+      SizedBox(height: 15),
+        NuOutlinedButton('Regisrar meu cartão'),
         ],
-      ),
+      
     );
   }
 }
