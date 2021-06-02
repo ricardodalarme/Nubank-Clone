@@ -10,11 +10,10 @@ class GoogleCard extends StatelessWidget {
       'Google Pay',
       NuIcons.ic_card_nu,
       [
-          Text('Use o Google Pay com seus cartões Nubank'),
-      SizedBox(height: 15),
+        Text('Use o Google Pay com seus cartões Nubank'),
+        SizedBox(height: 15),
         NuOutlinedButton('Regisrar meu cartão'),
-        ],
-      
+      ],
     );
   }
 }

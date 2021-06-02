@@ -15,6 +15,7 @@ class AccountCard extends StatelessWidget {
           'Saldo disponível',
           style: TextStyle(
             color: kSecondaryTextColor,
+            fontSize: 13,
           ),
         ),
         SizedBox(height: 10),
@@ -22,7 +23,7 @@ class AccountCard extends StatelessWidget {
           'R\$ $kBalance',
           style: TextStyle(
             color: kTextColor,
-            fontSize: 28,
+            fontSize: 26,
             fontWeight: FontWeight.w800,
           ),
         ),

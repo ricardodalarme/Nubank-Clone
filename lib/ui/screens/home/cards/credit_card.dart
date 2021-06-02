@@ -13,21 +13,35 @@ class CreditCard extends StatelessWidget {
       [
         Text(
           'Fatura atual',
-          style: TextStyle(color: kSecondaryTextColor),
+          style: TextStyle(
+            color: kSecondaryTextColor,
+            fontSize: 13,
+          ),
         ),
         SizedBox(height: 10),
         Text(
           'R\$ $kInvoce',
           style: TextStyle(
             color: kInvoiceColor,
-            fontSize: 28,
+            fontSize: 26,
             fontWeight: FontWeight.w800,
           ),
         ),
         SizedBox(height: 5),
-        Text(
-          'Limite disponível R\$ $kLimit',
-          style: TextStyle(color: kTextColor),
+        RichText(
+          text: TextSpan(
+            children: <TextSpan>[
+              TextSpan(
+                text: 'Limite disponível ',
+                style: TextStyle(color: kTextColor),
+              ),
+              TextSpan(
+                text: 'R\$ $kLimit',
+                style:
+                    TextStyle(color: kLimitColor, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
         ),
       ],
     );

@@ -17,6 +17,6 @@ const kTitleStyle = TextStyle(
 );
 
 const kSubTitleStyle = TextStyle(
-  fontSize: 16,
+  fontSize: 15,
   color: kSecondaryTextColor,
 );

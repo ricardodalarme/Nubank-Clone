@@ -17,7 +17,7 @@ class LoanCard extends StatelessWidget {
           'Valor disponível de até',
           style: TextStyle(
             color: kTextColor,
-            fontSize: 16,
+            fontSize: 15,
           ),
         ),
         SizedBox(height: 5),
@@ -25,7 +25,7 @@ class LoanCard extends StatelessWidget {
           'R\$ $kLoan',
           style: TextStyle(
             color: kTextColor,
-            fontSize: 16,
+            fontSize: 15,
             fontWeight: FontWeight.bold,
           ),
         ),
