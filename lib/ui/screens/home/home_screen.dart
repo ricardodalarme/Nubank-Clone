@@ -9,7 +9,6 @@ import 'package:nubank_clone/ui/screens/home/cards/rewards_card.dart';
 import 'package:nubank_clone/ui/screens/home/components/nu_menu.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
-
 import 'components/circle_button.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -50,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         backgroundColor: kPrimaryColor,
         body: Padding(
-          padding: EdgeInsets.all(17),
+          padding: EdgeInsets.all(15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -63,12 +62,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 28,
-                        fontWeight: FontWeight.w600),
+                        fontWeight: FontWeight.bold),
                   ),
                   Row(
                     children: [
                       CircleButton(NuIcons.ic_cc_balance_invisible),
-                      CircleButton(Icons.settings),
+                      CircleButton(NuIcons.nuds_ic_settings),
                     ],
                   )
                 ],
