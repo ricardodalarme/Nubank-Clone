@@ -13,7 +13,7 @@ class CircleButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         shape: CircleBorder(),
         primary: kSecondaryColor,
-        fixedSize: Size(45, 45),
+        fixedSize: Size(50, 50),
         elevation: 0,
       ),
       child: Icon(

@@ -18,7 +18,7 @@ class NuCard extends StatelessWidget {
           color: Colors.white),
       margin: EdgeInsets.only(bottom: 15),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 22),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
