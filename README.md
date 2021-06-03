@@ -3,7 +3,6 @@
 * [Introdução](#introdução)
 * [Screenshots](#screenshots)
 * [Executando](#executando)
-* [Creditos](#creditos)
 
 ## Introdução
 
