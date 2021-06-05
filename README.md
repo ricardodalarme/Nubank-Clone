@@ -3,6 +3,7 @@
 * [Introdução](#introdução)
 * [Screenshots](#screenshots)
 * [Executando](#executando)
+* [Contribua](#contribua)
 
 ## Introdução
 
@@ -33,3 +34,11 @@ flutter pub get
 ```
 flutter run
 ```
+
+## Contribua
+
+1. **Fork** o repositório no *GitHub*
+2. **Clone** o projeto para a sua máquina
+3. **Commit** suas alterações 
+4. **Push** para o seu *fork*
+5. Faça um **Pull Request**
