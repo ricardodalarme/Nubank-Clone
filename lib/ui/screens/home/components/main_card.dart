@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/styles.dart';
 
-class NuCard extends StatelessWidget {
+class MainCard extends StatelessWidget {
   final String title;
   final IconData icon;
   final List<Widget> body;
   final bool highlight;
 
-  NuCard(this.title, this.icon, this.body, {this.highlight = false});
+  MainCard(this.title, this.icon, this.body, {this.highlight = false});
 
   @override
   Widget build(BuildContext context) {

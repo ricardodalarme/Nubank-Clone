@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/ui/screens/home/cards/account_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/credit_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/easynvest_card.dart';
@@ -6,35 +7,15 @@ import 'package:nubank_clone/ui/screens/home/cards/google_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/insurance_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/loan_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/rewards_card.dart';
-import 'package:nubank_clone/ui/screens/home/components/nu_menu.dart';
+import 'package:nubank_clone/ui/screens/home/components/menu_button.dart';
+import 'package:nubank_clone/ui/screens/refer/refer_screen.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:provider/provider.dart';
 import 'components/circle_button.dart';
 import 'package:nubank_clone/core/app_state.dart';
 
-class HomeScreen extends StatefulWidget {
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  final _menu = [
-    NuMenu('Pix', NuIcons.rewards_ic_empty_state_other),
-    NuMenu('Pagar', NuIcons.ic_savings_global_action_pay),
-    NuMenu('Indicar amigos', NuIcons.ic_refer_friend),
-    NuMenu('Transferir', NuIcons.ic_savings_global_action_transfer_out),
-    NuMenu('Depositar', NuIcons.ic_savings_global_action_transfer_in),
-    NuMenu('Empréstimos', NuIcons.nuds_ic_personal_loan),
-    NuMenu('Cartão virtual', NuIcons.ic_virtual_card),
-    NuMenu('Recarga de celular', NuIcons.ic_phone),
-    NuMenu('Ajustar limite', NuIcons.cc_ic_limit_adjustment),
-    NuMenu('Bloquear cartão', NuIcons.ic_virtual_card_blocked),
-    NuMenu('Cobrar', NuIcons.nuds_ic_request_money),
-    NuMenu('Doação', NuIcons.nuds_ic_personal_loan),
-    NuMenu('Me ajuda', NuIcons.help),
-  ];
-
+class HomeScreen extends StatelessWidget {
   final _cards = [
     CreditCard(),
     AccountCard(),
@@ -93,7 +74,34 @@ class _HomeScreenState extends State<HomeScreen> {
               SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
-                child: Row(children: _menu),
+                child: Row(children: [
+                  MenuButton('Pix', NuIcons.rewards_ic_empty_state_other),
+                  MenuButton('Pagar', NuIcons.ic_savings_global_action_pay),
+                  MenuButton(
+                    'Indicar amigos',
+                    NuIcons.ic_refer_friend,
+                    onTap: () {
+                      showModalBottomSheet(
+                          isScrollControlled: true,
+                          isDismissible: false,
+                          context: context,
+                          builder: (context) => ReferScreen());
+                    },
+                  ),
+                  MenuButton('Transferir',
+                      NuIcons.ic_savings_global_action_transfer_out),
+                  MenuButton('Depositar',
+                      NuIcons.ic_savings_global_action_transfer_in),
+                  MenuButton('Empréstimos', NuIcons.nuds_ic_personal_loan),
+                  MenuButton('Cartão virtual', NuIcons.ic_virtual_card),
+                  MenuButton('Recarga de celular', NuIcons.ic_phone),
+                  MenuButton('Ajustar limite', NuIcons.cc_ic_limit_adjustment),
+                  MenuButton(
+                      'Bloquear cartão', NuIcons.ic_virtual_card_blocked),
+                  MenuButton('Cobrar', NuIcons.nuds_ic_request_money),
+                  MenuButton('Doação', NuIcons.nuds_ic_personal_loan),
+                  MenuButton('Me ajuda', NuIcons.help),
+                ]),
               ),
             ],
           ),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/ui/screens/home/components/nu_card.dart';
+import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
-import 'package:nubank_clone/ui/screens/home/components/nu_outlined_button.dart';
+import 'package:nubank_clone/ui/shared/nu_outlined_button.dart';
 import 'package:nubank_clone/core/constants.dart';
 
 class LoanCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return NuCard(
+    return MainCard(
       'Empréstimo',
       NuIcons.nuds_ic_personal_loan,
       [

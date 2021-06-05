@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/ui/screens/home/components/nu_card.dart';
+import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:nubank_clone/core/constants.dart';
@@ -7,7 +7,7 @@ import 'package:nubank_clone/core/constants.dart';
 class CreditCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return NuCard(
+    return MainCard(
       'Cartão de Crédito',
       NuIcons.ic_card_nu,
       [
