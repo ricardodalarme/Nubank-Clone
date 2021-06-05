@@ -30,11 +30,9 @@ class CreditCard extends StatelessWidget {
         SizedBox(height: 5),
         RichText(
           text: TextSpan(
+            text: 'Limite disponível ',
+            style: TextStyle(color: kTextColor),
             children: <TextSpan>[
-              TextSpan(
-                text: 'Limite disponível ',
-                style: TextStyle(color: kTextColor),
-              ),
               TextSpan(
                 text: 'R\$ $kLimit',
                 style:

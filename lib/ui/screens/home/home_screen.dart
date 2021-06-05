@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/ui/screens/home/cards/account_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/credit_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/easynvest_card.dart';
@@ -33,45 +32,54 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: kPrimaryColor,
-        body: Padding(
-          padding: EdgeInsets.all(15),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 15),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Olá, Ricardo',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  Row(
-                    children: [
-                      CircleButton(
-                        state.viewValues
-                            ? NuIcons.ic_cc_balance_invisible
-                            : NuIcons.ic_cc_balance_visible,
-                        () {
-                          state.switchView();
-                        },
+        body: Column(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 15),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Olá, Ricardo',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Row(
+                          children: [
+                            CircleButton(
+                              state.viewValues
+                                  ? NuIcons.ic_cc_balance_invisible
+                                  : NuIcons.ic_cc_balance_visible,
+                              () {
+                                state.switchView();
+                              },
+                            ),
+                            CircleButton(NuIcons.nuds_ic_settings, () {}),
+                          ],
+                        )
+                      ],
+                    ),
+                    SizedBox(height: 25),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        physics: BouncingScrollPhysics(),
+                        child: Column(children: _cards),
                       ),
-                      CircleButton(NuIcons.nuds_ic_settings, () {}),
-                    ],
-                  )
-                ],
-              ),
-              SizedBox(height: 25),
-              Expanded(
-                child: SingleChildScrollView(
-                  physics: BouncingScrollPhysics(),
-                  child: Column(children: _cards),
+                    ),
+                  ],
                 ),
               ),
-              SingleChildScrollView(
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 15, bottom: 15),
+              child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 child: Row(children: [
@@ -101,10 +109,11 @@ class HomeScreen extends StatelessWidget {
                   MenuButton('Cobrar', NuIcons.nuds_ic_request_money),
                   MenuButton('Doação', NuIcons.nuds_ic_personal_loan),
                   MenuButton('Me ajuda', NuIcons.help),
+                  SizedBox(width: 8),
                 ]),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
