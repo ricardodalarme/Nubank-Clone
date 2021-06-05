@@ -9,8 +9,10 @@ void main() {
   runApp(ChangeNotifierProvider(
     create: (context) => AppState(),
     child: MaterialApp(
+      title: 'Nubank Clone',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        brightness: Brightness.light,
         primaryColor: kPrimaryColor,
       ),
       home: HomeScreen(),
