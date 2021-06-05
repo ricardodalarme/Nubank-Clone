@@ -9,7 +9,9 @@ import 'package:nubank_clone/ui/screens/home/cards/rewards_card.dart';
 import 'package:nubank_clone/ui/screens/home/components/nu_menu.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
+import 'package:provider/provider.dart';
 import 'components/circle_button.dart';
+import 'package:nubank_clone/core/app_state.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -45,6 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var state = Provider.of<AppState>(context);
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: kPrimaryColor,
@@ -66,8 +70,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Row(
                     children: [
-                      CircleButton(NuIcons.ic_cc_balance_invisible),
-                      CircleButton(NuIcons.nuds_ic_settings),
+                      CircleButton(
+                        state.viewValues
+                            ? NuIcons.ic_cc_balance_invisible
+                            : NuIcons.ic_cc_balance_visible,
+                        () {
+                          state.switchView();
+                        },
+                      ),
+                      CircleButton(NuIcons.nuds_ic_settings, () {}),
                     ],
                   )
                 ],

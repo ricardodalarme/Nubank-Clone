@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/ui/screens/home/home_screen.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(
-      primaryColor: kPrimaryColor,
+  runApp(ChangeNotifierProvider(
+    create: (context) => AppState(),
+    child: MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: kPrimaryColor,
+      ),
+      home: HomeScreen(),
     ),
-    home: HomeScreen(),
   ));
 
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
