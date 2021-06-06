@@ -4,9 +4,9 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 class MenuButton extends StatelessWidget {
   final String title;
   final IconData icon;
-  final Function() ?onTap;
+  final Function()? onTap;
 
-  MenuButton(this.title, this.icon, {this.onTap });
+  MenuButton(this.title, this.icon, {this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,10 @@ class MenuButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Icon(icon, color: Colors.white),
-              Text(title, style: TextStyle(color: Colors.white)),
+              Text(
+                title,
+                style: TextStyle(color: Colors.white, fontSize: 12),
+              ),
             ],
           ),
         ),

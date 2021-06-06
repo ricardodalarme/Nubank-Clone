@@ -15,19 +15,12 @@ class AccountCard extends StatelessWidget {
       [
         Text(
           'Saldo disponível',
-          style: TextStyle(
-            color: kSecondaryTextColor,
-            fontSize: 13,
-          ),
+          style: Theme.of(context).textTheme.caption,
         ),
         SizedBox(height: 10),
         Text(
           'R\$ $kBalance',
-          style: TextStyle(
-            color: kTextColor,
-            fontSize: 26,
-            fontWeight: FontWeight.w800,
-          ),
+          style: Theme.of(context).textTheme.headline6,
         ),
       ],
       onTap: () => MyRouter.pushPage(context, AccountScreen()),

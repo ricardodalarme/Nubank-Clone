@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/deposit/deposit_screen.dart';
 import 'package:nubank_clone/ui/screens/home/cards/account_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/credit_card.dart';
@@ -37,7 +38,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.fromLTRB(15, 15, 15, 0),
+                padding: EdgeInsets.fromLTRB(16, 17, 16, 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -46,11 +47,13 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Olá, Ricardo',
+                          'Olá, $kUsername',
                           style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold),
+                            color: Colors.white,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 0.1,
+                          ),
                         ),
                         Row(
                           children: [
@@ -79,7 +82,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 15, bottom: 15),
+              padding: const EdgeInsets.only(left: 17, bottom: 17),
               child: SingleChildScrollView(
                 physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
@@ -99,8 +102,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                   MenuButton('Transferir',
                       NuIcons.ic_savings_global_action_transfer_out),
-                  MenuButton('Depositar',
-                      NuIcons.ic_savings_global_action_transfer_in,
+                  MenuButton(
+                    'Depositar',
+                    NuIcons.ic_savings_global_action_transfer_in,
                     onTap: () {
                       showModalBottomSheet(
                           isScrollControlled: true,
