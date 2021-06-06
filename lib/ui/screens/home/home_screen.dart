@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/ui/screens/deposit/deposit_screen.dart';
 import 'package:nubank_clone/ui/screens/home/cards/account_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/credit_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/easynvest_card.dart';
@@ -99,7 +100,15 @@ class HomeScreen extends StatelessWidget {
                   MenuButton('Transferir',
                       NuIcons.ic_savings_global_action_transfer_out),
                   MenuButton('Depositar',
-                      NuIcons.ic_savings_global_action_transfer_in),
+                      NuIcons.ic_savings_global_action_transfer_in,
+                    onTap: () {
+                      showModalBottomSheet(
+                          isScrollControlled: true,
+                          isDismissible: false,
+                          context: context,
+                          builder: (context) => DepositScreen());
+                    },
+                  ),
                   MenuButton('Empréstimos', NuIcons.nuds_ic_personal_loan),
                   MenuButton('Cartão virtual', NuIcons.ic_virtual_card),
                   MenuButton('Recarga de celular', NuIcons.ic_phone),
