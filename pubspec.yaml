@@ -28,3 +28,40 @@ flutter:
     - family:  NuIcons
       fonts:
         - asset: assets/fonts/NuIcons.ttf
+
+    - family: Gotham-SSm
+      fonts:
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-XLight.ttf
+          weight: 200
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-XLightItalic.ttf
+          weight: 200
+          style: italic
+          
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-LightItalic.ttf
+          weight: 300
+          style: italic
+          
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-Book.ttf
+          weight: 400
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-BookItalic.ttf
+          weight: 400
+          style: italic
+          
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-MediumItalic.ttf
+          weight: 500
+          style: italic
+
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Gotham-SSm/GothamSSm-BlackItalic.ttf
+          weight: 900
