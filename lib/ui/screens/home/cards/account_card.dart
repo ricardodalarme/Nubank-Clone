@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/core/router.dart';
+import 'package:nubank_clone/ui/screens/account/account_screen.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
@@ -28,6 +30,7 @@ class AccountCard extends StatelessWidget {
           ),
         ),
       ],
+      onTap: () => MyRouter.pushPage(context, AccountScreen()),
     );
   }
 }
