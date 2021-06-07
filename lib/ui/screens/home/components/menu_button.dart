@@ -14,14 +14,14 @@ class MenuButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: 88,
-        height: 95,
+        height: 96,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(3)),
           color: kSecondaryColor,
         ),
         margin: EdgeInsets.only(right: 8, top: 15),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

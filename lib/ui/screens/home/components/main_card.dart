@@ -21,14 +21,14 @@ class MainCard extends StatelessWidget {
             color: Colors.white),
         margin: EdgeInsets.only(bottom: 16),
         child: Padding(
-          padding: const EdgeInsets.all(23),
+          padding: const EdgeInsets.symmetric(vertical: 23, horizontal: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
                   Icon(icon, color: kSecondaryTextColor),
-                  SizedBox(width: 15),
+                  SizedBox(width: 16),
                   Text(title,
                       style: highlight
                           ? TextStyle(
@@ -38,7 +38,7 @@ class MainCard extends StatelessWidget {
                           : Theme.of(context).textTheme.bodyText2),
                 ],
               ),
-              SizedBox(height: 17),
+              SizedBox(height: 16),
               ...body,
             ],
           ),

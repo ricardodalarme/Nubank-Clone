@@ -13,7 +13,7 @@ class NuOutlinedButton extends StatelessWidget {
       style: OutlinedButton.styleFrom(
         primary: Colors.white,
         side: BorderSide(color: kPrimaryColor, width: 0.5),
-        padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+        padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       ),
       child: Text(
         Value.toUpperCase(),

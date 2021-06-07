@@ -11,7 +11,7 @@ class LoanCard extends StatelessWidget {
       'Empréstimo',
       NuIcons.nuds_ic_personal_loan,
       [
-        SizedBox(height: 10),
+        SizedBox(height: 12),
         Text(
           'Valor disponível de até',
           style: Theme.of(context).textTheme.bodyText2!,
@@ -24,7 +24,7 @@ class LoanCard extends StatelessWidget {
               .bodyText2!
               .copyWith(fontWeight: FontWeight.bold),
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 15),
         NuOutlinedButton('Simular empréstimo'),
       ],
     );

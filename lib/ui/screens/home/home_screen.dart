@@ -38,7 +38,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.fromLTRB(16, 17, 16, 0),
+                padding: EdgeInsets.fromLTRB(16, 18, 16, 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -48,12 +48,11 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Olá, $kUsername',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 0.1,
-                          ),
+                          style:
+                              Theme.of(context).textTheme.headline5!.copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                         ),
                         Row(
                           children: [
@@ -70,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(height: 25),
+                    SizedBox(height: 24),
                     Expanded(
                       child: SingleChildScrollView(
                         physics: BouncingScrollPhysics(),

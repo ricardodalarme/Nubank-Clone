@@ -16,7 +16,7 @@ class AccountCard extends StatelessWidget {
           'Saldo disponível',
           style: Theme.of(context).textTheme.caption,
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 13),
         Text(
           'R\$ $kBalance',
           style: Theme.of(context)

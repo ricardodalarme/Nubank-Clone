@@ -3,23 +3,24 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 
 class CircleButton extends StatelessWidget {
   final IconData icon;
-  final Function() onPressed;
+  final Function() onTap;
 
-  CircleButton(this.icon, this.onPressed);
+  CircleButton(this.icon, this.onTap);
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        shape: CircleBorder(),
-        primary: kSecondaryColor,
-        fixedSize: Size(50, 50),
-        elevation: 0,
-      ),
-      child: Icon(
-        icon,
-        color: Colors.white,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 48,
+        width: 48,
+        margin: EdgeInsets.only(left: 8),
+        decoration:
+            BoxDecoration(color: kSecondaryColor, shape: BoxShape.circle),
+        child: Icon(
+          icon,
+          color: Colors.white,
+        ),
       ),
     );
   }

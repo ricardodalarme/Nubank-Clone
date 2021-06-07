@@ -15,7 +15,7 @@ class CreditCard extends StatelessWidget {
           'Fatura atual',
           style: Theme.of(context).textTheme.caption,
         ),
-        SizedBox(height: 10),
+        SizedBox(height: 13),
         Text(
           'R\$ $kInvoce',
           style: Theme.of(context)
