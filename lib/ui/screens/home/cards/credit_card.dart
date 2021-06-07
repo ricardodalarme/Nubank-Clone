@@ -21,7 +21,7 @@ class CreditCard extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headline5!
-              .copyWith(fontWeight: FontWeight.bold, color: kInvoiceColor),
+              .copyWith(color: kInvoiceColor),
         ),
         SizedBox(height: 5),
         RichText(

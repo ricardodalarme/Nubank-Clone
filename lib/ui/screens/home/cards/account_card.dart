@@ -17,13 +17,7 @@ class AccountCard extends StatelessWidget {
           style: Theme.of(context).textTheme.caption,
         ),
         SizedBox(height: 13),
-        Text(
-          'R\$ $kBalance',
-          style: Theme.of(context)
-              .textTheme
-              .headline5!
-              .copyWith(fontWeight: FontWeight.bold),
-        ),
+        Text('R\$ $kBalance', style: Theme.of(context).textTheme.headline5!),
       ],
       onTap: () => MyRouter.pushPage(context, AccountScreen()),
     );

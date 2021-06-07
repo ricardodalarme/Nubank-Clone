@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/ui/screens/home/home_screen.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
+import 'package:nubank_clone/ui/theme/texts.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -11,7 +12,7 @@ void main() {
     child: MaterialApp(
       title: 'Nubank Clone',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Gotham-SSm'),
+      theme: ThemeData(fontFamily: 'Gotham-SSm', textTheme: customTextTheme),
       home: HomeScreen(),
     ),
   ));

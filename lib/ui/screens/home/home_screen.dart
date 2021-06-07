@@ -48,11 +48,10 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Olá, $kUsername',
-                          style:
-                              Theme.of(context).textTheme.headline5!.copyWith(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                          style: Theme.of(context)
+                              .textTheme
+                              .headline5!
+                              .copyWith(color: Colors.white),
                         ),
                         Row(
                           children: [
