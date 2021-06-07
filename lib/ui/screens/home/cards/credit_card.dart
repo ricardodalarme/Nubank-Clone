@@ -18,13 +18,16 @@ class CreditCard extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           'R\$ $kInvoce',
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context)
+              .textTheme
+              .headline5!
+              .copyWith(fontWeight: FontWeight.bold, color: kInvoiceColor),
         ),
         SizedBox(height: 5),
         RichText(
           text: TextSpan(
             text: 'Limite disponível ',
-            style: TextStyle(color: kTextColor),
+            style: Theme.of(context).textTheme.bodyText2,
             children: <TextSpan>[
               TextSpan(
                 text: 'R\$ $kLimit',

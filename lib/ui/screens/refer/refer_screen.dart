@@ -23,18 +23,12 @@ class ReferScreen extends StatelessWidget {
               children: [
                 Text(
                   'Resgate seus amigos da fila do banco',
-                  style: TextStyle(
-                    color: kTextColor,
-                    fontSize: 20,
-                  ),
+                  style: Theme.of(context).textTheme.headline6,
                 ),
                 SizedBox(height: 10),
                 Text(
                   'Para cada indicação aceita, um amigo salvo da burocracia',
-                  style: TextStyle(
-                    color: kSecondaryTextColor,
-                    fontSize: 15,
-                  ),
+                  style: Theme.of(context).textTheme.subtitle2,
                 ),
                 SizedBox(height: 20),
                 NuOutlinedButton('Indicar amigos'),

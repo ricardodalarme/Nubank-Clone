@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
-import 'package:nubank_clone/ui/theme/styles.dart';
 
 class MainCard extends StatelessWidget {
   final String title;
   final IconData icon;
   final List<Widget> body;
   final bool highlight;
-  final Function() ?onTap;
+  final Function()? onTap;
 
-  MainCard(this.title, this.icon, this.body, {this.highlight = false, this.onTap});
+  MainCard(this.title, this.icon, this.body,
+      {this.highlight = false, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class MainCard extends StatelessWidget {
                               fontSize: 20,
                               color: kPrimaryColor,
                             )
-                          : kSubTitleStyle),
+                          : Theme.of(context).textTheme.bodyText2),
                 ],
               ),
               SizedBox(height: 17),
