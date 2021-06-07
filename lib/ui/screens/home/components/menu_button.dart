@@ -29,7 +29,10 @@ class MenuButton extends StatelessWidget {
               Icon(icon, color: Colors.white),
               Text(
                 title,
-                style: TextStyle(color: Colors.white, fontSize: 12),
+                style: Theme.of(context)
+                    .textTheme
+                    .caption!
+                    .copyWith(color: Colors.white),
               ),
             ],
           ),

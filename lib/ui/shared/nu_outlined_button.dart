@@ -17,11 +17,10 @@ class NuOutlinedButton extends StatelessWidget {
       ),
       child: Text(
         Value.toUpperCase(),
-        style: TextStyle(
-          color: kPrimaryColor,
-          fontSize: 12,
-          fontWeight: FontWeight.w700,
-        ),
+        style: Theme.of(context)
+            .textTheme
+            .caption!
+            .copyWith(color: kPrimaryColor, fontWeight: FontWeight.bold),
       ),
     );
   }
