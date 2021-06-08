@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/ui/screens/pix/components/pix_menu.dart';
 import 'package:nubank_clone/ui/shared/label_button.dart';
@@ -41,9 +42,9 @@ class PixScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      LabelButton('Pagar', NuIcons.star),
-                      LabelButton('Transferir', NuIcons.star),
-                      LabelButton('Cobrar', NuIcons.star),
+                      LabelButton('Pagar', Mdi.arrangeSendToBack),
+                      LabelButton('Transferir', Mdi.cubeSend),
+                      LabelButton('Cobrar', Mdi.messageAlertOutline),
                     ],
                   ),
                   SizedBox(height: 20),
@@ -54,9 +55,9 @@ class PixScreen extends StatelessWidget {
           Container(height: 1, color: kLineColor),
           Column(
             children: [
-              PixMenu('Minhas chaves', NuIcons.star),
-              PixMenu('Meu limite Pix', NuIcons.star),
-              PixMenu('Me ajuda', NuIcons.star),
+              PixMenu('Minhas chaves', Mdi.keyChain),
+              PixMenu('Meu limite Pix', Mdi.tuneVariant),
+              PixMenu('Me ajuda', Mdi.helpCircleOutline),
             ],
           ),
         ],
