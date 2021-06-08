@@ -12,6 +12,7 @@ import 'package:nubank_clone/ui/screens/home/cards/loan_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/rewards_card.dart';
 import 'package:nubank_clone/ui/screens/home/components/menu_button.dart';
 import 'package:nubank_clone/ui/screens/payment/payment_screen.dart';
+import 'package:nubank_clone/ui/screens/pix/pix_screen.dart';
 import 'package:nubank_clone/ui/screens/refer/refer_screen.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
@@ -90,7 +91,12 @@ class HomeScreen extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   child: Row(children: [
-                    MenuButton('Pix', NuIcons.rewards_ic_empty_state_other),
+                    MenuButton(
+                      'Pix',
+                      NuIcons.rewards_ic_empty_state_other,
+                      onTap: () =>
+                          MyRouter.showBottomSheet(context, PixScreen()),
+                    ),
                     MenuButton(
                       'Pagar',
                       NuIcons.ic_savings_global_action_pay,

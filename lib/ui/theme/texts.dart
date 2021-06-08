@@ -12,6 +12,12 @@ final customTextTheme = TextTheme(
     fontWeight: FontWeight.w500,
     letterSpacing: -1.5,
   ),
+  subtitle1: TextStyle(
+    fontSize: 17,
+    color: kSecondaryTextColor,
+    letterSpacing: -1,
+  ),
+  button: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
   headline5: TextStyle(fontWeight: FontWeight.bold),
   headline6: TextStyle(fontWeight: FontWeight.w400),
 );

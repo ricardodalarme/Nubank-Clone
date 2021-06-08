@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:nubank_clone/core/constants.dart';
-import 'package:nubank_clone/ui/screens/account/components/label_button.dart';
+import 'package:nubank_clone/ui/shared/label_button.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
@@ -136,7 +136,6 @@ class AccountScreen extends StatelessWidget {
             ),
           ),
           Container(height: 1, color: kSecondaryTextColor),
-          
         ],
       ),
     );
