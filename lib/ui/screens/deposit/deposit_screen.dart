@@ -16,15 +16,15 @@ class DepositScreen extends StatelessWidget {
           IconButton(
               onPressed: () => MyRouter.popPage(context),
               icon: Icon(NuIcons.close, color: kSecondaryTextColor)),
-          SizedBox(height: 10),
+          SizedBox(height: 15),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Text(
               'Como você quer depositar na sua conta do Nubank',
               style: Theme.of(context).textTheme.headline4,
             ),
           ),
-          SizedBox(height: 5),
+          SizedBox(height: 10),
           DepositMenu(
             'Pix',
             'Sem custo e cai na hora, mesmo de madrugada e fim de semana.',

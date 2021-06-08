@@ -16,8 +16,9 @@ class ReferScreen extends StatelessWidget {
           IconButton(
               onPressed: () => MyRouter.popPage(context),
               icon: Icon(NuIcons.close, color: kSecondaryTextColor)),
+          SizedBox(height: 15),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
