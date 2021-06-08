@@ -7,3 +7,4 @@ const kSecondaryTextColor = Color.fromARGB(255, 112, 112, 112);
 const kInvoiceColor = Color.fromARGB(255, 38, 161, 221);
 const kLimitColor = Color.fromARGB(255, 35, 125, 70);
 const kUnviewColor = Color.fromARGB(255, 245, 245, 245);
+const kLineColor = Color.fromARGB(255, 204, 204, 204);

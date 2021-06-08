@@ -12,5 +12,14 @@ class MyRouter {
     );
   }
 
+  static Future showBottomSheet(BuildContext context, Widget page,
+      {bool isScrollControlled = true}) {
+    return showModalBottomSheet(
+      isScrollControlled: isScrollControlled,
+      context: context,
+      builder: (context) => page,
+    );
+  }
+
   static void popPage(BuildContext context) => Navigator.pop(context);
 }

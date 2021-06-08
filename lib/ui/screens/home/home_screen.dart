@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/constants.dart';
+import 'package:nubank_clone/core/router.dart';
+import 'package:nubank_clone/ui/screens/block/block_screen.dart';
 import 'package:nubank_clone/ui/screens/deposit/deposit_screen.dart';
 import 'package:nubank_clone/ui/screens/home/cards/account_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/credit_card.dart';
@@ -92,37 +94,22 @@ class HomeScreen extends StatelessWidget {
                     MenuButton(
                       'Pagar',
                       NuIcons.ic_savings_global_action_pay,
-                      onTap: () {
-                        showModalBottomSheet(
-                            isScrollControlled: true,
-                            isDismissible: false,
-                            context: context,
-                            builder: (context) => PaymentScreen());
-                      },
+                      onTap: () =>
+                          MyRouter.showBottomSheet(context, PaymentScreen()),
                     ),
                     MenuButton(
                       'Indicar amigos',
                       NuIcons.ic_refer_friend,
-                      onTap: () {
-                        showModalBottomSheet(
-                            isScrollControlled: true,
-                            isDismissible: false,
-                            context: context,
-                            builder: (context) => ReferScreen());
-                      },
+                      onTap: () =>
+                          MyRouter.showBottomSheet(context, ReferScreen()),
                     ),
                     MenuButton('Transferir',
                         NuIcons.ic_savings_global_action_transfer_out),
                     MenuButton(
                       'Depositar',
                       NuIcons.ic_savings_global_action_transfer_in,
-                      onTap: () {
-                        showModalBottomSheet(
-                            isScrollControlled: true,
-                            isDismissible: false,
-                            context: context,
-                            builder: (context) => DepositScreen());
-                      },
+                      onTap: () =>
+                          MyRouter.showBottomSheet(context, DepositScreen()),
                     ),
                     MenuButton('Empréstimos', NuIcons.nuds_ic_personal_loan),
                     MenuButton('Cartão virtual', NuIcons.ic_virtual_card),
@@ -130,7 +117,14 @@ class HomeScreen extends StatelessWidget {
                     MenuButton(
                         'Ajustar limite', NuIcons.cc_ic_limit_adjustment),
                     MenuButton(
-                        'Bloquear cartão', NuIcons.ic_virtual_card_blocked),
+                      'Bloquear cartão',
+                      NuIcons.ic_virtual_card_blocked,
+                      onTap: () => MyRouter.showBottomSheet(
+                        context,
+                        BlockScreen(),
+                        isScrollControlled: false,
+                      ),
+                    ),
                     MenuButton('Cobrar', NuIcons.nuds_ic_request_money),
                     MenuButton('Doação', NuIcons.nuds_ic_personal_loan),
                     MenuButton('Me ajuda', NuIcons.help),
