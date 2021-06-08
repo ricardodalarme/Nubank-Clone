@@ -31,9 +31,10 @@ class MainCard extends StatelessWidget {
                   SizedBox(width: 16),
                   Text(title,
                       style: highlight
-                          ? Theme.of(context).textTheme.headline6!.copyWith(
-                              color: kPrimaryColor,
-                              fontWeight: FontWeight.normal)
+                          ? Theme.of(context)
+                              .textTheme
+                              .headline6!
+                              .copyWith(color: kPrimaryColor)
                           : Theme.of(context).textTheme.subtitle2!),
                 ],
               ),
