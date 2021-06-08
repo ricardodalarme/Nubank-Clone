@@ -50,7 +50,7 @@ class DepositMenu extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(NuIcons.nuds_ic_chevron_right, color: kSecondaryTextColor),
+                Icon(NuIcons.abc_ic_go_search_api_material, color: kSecondaryTextColor),
               ],
             ),
           ),
