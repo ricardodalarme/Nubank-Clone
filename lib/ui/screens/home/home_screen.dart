@@ -9,6 +9,7 @@ import 'package:nubank_clone/ui/screens/home/cards/insurance_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/loan_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/rewards_card.dart';
 import 'package:nubank_clone/ui/screens/home/components/menu_button.dart';
+import 'package:nubank_clone/ui/screens/payment/payment_screen.dart';
 import 'package:nubank_clone/ui/screens/refer/refer_screen.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
@@ -86,7 +87,15 @@ class HomeScreen extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(children: [
                   MenuButton('Pix', NuIcons.rewards_ic_empty_state_other),
-                  MenuButton('Pagar', NuIcons.ic_savings_global_action_pay),
+                  MenuButton('Pagar', NuIcons.ic_savings_global_action_pay,
+                    onTap: () {
+                      showModalBottomSheet(
+                          isScrollControlled: true,
+                          isDismissible: false,
+                          context: context,
+                          builder: (context) => PaymentScreen());
+                    },
+                  ),
                   MenuButton(
                     'Indicar amigos',
                     NuIcons.ic_refer_friend,
