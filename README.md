@@ -12,9 +12,10 @@ Este projeto se trata de uma recriação bem próxima da interface do app do Nub
 ## Screenshots
 
 <p float="left">
-  <img src="/screenshots/home.jpg" width="250" />
-  <img src="/screenshots/deposit.jpg" width="250" /> 
-  <img src="/screenshots/refer.jpg" width="250" />
+  <img src="/screenshots/home.jpg" width="200" />
+  <img src="/screenshots/deposit.jpg" width="200" /> 
+  <img src="/screenshots/refer.jpg" width="200" />
+  <img src="/screenshots/payment.jpg" width="200" />
 </p>
 
 ## Executando
