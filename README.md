@@ -11,7 +11,11 @@ Este projeto se trata de uma recriação bem próxima da interface do app do Nub
 
 ## Screenshots
 
-![](/screenshots/home.jpg)
+<p float="left">
+  <img src="/screenshots/home.jpg" width="250" />
+  <img src="/screenshots/deposit.jpg" width="250" /> 
+  <img src="/screenshots/refer.jpg" width="250" />
+</p>
 
 ## Executando
 
