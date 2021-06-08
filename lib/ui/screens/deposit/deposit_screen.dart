@@ -9,7 +9,7 @@ class DepositScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      height: MediaQuery.of(context).size.height - 32,
+      height: MediaQuery.of(context).size.height - 50,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
