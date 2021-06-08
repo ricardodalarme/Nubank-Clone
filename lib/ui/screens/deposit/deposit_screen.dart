@@ -21,30 +21,29 @@ class DepositScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
             child: Text(
               'Como você quer depositar na sua conta do Nubank',
-              style: TextStyle(
-                  fontSize: 31, color: kTextColor, fontWeight: FontWeight.w500),
+              style: Theme.of(context).textTheme.headline4,
             ),
           ),
           SizedBox(height: 5),
           DepositMenu(
             'Pix',
             'Sem custo e cai na hora, mesmo de madrugada e fim de semana.',
-            NuIcons.ic_error_alert_red,
+            NuIcons.rewards_ic_empty_state_other,
           ),
           DepositMenu(
             'Boleto',
             'Sem custo e pode levar 3 dias úteis para o dinheiro cair.',
-            NuIcons.ic_error_alert_red,
+            NuIcons.ic_savings_global_action_pay,
           ),
           DepositMenu(
             'TED/DOC',
             'Pode ter custo e cai somente em horário comercial de dias úteis.',
-            NuIcons.ic_error_alert_red,
+            NuIcons.nuds_ic_receipt,
           ),
           DepositMenu(
             'Trazer seu salário',
             'Receba todo mês direto aqui na sua conta, sem custo.',
-            NuIcons.ic_error_alert_red,
+            NuIcons.ic_savings_global_action_transfer_in,
           ),
         ],
       ),

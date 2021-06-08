@@ -35,17 +35,15 @@ class DepositMenu extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             title,
-                            style: TextStyle(
-                                color: kTextColor,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyText2!
+                                .copyWith(fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 10),
                           Text(
                             subTitle,
-                            style: TextStyle(
-                              color: kSecondaryTextColor,
-                            ),
+                            style: Theme.of(context).textTheme.caption,
                           ),
                         ],
                       ),
