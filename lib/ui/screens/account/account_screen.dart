@@ -27,102 +27,105 @@ class AccountScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: 15),
-                Text(
-                  'Saldo disponível',
-                  style: Theme.of(context)
-                      .textTheme
-                      .subtitle2!
-                      .copyWith(fontWeight: FontWeight.w500),
-                ),
-                SizedBox(height: 7),
-                Text(
-                  'R\$ $kBalance',
-                  style: Theme.of(context).textTheme.headline3,
-                ),
-                SizedBox(height: 50),
-                AccountMenu(
-                  'Dinheiro guardado',
-                  Text(
-                    'R\$ $kBalance',
-                    style: Theme.of(context)
-                        .textTheme
-                        .bodyText2!
-                        .copyWith(fontWeight: FontWeight.w500, fontSize: 15),
-                  ),
-                  Mdi.piggyBankOutline,
-                ),
-                SizedBox(height: 38),
-                AccountMenu(
-                  'Rendimento total da conta',
-                  RichText(
-                    text: TextSpan(
-                      text: '+R\$ $kIcome',
-                      style: Theme.of(context).textTheme.bodyText2!.copyWith(
-                          color: kLimitColor,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 15),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: ' este mês',
-                          style: TextStyle(
-                            color: kTextColor,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Mdi.signal,
-                ),
-              ],
-            ),
-          ),
-          SizedBox(height: 14),
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              physics: BouncingScrollPhysics(),
-              child: Row(
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  LabelButton('Depositar', Mdi.cashPlus),
-                  LabelButton('Pagar', Mdi.barcode),
-                  LabelButton('Transferir', Mdi.cubeSend),
-                  LabelButton('Empréstimos', Mdi.cashMinus),
-                  LabelButton('Cobrar', Mdi.messageAlertOutline),
-                  SizedBox(width: 20),
+                  SizedBox(height: 20),
+                  Text(
+                    'Saldo disponível',
+                    style: Theme.of(context)
+                        .textTheme
+                        .subtitle2!
+                        .copyWith(fontWeight: FontWeight.w500),
+                  ),
+                  SizedBox(height: 7),
+                  Text(
+                    'R\$ $kBalance',
+                    style: Theme.of(context).textTheme.headline3,
+                  ),
+                  SizedBox(height: 50),
+                  AccountMenu(
+                    'Dinheiro guardado',
+                    Text(
+                      'R\$ $kSaved',
+                      style: Theme.of(context)
+                          .textTheme
+                          .bodyText2!
+                          .copyWith(fontWeight: FontWeight.w500, fontSize: 16),
+                    ),
+                    Mdi.piggyBankOutline,
+                  ),
+                  SizedBox(height: 38),
+                  AccountMenu(
+                    'Rendimento total da conta',
+                    RichText(
+                      text: TextSpan(
+                        text: '+R\$ $kIcome',
+                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                              color: kLimitColor,
+                              fontWeight: FontWeight.w500,
+                            ),
+                        children: <TextSpan>[
+                          TextSpan(
+                            text: ' este mês',
+                            style: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              color: kTextColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Mdi.signal,
+                  ),
                 ],
               ),
             ),
-          ),
-          SizedBox(height: 25),
-          Container(height: 1, color: kLineColor),
-          SizedBox(height: 50),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Text('Histórico',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6!
-                    .copyWith(fontWeight: FontWeight.w500)),
-          ),
-          ListView(
-            shrinkWrap: true,
-            children: [
-              HistoricCard(
-                  'Transferência enviada', 'Ricardo Dalarme', NuIcons.money),
-            ],
-          )
-        ],
+            SizedBox(height: 14),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                physics: BouncingScrollPhysics(),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    LabelButton('Depositar', Mdi.cashPlus),
+                    LabelButton('Pagar', Mdi.barcode),
+                    LabelButton('Transferir', Mdi.cubeSend),
+                    LabelButton('Empréstimos', Mdi.cashMinus),
+                    LabelButton('Cobrar', Mdi.messageAlertOutline),
+                    SizedBox(width: 20),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 25),
+            Container(height: 1, color: kLineColor),
+            SizedBox(height: 50),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Text('Histórico',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline6!
+                      .copyWith(fontWeight: FontWeight.w500)),
+            ),
+            HistoricCard(
+                'Transferência enviada', 'Ricardo Dalarme', NuIcons.money),
+            HistoricCard(
+                'Transferência enviada', 'Ricardo Dalarme', NuIcons.money),
+            HistoricCard(
+                'Transferência enviada', 'Ricardo Dalarme', NuIcons.money),
+          ],
+        ),
       ),
     );
   }

@@ -11,7 +11,7 @@ class LabelButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 10),
+      margin: EdgeInsets.only(right: 5),
       width: 82,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
