@@ -88,7 +88,7 @@ class AccountScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 14),
+            SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: SingleChildScrollView(
@@ -118,12 +118,15 @@ class AccountScreen extends StatelessWidget {
                       .headline6!
                       .copyWith(fontWeight: FontWeight.w500)),
             ),
+            SizedBox(height: 30),
             HistoricCard(
-                'Transferência enviada', 'Ricardo Dalarme', NuIcons.money),
-            HistoricCard(
-                'Transferência enviada', 'Ricardo Dalarme', NuIcons.money),
-            HistoricCard(
-                'Transferência enviada', 'Ricardo Dalarme', NuIcons.money),
+                'Transferência enviada',
+                'Ricardo Dalarme de Oliveira Filho',
+                NuIcons.nuds_ic_add_circle),
+            HistoricCard('Transferência enviada', 'Ricardo Dalarme',
+                NuIcons.nuds_ic_add_circle),
+            HistoricCard('Transferência enviada', 'Ricardo Dalarme',
+                NuIcons.nuds_ic_add_circle),
           ],
         ),
       ),

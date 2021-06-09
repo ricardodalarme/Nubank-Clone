@@ -19,42 +19,65 @@ class HistoricCard extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(vertical: 15),
             padding: EdgeInsets.symmetric(horizontal: 20),
-            height: 80,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: <Widget>[
-                    Icon(icon, color: kSecondaryTextColor),
-                    SizedBox(width: 20),
-                    Container(
-                      width: MediaQuery.of(context).size.width - 125,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  height: 48,
+                  width: 48,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: kLabelButtonColor,
+                  ),
+                  child: Icon(icon),
+                ),
+                SizedBox(width: 20),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
                           Text(
                             title,
                             style: Theme.of(context)
                                 .textTheme
                                 .bodyText2!
-                                .copyWith(fontWeight: FontWeight.bold),
+                                .copyWith(fontWeight: FontWeight.w500),
                           ),
-                          SizedBox(height: 10),
                           Text(
-                            subTitle,
+                            'Ontem',
                             style: Theme.of(context).textTheme.caption,
                           ),
                         ],
                       ),
-                    ),
-                  ],
+                      SizedBox(height: 10),
+                      Text(
+                        subTitle.toUpperCase(),
+                        style: Theme.of(context)
+                            .textTheme
+                            .subtitle2!
+                            .copyWith(height: 1.6),
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        'R\$ 30,00',
+                        style: Theme.of(context).textTheme.subtitle2,
+                      ),
+                      SizedBox(height: 5),
+                      Text(
+                        'Pix',
+                        style: Theme.of(context).textTheme.caption,
+                      ),
+                    ],
+                  ),
                 ),
-                Icon(NuIcons.abc_ic_go_search_api_material,
-                    color: kSecondaryTextColor),
               ],
             ),
           ),
+          SizedBox(height: 5),
           Container(
             height: 1,
             color: kUnviewColor,
@@ -64,3 +87,5 @@ class HistoricCard extends StatelessWidget {
     );
   }
 }
+
+class Bowidth {}
