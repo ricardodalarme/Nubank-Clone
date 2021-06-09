@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/core/constants.dart';
+import 'package:nubank_clone/ui/screens/account/components/account_menu.dart';
+import 'package:nubank_clone/ui/screens/account/components/historic_card.dart';
 import 'package:nubank_clone/ui/shared/label_button.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
@@ -14,128 +17,111 @@ class AccountScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(NuIcons.back, color: kSecondaryTextColor),
+          icon: Icon(NuIcons.nuds_ic_chevron_left, color: kSecondaryTextColor),
           onPressed: () => Navigator.of(context).pop(),
         ),
         actions: [
           IconButton(
-            icon: Icon(NuIcons.help, color: kSecondaryTextColor),
+            icon: Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
             onPressed: () {},
           )
         ],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
             padding: EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                SizedBox(height: 25),
+              children: [
+                SizedBox(height: 15),
                 Text(
                   'Saldo disponível',
-                  style: TextStyle(
-                    color: kSecondaryTextColor,
-                    fontSize: 16,
-                  ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .subtitle2!
+                      .copyWith(fontWeight: FontWeight.w500),
                 ),
+                SizedBox(height: 7),
                 Text(
                   'R\$ $kBalance',
-                  style: TextStyle(
-                      color: kTextColor,
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.headline3,
                 ),
-                SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: <Widget>[
-                        Icon(
-                          NuIcons.ic_nudge_girl_and_pig,
-                          color: kSecondaryTextColor,
-                        ),
-                        SizedBox(width: 20),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              'Dinheiro guardado',
-                              style: TextStyle(
-                                color: kSecondaryTextColor,
-                              ),
-                            ),
-                            Text(
-                              'R\$ $kSaved',
-                              style: TextStyle(
-                                  color: kTextColor,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    IconButton(
-                      icon: Icon(NuIcons.arrow_right_list_item),
-                      onPressed: null,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 20),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Row(
-                      children: <Widget>[
-                        Icon(NuIcons.abc_ic_arrow_drop_right_black_24dp),
-                        SizedBox(width: 10),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              'Rendimento total da conta',
-                              style: TextStyle(
-                                color: kSecondaryTextColor,
-                              ),
-                            ),
-                            Text(
-                              '+R\$ $kIcome este mês',
-                              style: TextStyle(
-                                color: kTextColor,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    IconButton(
-                      icon: Icon(NuIcons.arrow_right_list_item),
-                      onPressed: null,
-                    ),
-                  ],
-                ),
-                SizedBox(height: 15),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  physics: BouncingScrollPhysics(),
-                  child: Row(
-                    children: <Widget>[
-                      LabelButton('Depositar', NuIcons.abc_ic_ab_back_material),
-                      LabelButton('Pagar', NuIcons.abc_ic_ab_back_material),
-                      LabelButton(
-                          'Transferir', NuIcons.abc_ic_ab_back_material),
-                      LabelButton(
-                          'Empréstimos', NuIcons.abc_ic_ab_back_material),
-                      LabelButton('Cobrar', NuIcons.abc_ic_ab_back_material),
-                    ],
+                SizedBox(height: 50),
+                AccountMenu(
+                  'Dinheiro guardado',
+                  Text(
+                    'R\$ $kBalance',
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyText2!
+                        .copyWith(fontWeight: FontWeight.w500, fontSize: 15),
                   ),
+                  Mdi.piggyBankOutline,
+                ),
+                SizedBox(height: 38),
+                AccountMenu(
+                  'Rendimento total da conta',
+                  RichText(
+                    text: TextSpan(
+                      text: '+R\$ $kIcome',
+                      style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                          color: kLimitColor,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15),
+                      children: <TextSpan>[
+                        TextSpan(
+                          text: ' este mês',
+                          style: TextStyle(
+                            color: kTextColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Mdi.signal,
                 ),
               ],
             ),
           ),
-          Container(height: 1, color: kSecondaryTextColor),
+          SizedBox(height: 14),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              physics: BouncingScrollPhysics(),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  LabelButton('Depositar', Mdi.cashPlus),
+                  LabelButton('Pagar', Mdi.barcode),
+                  LabelButton('Transferir', Mdi.cubeSend),
+                  LabelButton('Empréstimos', Mdi.cashMinus),
+                  LabelButton('Cobrar', Mdi.messageAlertOutline),
+                  SizedBox(width: 20),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 25),
+          Container(height: 1, color: kLineColor),
+          SizedBox(height: 50),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Text('Histórico',
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6!
+                    .copyWith(fontWeight: FontWeight.w500)),
+          ),
+          ListView(
+            shrinkWrap: true,
+            children: [
+              HistoricCard(
+                  'Transferência enviada', 'Ricardo Dalarme', NuIcons.money),
+            ],
+          )
         ],
       ),
     );
