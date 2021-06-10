@@ -1,3 +1,4 @@
+import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:mdi/mdi.dart';
@@ -60,7 +61,7 @@ class AccountScreen extends StatelessWidget {
                           .bodyText2!
                           .copyWith(fontWeight: FontWeight.w500, fontSize: 16),
                     ),
-                    Mdi.piggyBankOutline,
+                    BootstrapIcons.piggy_bank,
                   ),
                   SizedBox(height: 38),
                   AccountMenu(

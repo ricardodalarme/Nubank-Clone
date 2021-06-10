@@ -10,6 +10,7 @@ dependencies:
   provider: ^5.0.0
   mdi: ^5.0.0-nullsafety.0
   page_transition: ^2.0.2
+  bootstrap_icons: ^1.5.0
 
   flutter:
     sdk: flutter
