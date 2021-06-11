@@ -98,10 +98,10 @@ class AccountScreen extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    LabelButton('Depositar', Mdi.cashPlus),
+                    LabelButton('Depositar', BootstrapIcons.cash),
                     LabelButton('Pagar', Mdi.barcode),
                     LabelButton('Transferir', Mdi.cubeSend),
-                    LabelButton('Empréstimos', Mdi.cashMinus),
+                    LabelButton('Empréstimos', BootstrapIcons.bank),
                     LabelButton('Cobrar', Mdi.messageAlertOutline),
                     SizedBox(width: 20),
                   ],
@@ -120,14 +120,12 @@ class AccountScreen extends StatelessWidget {
                       .copyWith(fontWeight: FontWeight.w500)),
             ),
             SizedBox(height: 30),
+            HistoricCard('Transferência enviada',
+                'Ricardo Dalarme de Oliveira Filho', Mdi.cubeSend),
             HistoricCard(
-                'Transferência enviada',
-                'Ricardo Dalarme de Oliveira Filho',
-                NuIcons.nuds_ic_add_circle),
-            HistoricCard('Transferência enviada', 'Ricardo Dalarme',
-                NuIcons.nuds_ic_add_circle),
-            HistoricCard('Transferência enviada', 'Ricardo Dalarme',
-                NuIcons.nuds_ic_add_circle),
+                'Transferência enviada', 'Ricardo Dalarme', Mdi.cubeSend),
+            HistoricCard(
+                'Transferência enviada', 'Ricardo Dalarme', Mdi.cubeSend),
           ],
         ),
       ),
