@@ -39,10 +39,13 @@ class LoanScreen extends StatelessWidget {
                     'O valor disponível no momento é de R\$ $kLoan',
                     style: Theme.of(context).textTheme.headline6,
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 15),
                   Text(
                     'Este valor pode mudar diariamente devido à nossa análise de crédito.',
-                    style: Theme.of(context).textTheme.subtitle2,
+                    style: Theme.of(context)
+                        .textTheme
+                        .subtitle2!
+                        .copyWith(height: 1.3),
                   ),
                   SizedBox(height: 20),
                   Text(
