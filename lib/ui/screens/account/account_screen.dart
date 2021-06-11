@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/core/constants.dart';
+import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/ui/screens/account/components/account_menu.dart';
 import 'package:nubank_clone/ui/screens/account/components/historic_card.dart';
 import 'package:nubank_clone/ui/shared/label_button.dart';
@@ -19,7 +20,7 @@ class AccountScreen extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           icon: Icon(NuIcons.nuds_ic_chevron_left, color: kSecondaryTextColor),
-          onPressed: () => Navigator.of(context).pop(),
+          onPressed: () => MyRouter.popPage(context),
         ),
         actions: [
           IconButton(
