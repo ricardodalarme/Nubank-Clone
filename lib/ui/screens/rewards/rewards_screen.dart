@@ -42,7 +42,7 @@ class EasyInvestScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 47),
                 Text(
-                  'É fácil juntar: R\$ 1 = 1 ponto',
+                  r'É fácil juntar: R$ 1 = 1 ponto',
                   style: Theme.of(context).textTheme.headline4,
                 ),
                 const SizedBox(height: 10),

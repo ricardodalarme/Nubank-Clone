@@ -13,16 +13,14 @@ class ExpandedButton extends StatelessWidget {
     return Expanded(
       child: GestureDetector(
         onTap: onTap,
-        child: Container(
-          child: Center(
-              child: Text(
-            text.toUpperCase(),
-            style: Theme.of(context)
-                .textTheme
-                .bodyText1!
-                .copyWith(color: color, fontWeight: FontWeight.bold),
-          )),
-        ),
+        child: Center(
+            child: Text(
+          text.toUpperCase(),
+          style: Theme.of(context)
+              .textTheme
+              .bodyText1!
+              .copyWith(color: color, fontWeight: FontWeight.bold),
+        )),
       ),
     );
   }

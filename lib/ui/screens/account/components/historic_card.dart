@@ -62,7 +62,7 @@ class HistoricCard extends StatelessWidget {
                       ),
                       SizedBox(height: 5),
                       Text(
-                        'R\$ 30,00',
+                        r'R$ 30,00',
                         style: Theme.of(context).textTheme.subtitle2,
                       ),
                       SizedBox(height: 5),

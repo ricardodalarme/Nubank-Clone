@@ -137,7 +137,7 @@ class CreditScreen extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(height: 20),
-                  HistoricCard('Pagamento recebido', 'Você pagou R\$ 50,00',
+                  HistoricCard('Pagamento recebido', r'Você pagou R$ 50,00',
                       Mdi.cubeSend),
                   HistoricCard('Supermecado', 'Ricardo Dalarme', Mdi.cubeSend),
                   HistoricCard(

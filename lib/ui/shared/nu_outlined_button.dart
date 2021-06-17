@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 
 class NuOutlinedButton extends StatelessWidget {
-  final String Value;
+  final String value;
 
-  NuOutlinedButton(this.Value);
+  NuOutlinedButton(this.value);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class NuOutlinedButton extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       ),
       child: Text(
-        Value.toUpperCase(),
+        value.toUpperCase(),
         style: Theme.of(context)
             .textTheme
             .caption!

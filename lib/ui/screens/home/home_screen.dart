@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/ui/screens/block/block_screen.dart';
@@ -20,7 +21,6 @@ import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'components/circle_button.dart';
-import 'package:nubank_clone/core/app_state.dart';
 
 class HomeScreen extends StatelessWidget {
   final _cards = [
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var state = Provider.of<AppState>(context);
+    final state = Provider.of<AppState>(context);
 
     return Container(
       color: kPrimaryColor,
