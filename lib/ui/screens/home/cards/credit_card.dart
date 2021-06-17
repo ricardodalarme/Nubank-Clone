@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/credit/credit_screen.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
-import 'package:nubank_clone/core/constants.dart';
 import 'package:page_transition/page_transition.dart';
 
 class CreditCard extends StatelessWidget {

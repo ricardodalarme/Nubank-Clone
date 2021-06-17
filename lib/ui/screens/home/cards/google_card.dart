@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/ui/shared/nu_outlined_button.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
+import 'package:nubank_clone/ui/shared/nu_outlined_button.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
 class GoogleCard extends StatelessWidget {

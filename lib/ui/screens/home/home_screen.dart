@@ -11,6 +11,7 @@ import 'package:nubank_clone/ui/screens/home/cards/google_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/insurance_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/loan_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/rewards_card.dart';
+import 'package:nubank_clone/ui/screens/home/components/circle_button.dart';
 import 'package:nubank_clone/ui/screens/home/components/menu_button.dart';
 import 'package:nubank_clone/ui/screens/loan/loan_screen.dart';
 import 'package:nubank_clone/ui/screens/payment/payment_screen.dart';
@@ -20,7 +21,6 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import 'components/circle_button.dart';
 
 class HomeScreen extends StatelessWidget {
   final _cards = [

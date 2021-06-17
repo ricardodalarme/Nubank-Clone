@@ -3,6 +3,7 @@ linter:
     - always_declare_return_types
     - always_put_control_body_on_new_line
     - always_require_non_null_named_parameters
+    - always_use_package_imports
     - annotate_overrides
     - avoid_bool_literals_in_conditional_expressions
     - avoid_classes_with_only_static_members
@@ -56,6 +57,7 @@ linter:
     - null_closures
     - omit_local_variable_types
     - overridden_fields
+    - package_api_docs
     - package_names
     - package_prefixed_library_names
     - prefer_adjacent_string_concatenation
