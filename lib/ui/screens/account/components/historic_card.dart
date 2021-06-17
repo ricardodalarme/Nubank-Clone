@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
-import 'package:nubank_clone/ui/theme/icons.dart';
 
 class HistoricCard extends StatelessWidget {
   final String title;

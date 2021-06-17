@@ -16,7 +16,7 @@ class LoanCard extends StatelessWidget {
         SizedBox(height: 12),
         Text(
           'Valor disponível de até',
-          style: Theme.of(context).textTheme.bodyText2!,
+          style: Theme.of(context).textTheme.bodyText2,
         ),
         SizedBox(height: 5),
         Text(
