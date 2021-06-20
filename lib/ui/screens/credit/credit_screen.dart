@@ -122,12 +122,11 @@ class CreditScreen extends StatelessWidget {
                   CreditMenu('Ajustar limites', NuIcons.cc_ic_limit_adjustment),
                   Container(width: 0.3, height: 100, color: kLineColor),
                   CreditMenu('Cartão virtual', NuIcons.ic_virtual_card),
-                  Container(width: 0.5, height: 100, color: kLineColor),
+                  Container(width: 0.3, height: 100, color: kLineColor),
                   CreditMenu(
                       'Bloquear cartão', NuIcons.ic_virtual_card_blocked),
                   Container(width: 0.3, height: 100, color: kLineColor),
                   CreditMenu('Indicar amigos', NuIcons.ic_refer_friend),
-                  SizedBox(width: 20),
                 ],
               ),
             ),
