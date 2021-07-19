@@ -23,6 +23,16 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
+  final _cards = [
+    CreditCard(),
+    AccountCard(),
+    LoanCard(),
+    InsuranceCard(),
+    RewardsCard(),
+    EasynvestCard(),
+    GoogleCard(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     final state = Provider.of<AppState>(context);
@@ -70,15 +80,7 @@ class HomeScreen extends StatelessWidget {
                       Expanded(
                         child: SingleChildScrollView(
                           physics: BouncingScrollPhysics(),
-                          child: Column(children: [
-                            CreditCard(state.viewValues),
-                            AccountCard(state.viewValues),
-                            LoanCard(state.viewValues),
-                            InsuranceCard(),
-                            RewardsCard(),
-                            EasynvestCard(),
-                            GoogleCard(),
-                          ]),
+                          child: Column(children: _cards),
                         ),
                       ),
                     ],

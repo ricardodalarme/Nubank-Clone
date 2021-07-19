@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/credit/credit_screen.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 
 class CreditCard extends StatelessWidget {
-  final bool viewValues;
-  CreditCard(this.viewValues);
   @override
   Widget build(BuildContext context) {
+    final viewValues = Provider.of<AppState>(context).viewValues;
+
     return MainCard(
       'Cartão de Crédito',
       NuIcons.ic_card_nu,
@@ -23,40 +25,37 @@ class CreditCard extends StatelessWidget {
         if (viewValues)
           Container(
             color: kUnviewColor,
-            height: 55,
+            height: 51,
             width: double.infinity,
           )
         else
-          Visibility(
-            visible: !viewValues,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'R\$ $kInvoce',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline5!
-                      .copyWith(color: kInvoiceColor),
-                ),
-                SizedBox(height: 5),
-                RichText(
-                  text: TextSpan(
-                    text: 'Limite disponível ',
-                    style: Theme.of(context).textTheme.bodyText2,
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'R\$ $kLimit',
-                        style: TextStyle(
-                          color: kLimitColor,
-                          fontWeight: FontWeight.bold,
-                        ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'R\$ $kInvoce',
+                style: Theme.of(context)
+                    .textTheme
+                    .headline5!
+                    .copyWith(color: kInvoiceColor),
+              ),
+              SizedBox(height: 5),
+              RichText(
+                text: TextSpan(
+                  text: 'Limite disponível ',
+                  style: Theme.of(context).textTheme.bodyText2,
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'R\$ $kLimit',
+                      style: TextStyle(
+                        color: kLimitColor,
+                        fontWeight: FontWeight.bold,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
       ],
       onTap: () => Navigator.push(

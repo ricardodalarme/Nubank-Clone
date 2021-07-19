@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/account/account_screen.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 
 class AccountCard extends StatelessWidget {
-  final bool viewValues;
-  AccountCard(this.viewValues);
   @override
   Widget build(BuildContext context) {
+    final viewValues = Provider.of<AppState>(context).viewValues;
+
     return MainCard(
       'Conta',
       NuIcons.ic_money_coins,
@@ -23,7 +25,7 @@ class AccountCard extends StatelessWidget {
         if (viewValues)
           Container(
             color: kUnviewColor,
-            height: 30,
+            height: 29,
             width: double.infinity,
           )
         else
