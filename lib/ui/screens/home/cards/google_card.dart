@@ -15,7 +15,7 @@ class GoogleCard extends StatelessWidget {
           style: Theme.of(context).textTheme.bodyText2,
         ),
         SizedBox(height: 15),
-        NuOutlinedButton('Regisrar meu cartão'),
+        NuOutlinedButton('Registrar meu cartão'),
       ],
     );
   }
