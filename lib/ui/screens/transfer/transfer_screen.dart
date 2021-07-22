@@ -13,7 +13,6 @@ class TransferScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
       height: MediaQuery.of(context).size.height - 50,
       child: Scaffold(
         backgroundColor: Colors.white,
