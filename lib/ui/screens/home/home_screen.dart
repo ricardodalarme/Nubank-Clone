@@ -3,6 +3,7 @@ import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/ui/screens/block/block_screen.dart';
+import 'package:nubank_clone/ui/screens/charge/charge_screen.dart';
 import 'package:nubank_clone/ui/screens/deposit/deposit_screen.dart';
 import 'package:nubank_clone/ui/screens/home/cards/account_card.dart';
 import 'package:nubank_clone/ui/screens/home/cards/credit_card.dart';
@@ -16,7 +17,9 @@ import 'package:nubank_clone/ui/screens/home/components/menu_button.dart';
 import 'package:nubank_clone/ui/screens/loan/loan_screen.dart';
 import 'package:nubank_clone/ui/screens/payment/payment_screen.dart';
 import 'package:nubank_clone/ui/screens/pix/pix_screen.dart';
+import 'package:nubank_clone/ui/screens/recharge/recharge_screen.dart';
 import 'package:nubank_clone/ui/screens/refer/refer_screen.dart';
+import 'package:nubank_clone/ui/screens/transfer/transfer_screen.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
@@ -111,8 +114,12 @@ class HomeScreen extends StatelessWidget {
                       onTap: () =>
                           MyRouter.showBottomSheet(context, ReferScreen()),
                     ),
-                    MenuButton('Transferir',
-                        NuIcons.ic_savings_global_action_transfer_out),
+                    MenuButton(
+                      'Transferir',
+                      NuIcons.ic_savings_global_action_transfer_out,
+                      onTap: () =>
+                          MyRouter.showBottomSheet(context, TransferScreen()),
+                    ),
                     MenuButton(
                       'Depositar',
                       NuIcons.ic_savings_global_action_transfer_in,
@@ -130,7 +137,9 @@ class HomeScreen extends StatelessWidget {
                               child: LoanScreen())),
                     ),
                     MenuButton('Cartão virtual', NuIcons.ic_virtual_card),
-                    MenuButton('Recarga de celular', NuIcons.ic_phone),
+                    MenuButton('Recarga de celular', NuIcons.ic_phone,
+                        onTap: () => MyRouter.showBottomSheet(
+                            context, RechargeScreen())),
                     MenuButton(
                         'Ajustar limite', NuIcons.cc_ic_limit_adjustment),
                     MenuButton(
@@ -142,7 +151,12 @@ class HomeScreen extends StatelessWidget {
                         isScrollControlled: false,
                       ),
                     ),
-                    MenuButton('Cobrar', NuIcons.nuds_ic_request_money),
+                    MenuButton(
+                      'Cobrar',
+                      NuIcons.nuds_ic_request_money,
+                      onTap: () =>
+                          MyRouter.showBottomSheet(context, ChargeScreen()),
+                    ),
                     MenuButton('Doação', NuIcons.nuds_ic_personal_loan),
                     MenuButton('Me ajuda', NuIcons.help),
                     SizedBox(width: 8),

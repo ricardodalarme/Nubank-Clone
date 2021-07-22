@@ -269,9 +269,9 @@ class NuIcons {
       IconData(0xe888, fontFamily: _kFontFamily);
   static const IconData warning_extra_payment_image =
       IconData(0xe889, fontFamily: _kFontFamily);
-  static const IconData _avd_hide_password__0 =
+  static const IconData avd_hide_password_0 =
       IconData(0xe88a, fontFamily: _kFontFamily);
-  static const IconData _avd_show_password__0 =
+  static const IconData avd_show_password_0 =
       IconData(0xe88b, fontFamily: _kFontFamily);
   static const IconData abc_ic_ab_back_material =
       IconData(0xe88c, fontFamily: _kFontFamily);
