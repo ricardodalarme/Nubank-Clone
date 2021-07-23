@@ -12,6 +12,7 @@ dependencies:
   page_transition: ^2.0.2
   bootstrap_icons: ^1.5.0
   flutter_masked_text2: ^0.9.1
+  easy_localization: ^3.0.0
 
   flutter:
     sdk: flutter

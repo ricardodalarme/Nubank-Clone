@@ -1,0 +1,43 @@
+{
+    "hello": "Hello, {}",
+    "pix": "Pix",
+    "pay": "Pagar",
+    "refer_friend": "Indicar amigos",
+    "transfer": "Transferir",
+    "deposit": "Depositar",
+    "loan": "Empréstimo",
+    "virtual_card": "Cartão virtual",
+    "recharge_phone": "Recarga de celular",
+    "adjust_limit": "Ajustar limite",
+    "block_card": "Bloquear cartão",
+    "charge": "Cobrar",
+    "donation": "Doação",
+    "help_me": "Me ajuda",
+    "credit_card": "Cartão de Crédito",
+    "current_invoice": "Fatura atual",
+    "limit_available": "Limite disponível",
+    "account": "Conta",
+    "balance_available": "Saldo disponível",
+    "loan_card": {
+        "available": "Valor disponível de até",
+        "simulate": "Simular empréstimo"
+    },
+    "life_insurance": "Seguro de vida",
+    "life_insurance_card": {
+        "text": "Conheça Nubank Vida: um seguro simples que cabe no seu bolso."
+    },
+    "meet": "Conhecer",
+    "rewards": "Rewards",
+    "rewards_card": {
+        "text": "Pague compras com pontos que nunca expiram."
+    },
+    "easynvest_investment": "Investimento Easynvest",
+    "easynvest_investment_card": {
+        "text": "Conheça a Easynvest e invista com taxa zero de corretagem e sem burocracias!"
+    },
+    "google_pay": "Google Pay",
+    "google_pay_card": {
+        "text": "Use o Google Pay com seus cartões Nubank",
+        "register": "Registar meu cartão"
+    }
+}
