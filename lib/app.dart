@@ -6,6 +6,9 @@ import 'package:nubank_clone/ui/screens/home/home_screen.dart';
 import 'package:nubank_clone/ui/theme/texts.dart';
 import 'package:provider/provider.dart';
 
+// flutter pub run easy_localization:generate -S assets/translations -f keys -O lib/core/ -o locale_keys.g.dart
+// flutter pub run easy_localization:generate -S assets/translations -s pt-BR.json -O lib/core/internationalization -o loader.g.dart -f json
+
 class NuApp extends StatelessWidget {
   NuApp() {
     SystemChrome.setPreferredOrientations([
@@ -35,6 +38,3 @@ class NuApp extends StatelessWidget {
     );
   }
 }
-
-// flutter pub run easy_localization:generate -S assets/translations -s pt-BR.json -O lib/core/internationalization -o loader.g.dart -f json
-// flutter pub run easy_localization:generate -S assets/translations -f keys -o locale_keys.g.dart

@@ -40,8 +40,8 @@ class TransferScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline4,
               ),
               SizedBox(height: 15),
-              Text.rich(
-                TextSpan(
+              RichText(
+                text: TextSpan(
                   text: 'Saldo disponível em conta ',
                   style: Theme.of(context).textTheme.bodyText2,
                   children: [
