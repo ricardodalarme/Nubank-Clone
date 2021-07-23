@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
+import 'package:nubank_clone/core/locale_keys.g.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/screens/loan/loan_screen.dart';
 import 'package:nubank_clone/ui/shared/nu_outlined_button.dart';
@@ -15,7 +17,7 @@ class LoanCard extends StatelessWidget {
     final viewValues = Provider.of<AppState>(context).viewValues;
 
     return MainCard(
-      'Empréstimo',
+      LocaleKeys.loan.tr(),
       NuIcons.nuds_ic_personal_loan,
       [
         SizedBox(height: 12),
@@ -30,7 +32,7 @@ class LoanCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Valor disponível de até',
+                LocaleKeys.loan_card_available.tr(),
                 style: Theme.of(context).textTheme.bodyText2,
               ),
               SizedBox(height: 5),
@@ -44,7 +46,7 @@ class LoanCard extends StatelessWidget {
             ],
           ),
         SizedBox(height: 15),
-        NuOutlinedButton('Simular empréstimo'),
+        NuOutlinedButton(LocaleKeys.loan_card_simulate.tr()),
       ],
       onTap: () => Navigator.push(
           context,

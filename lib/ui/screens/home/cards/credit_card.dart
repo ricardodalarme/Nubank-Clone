@@ -7,6 +7,8 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:nubank_clone/core/locale_keys.g.dart';
 
 class CreditCard extends StatelessWidget {
   @override
@@ -14,7 +16,7 @@ class CreditCard extends StatelessWidget {
     final viewValues = Provider.of<AppState>(context).viewValues;
 
     return MainCard(
-      'Cartão de Crédito',
+      LocaleKeys.credit_card.tr(),
       NuIcons.ic_card_nu,
       [
         Text(
@@ -42,11 +44,11 @@ class CreditCard extends StatelessWidget {
               SizedBox(height: 5),
               RichText(
                 text: TextSpan(
-                  text: 'Limite disponível ',
+                  text: LocaleKeys.limit_available.tr(),
                   style: Theme.of(context).textTheme.bodyText2,
                   children: <TextSpan>[
                     TextSpan(
-                      text: 'R\$ $kLimit',
+                      text: ' R\$ $kLimit',
                       style: TextStyle(
                         color: kLimitColor,
                         fontWeight: FontWeight.bold,

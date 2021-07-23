@@ -1,4 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/core/locale_keys.g.dart';
 import 'package:nubank_clone/ui/screens/easyinvest/easyinvest_screen.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/shared/nu_outlined_button.dart';
@@ -9,15 +11,15 @@ class EasynvestCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MainCard(
-      'Investimento Easynvest',
+      LocaleKeys.easynvest_investment.tr(),
       NuIcons.ic_yield,
       [
         Text(
-          'Conheça a Easynvest e invista com taxa zero de corretagem e sem burocracias!',
+          LocaleKeys.easynvest_investment_card_text.tr(),
           style: Theme.of(context).textTheme.bodyText2,
         ),
         SizedBox(height: 15),
-        NuOutlinedButton('Conhecer'),
+        NuOutlinedButton(LocaleKeys.meet.tr()),
       ],
       onTap: () => Navigator.push(
           context,

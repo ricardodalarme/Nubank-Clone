@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
+import 'package:nubank_clone/core/locale_keys.g.dart';
 import 'package:nubank_clone/ui/screens/account/account_screen.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
@@ -14,11 +16,11 @@ class AccountCard extends StatelessWidget {
     final viewValues = Provider.of<AppState>(context).viewValues;
 
     return MainCard(
-      'Conta',
+      LocaleKeys.account.tr(),
       NuIcons.ic_money_coins,
       [
         Text(
-          'Saldo disponível',
+          LocaleKeys.balance_available.tr(),
           style: Theme.of(context).textTheme.caption,
         ),
         SizedBox(height: 13),
