@@ -6,9 +6,15 @@ import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/ui/screens/account/components/account_menu.dart';
 import 'package:nubank_clone/ui/screens/account/components/historic_card.dart';
+import 'package:nubank_clone/ui/screens/charge/charge_screen.dart';
+import 'package:nubank_clone/ui/screens/deposit/deposit_screen.dart';
+import 'package:nubank_clone/ui/screens/loan/loan_screen.dart';
+import 'package:nubank_clone/ui/screens/payment/payment_screen.dart';
+import 'package:nubank_clone/ui/screens/transfer/transfer_screen.dart';
 import 'package:nubank_clone/ui/shared/label_button.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
+import 'package:page_transition/page_transition.dart';
 
 class AccountScreen extends StatelessWidget {
   @override
@@ -99,11 +105,40 @@ class AccountScreen extends StatelessWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    LabelButton('Depositar', BootstrapIcons.cash),
-                    LabelButton('Pagar', Mdi.barcode),
-                    LabelButton('Transferir', Mdi.cubeSend),
-                    LabelButton('Empréstimos', BootstrapIcons.bank),
-                    LabelButton('Cobrar', Mdi.messageAlertOutline),
+                    LabelButton(
+                      'Depositar',
+                      BootstrapIcons.cash,
+                      onPressed: () =>
+                          MyRouter.showBottomSheet(context, DepositScreen()),
+                    ),
+                    LabelButton(
+                      'Pagar',
+                      Mdi.barcode,
+                      onPressed: () =>
+                          MyRouter.showBottomSheet(context, PaymentScreen()),
+                    ),
+                    LabelButton(
+                      'Transferir',
+                      Mdi.cubeSend,
+                      onPressed: () =>
+                          MyRouter.showBottomSheet(context, TransferScreen()),
+                    ),
+                    LabelButton(
+                      'Empréstimos',
+                      BootstrapIcons.bank,
+                      onPressed: () => Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.rightToLeft,
+                              duration: Duration(milliseconds: 400),
+                              child: LoanScreen())),
+                    ),
+                    LabelButton(
+                      'Cobrar',
+                      Mdi.messageAlertOutline,
+                      onPressed: () =>
+                          MyRouter.showBottomSheet(context, ChargeScreen()),
+                    ),
                     SizedBox(width: 20),
                   ],
                 ),

@@ -183,6 +183,7 @@ class HomeScreen extends StatelessWidget {
                   'Encontrar atalhos',
                   NuIcons.help,
                   onPressed: () {},
+                  tag: 'Dica',
                 ),
                 SizedBox(width: 20),
               ],

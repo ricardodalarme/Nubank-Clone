@@ -42,9 +42,21 @@ class PixScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      LabelButton('Pagar', Mdi.arrangeSendToBack),
-                      LabelButton('Transferir', Mdi.cubeSend),
-                      LabelButton('Cobrar', Mdi.messageAlertOutline),
+                      LabelButton(
+                        'Pagar',
+                        Mdi.arrangeSendToBack,
+                        onPressed: () {},
+                      ),
+                      LabelButton(
+                        'Transferir',
+                        Mdi.cubeSend,
+                        onPressed: () {},
+                      ),
+                      LabelButton(
+                        'Cobrar',
+                        Mdi.messageAlertOutline,
+                        onPressed: () {},
+                      ),
                     ],
                   ),
                   SizedBox(height: 20),
