@@ -62,14 +62,11 @@ class DiscoverCard extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 10),
-                Container(
-                  height: 50,
-                  child: Text(
-                    content,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 3,
-                    style: Theme.of(context).textTheme.bodyText2,
-                  ),
+                Text(
+                  content,
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 3,
+                  style: Theme.of(context).textTheme.bodyText2,
                 ),
                 SizedBox(height: 10),
                 FilledButton(buttonText),

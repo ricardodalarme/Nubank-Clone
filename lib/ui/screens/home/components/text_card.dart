@@ -17,7 +17,7 @@ class TextCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(right: 14),
-      width: 270,
+      width: 280,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(10)),
           color: kLabelButtonColor),
@@ -27,7 +27,7 @@ class TextCard extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(10)),
           onTap: onTap,
           child: Padding(
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(25),
             child: RichText(
               overflow: TextOverflow.ellipsis,
               maxLines: 2,

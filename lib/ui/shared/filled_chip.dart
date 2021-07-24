@@ -10,6 +10,7 @@ class FilledButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Chip(
       backgroundColor: kPrimaryColor,
+      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 11),
       label: Text(
         value,
         style: Theme.of(context)
