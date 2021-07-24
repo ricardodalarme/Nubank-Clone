@@ -36,10 +36,17 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kPrimaryColor,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [kPrimaryColor, Colors.white],
+          stops: [0.5, 0.5],
+        ),
+      ),
       child: SafeArea(
         child: Scaffold(
-          backgroundColor: kPrimaryColor,
+          backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Column(
