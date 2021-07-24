@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/credit/credit_screen.dart';
-import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
+import 'package:nubank_clone/ui/screens/old_home/components/main_card.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
@@ -15,16 +15,14 @@ class CreditCard extends StatelessWidget {
 
     return MainCard(
       'Cartão de Crédito',
+      NuIcons.ic_card_nu,
       [
         Text(
           'Fatura atual',
-          style: Theme.of(context)
-              .textTheme
-              .subtitle2!
-              .copyWith(fontWeight: FontWeight.w600),
+          style: Theme.of(context).textTheme.caption,
         ),
         SizedBox(height: 13),
-        if (!viewValues)
+        if (viewValues)
           Container(
             color: kUnviewColor,
             height: 51,
@@ -34,18 +32,32 @@ class CreditCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('R\$ $kInvoce',
-                  style: Theme.of(context).textTheme.headline5),
+              Text(
+                'R\$ $kInvoce',
+                style: Theme.of(context)
+                    .textTheme
+                    .headline5!
+                    .copyWith(color: kInvoiceColor),
+              ),
               SizedBox(height: 5),
-              Text('Limite disponível R\$ $kLimit',
-                  style: Theme.of(context)
-                      .textTheme
-                      .caption!
-                      .copyWith(fontWeight: FontWeight.w500)),
+              RichText(
+                text: TextSpan(
+                  text: 'Limite disponível ',
+                  style: Theme.of(context).textTheme.bodyText2,
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'R\$ $kLimit',
+                      style: TextStyle(
+                        color: kLimitColor,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
       ],
-      icon: NuIcons.ic_card_nu,
       onTap: () => Navigator.push(
           context,
           PageTransition(

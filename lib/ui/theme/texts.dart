@@ -25,6 +25,7 @@ final customTextTheme = TextTheme(
     letterSpacing: -1.5,
   ),
   button: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+  caption: TextStyle(height: 1.5),
   headline5: TextStyle(fontWeight: FontWeight.bold),
   headline6: TextStyle(fontWeight: FontWeight.w400),
 );

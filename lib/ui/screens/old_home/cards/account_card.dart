@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/account/account_screen.dart';
-import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
+import 'package:nubank_clone/ui/screens/old_home/components/main_card.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
+import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
@@ -14,8 +15,14 @@ class AccountCard extends StatelessWidget {
 
     return MainCard(
       'Conta',
+      NuIcons.ic_money_coins,
       [
-        if (!viewValues)
+        Text(
+          'Saldo disponível',
+          style: Theme.of(context).textTheme.caption,
+        ),
+        SizedBox(height: 13),
+        if (viewValues)
           Container(
             color: kUnviewColor,
             height: 29,
@@ -24,7 +31,6 @@ class AccountCard extends StatelessWidget {
         else
           Text('R\$ $kBalance', style: Theme.of(context).textTheme.headline5),
       ],
-      hideDivider: true,
       onTap: () => Navigator.push(
           context,
           PageTransition(

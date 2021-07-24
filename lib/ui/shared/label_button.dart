@@ -17,7 +17,7 @@ class LabelButton extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           ElevatedButton(
-            onPressed: () => onPressed,
+            onPressed: onPressed,
             style: ElevatedButton.styleFrom(
               primary: kLabelButtonColor,
               shape: CircleBorder(),

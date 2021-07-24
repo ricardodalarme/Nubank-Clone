@@ -3,7 +3,6 @@ import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 import 'package:nubank_clone/ui/screens/loan/loan_screen.dart';
-import 'package:nubank_clone/ui/shared/nu_outlined_button.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
@@ -16,10 +15,8 @@ class LoanCard extends StatelessWidget {
 
     return MainCard(
       'Empréstimo',
-      NuIcons.nuds_ic_personal_loan,
       [
-        SizedBox(height: 12),
-        if (viewValues)
+        if (!viewValues)
           Container(
             color: kUnviewColor,
             height: 39,
@@ -31,21 +28,21 @@ class LoanCard extends StatelessWidget {
             children: [
               Text(
                 'Valor disponível de até',
-                style: Theme.of(context).textTheme.bodyText2,
-              ),
-              SizedBox(height: 5),
-              Text(
-                'R\$ $kLoan',
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText2!
-                    .copyWith(fontWeight: FontWeight.bold),
+                    .caption!
+                    .copyWith(fontWeight: FontWeight.w500),
               ),
+              SizedBox(height: 5),
+              Text('R\$ $kLoan',
+                  style: Theme.of(context)
+                      .textTheme
+                      .caption!
+                      .copyWith(fontWeight: FontWeight.w500)),
             ],
           ),
-        SizedBox(height: 15),
-        NuOutlinedButton('Simular empréstimo'),
       ],
+      icon: NuIcons.nuds_ic_personal_loan,
       onTap: () => Navigator.push(
           context,
           PageTransition(

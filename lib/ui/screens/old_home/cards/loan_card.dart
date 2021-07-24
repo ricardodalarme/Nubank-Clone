@@ -1,57 +1,57 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
-import 'package:nubank_clone/ui/screens/credit/credit_screen.dart';
-import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
+import 'package:nubank_clone/ui/screens/old_home/components/main_card.dart';
+import 'package:nubank_clone/ui/screens/loan/loan_screen.dart';
+import 'package:nubank_clone/ui/shared/nu_outlined_button.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
-class CreditCard extends StatelessWidget {
+class LoanCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final viewValues = Provider.of<AppState>(context).viewValues;
 
     return MainCard(
-      'Cartão de Crédito',
+      'Empréstimo',
+      NuIcons.nuds_ic_personal_loan,
       [
-        Text(
-          'Fatura atual',
-          style: Theme.of(context)
-              .textTheme
-              .subtitle2!
-              .copyWith(fontWeight: FontWeight.w600),
-        ),
-        SizedBox(height: 13),
-        if (!viewValues)
+        SizedBox(height: 12),
+        if (viewValues)
           Container(
             color: kUnviewColor,
-            height: 51,
+            height: 39,
             width: double.infinity,
           )
         else
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('R\$ $kInvoce',
-                  style: Theme.of(context).textTheme.headline5),
+              Text(
+                'Valor disponível de até',
+                style: Theme.of(context).textTheme.bodyText2,
+              ),
               SizedBox(height: 5),
-              Text('Limite disponível R\$ $kLimit',
-                  style: Theme.of(context)
-                      .textTheme
-                      .caption!
-                      .copyWith(fontWeight: FontWeight.w500)),
+              Text(
+                'R\$ $kLoan',
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText2!
+                    .copyWith(fontWeight: FontWeight.bold),
+              ),
             ],
           ),
+        SizedBox(height: 15),
+        NuOutlinedButton('Simular empréstimo'),
       ],
-      icon: NuIcons.ic_card_nu,
       onTap: () => Navigator.push(
           context,
           PageTransition(
               type: PageTransitionType.rightToLeft,
               duration: Duration(milliseconds: 400),
-              child: CreditScreen())),
+              child: LoanScreen())),
     );
   }
 }
