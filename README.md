@@ -13,8 +13,7 @@ Este projeto se trata de uma recriação bem próxima da interface do app do Nub
 
 <p float="left">
   <img src="/screenshots/home.jpg" width="250" />
-  <img src="/screenshots/home_new2.jpg" width="250" />
-  <img src="/screenshots/home_new2.jpg" width="250" />
+  <img src="/screenshots/home_new.jpg" width="250" />
   <img src="/screenshots/account.jpg" width="250" /> 
   <img src="/screenshots/credit.jpg" width="250" /> 
   <img src="/screenshots/loan.jpg" width="250" /> 
