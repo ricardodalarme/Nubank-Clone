@@ -1,4 +1,4 @@
-package com.example.nubank_clone
+package com.example.nubankclone
 
 import io.flutter.embedding.android.FlutterActivity
 

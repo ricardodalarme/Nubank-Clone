@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyRouter {
-  static Future pushPage(BuildContext context, Widget page) {
+   Future pushPage(BuildContext context, Widget page) {
     return Navigator.push(
       context,
       MaterialPageRoute(
