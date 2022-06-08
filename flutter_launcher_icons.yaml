@@ -1,0 +1,28 @@
+flutter_icons:
+  # A command-line tool which simplifies the task of updating your Flutter app's
+  # launcher icon. Fully flexible, allowing you to choose what platform you wish
+  # to update the launcher icon for and if you want.
+  # Customize the parameters below, and run the following command in the terminal:
+  # flutter pub run flutter_launcher_icons:main
+
+  # The android, ios and web parameters can be used to enable/disable generating
+  # an launcher icon on a given platform.
+  android: true
+  ios: true
+
+  # The location of the image file which you want to use as the app launcher icon
+  image_path: "assets/icons/logo_background.png"
+
+  # The location of the icon image file specific for a specific platform
+  # (optional - if not defined then the image_path is used)
+  #image_path_android:
+  #image_path_ios:
+
+  # The next two attributes are only used when generating Android launcher icon
+
+  # The color (E.g. "#ffffff") or image asset (E.g. "assets/images/christmas-background.png")
+  # which will be used to fill out the background of the adaptive icon.
+  #adaptive_icon_background:
+
+  # The image asset which will be used for the icon foreground of the adaptive icon
+  #adaptive_icon_foreground:
