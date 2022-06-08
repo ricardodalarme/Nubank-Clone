@@ -9,6 +9,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class CreditCard extends StatelessWidget {
+  const CreditCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     final viewValues = Provider.of<AppState>(context).viewValues;
@@ -21,7 +23,7 @@ class CreditCard extends StatelessWidget {
           'Fatura atual',
           style: Theme.of(context).textTheme.caption,
         ),
-        SizedBox(height: 13),
+        const SizedBox(height: 13),
         if (viewValues)
           Container(
             color: kUnviewColor,
@@ -39,12 +41,12 @@ class CreditCard extends StatelessWidget {
                     .headline5!
                     .copyWith(color: kInvoiceColor),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               RichText(
                 text: TextSpan(
                   text: 'Limite disponível ',
                   style: Theme.of(context).textTheme.bodyText2,
-                  children: <TextSpan>[
+                  children: const <TextSpan>[
                     TextSpan(
                       text: 'R\$ $kLimit',
                       style: TextStyle(
@@ -59,11 +61,13 @@ class CreditCard extends StatelessWidget {
           ),
       ],
       onTap: () => Navigator.push(
-          context,
-          PageTransition(
-              type: PageTransitionType.rightToLeft,
-              duration: Duration(milliseconds: 400),
-              child: CreditScreen())),
+        context,
+        PageTransition(
+          type: PageTransitionType.rightToLeft,
+          duration: const Duration(milliseconds: 400),
+          child: const CreditScreen(),
+        ),
+      ),
     );
   }
 }

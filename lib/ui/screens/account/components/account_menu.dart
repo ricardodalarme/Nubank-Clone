@@ -8,7 +8,13 @@ class AccountMenu extends StatelessWidget {
   final IconData icon;
   final Function()? onTap;
 
-  const AccountMenu(this.title, this.information, this.icon, {this.onTap});
+  const AccountMenu(
+    this.title,
+    this.information,
+    this.icon, {
+    this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +26,7 @@ class AccountMenu extends StatelessWidget {
           Row(
             children: <Widget>[
               Icon(icon),
-              SizedBox(width: 15),
+              const SizedBox(width: 15),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -28,16 +34,17 @@ class AccountMenu extends StatelessWidget {
                     title,
                     style: Theme.of(context).textTheme.subtitle2,
                   ),
-                  SizedBox(height: 7),
+                  const SizedBox(height: 7),
                   information,
                 ],
               ),
             ],
           ),
           GestureDetector(
-            onTap: null,
-            child: Icon(NuIcons.abc_ic_go_search_api_material,
-                color: kSecondaryTextColor),
+            child: const Icon(
+              NuIcons.abc_ic_go_search_api_material,
+              color: kSecondaryTextColor,
+            ),
           ),
         ],
       ),

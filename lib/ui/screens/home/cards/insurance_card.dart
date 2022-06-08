@@ -3,6 +3,8 @@ import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/ui/screens/home/components/main_card.dart';
 
 class InsuranceCard extends StatelessWidget {
+  const InsuranceCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MainCard(

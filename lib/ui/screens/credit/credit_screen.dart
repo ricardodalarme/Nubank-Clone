@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/core/router.dart';
@@ -9,6 +8,8 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
 class CreditScreen extends StatelessWidget {
+  const CreditScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,29 +18,33 @@ class CreditScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(NuIcons.nuds_ic_chevron_left, color: kSecondaryTextColor),
+          icon: const Icon(
+            NuIcons.nuds_ic_chevron_left,
+            color: kSecondaryTextColor,
+          ),
           onPressed: () => MyRouter.popPage(context),
         ),
         actions: [
           IconButton(
-            icon: Icon(NuIcons.nuds_ic_search, color: kSecondaryTextColor),
+            icon:
+                const Icon(NuIcons.nuds_ic_search, color: kSecondaryTextColor),
             onPressed: () {},
           ),
           IconButton(
-            icon: Icon(NuIcons.help, color: kSecondaryTextColor),
+            icon: const Icon(NuIcons.help, color: kSecondaryTextColor),
             onPressed: () {},
           ),
         ],
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
+            SizedBox(
               height: 560,
               child: Padding(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -51,7 +56,7 @@ class CreditScreen extends StatelessWidget {
                           'Fatura atual',
                           style: Theme.of(context).textTheme.caption,
                         ),
-                        SizedBox(height: 13),
+                        const SizedBox(height: 13),
                         Text(
                           'R\$ $kInvoce',
                           style: Theme.of(context)
@@ -59,12 +64,12 @@ class CreditScreen extends StatelessWidget {
                               .headline5!
                               .copyWith(color: kInvoiceColor),
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         RichText(
                           text: TextSpan(
                             text: 'Limite disponível ',
                             style: Theme.of(context).textTheme.bodyText2,
-                            children: <TextSpan>[
+                            children: const <TextSpan>[
                               TextSpan(
                                 text: 'R\$ $kLimit',
                                 style: TextStyle(
@@ -82,22 +87,23 @@ class CreditScreen extends StatelessWidget {
                         Container(
                           width: 8,
                           height: 300,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: kLimitColor,
                             borderRadius:
                                 BorderRadius.vertical(top: Radius.circular(10)),
                           ),
                         ),
-                        SizedBox(height: 1),
+                        const SizedBox(height: 1),
                         Container(width: 8, height: 50, color: kInvoiceColor),
-                        SizedBox(height: 1),
+                        const SizedBox(height: 1),
                         Container(
                           width: 8,
                           height: 150,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: kNextInvoiceColor,
                             borderRadius: BorderRadius.vertical(
-                                bottom: Radius.circular(10)),
+                              bottom: Radius.circular(10),
+                            ),
                           ),
                         ),
                       ],
@@ -106,27 +112,34 @@ class CreditScreen extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 35),
+            const SizedBox(height: 35),
             Container(height: 0.3, color: kLineColor),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CreditMenu(
-                      'Pagar fatura', NuIcons.ic_savings_global_action_pay),
+                  const CreditMenu(
+                    'Pagar fatura',
+                    NuIcons.ic_savings_global_action_pay,
+                  ),
                   Container(width: 0.3, height: 100, color: kLineColor),
-                  CreditMenu('Resumo de faturas', NuIcons.nuds_ic_list),
+                  const CreditMenu('Resumo de faturas', NuIcons.nuds_ic_list),
                   Container(width: 0.3, height: 100, color: kLineColor),
-                  CreditMenu('Ajustar limites', NuIcons.cc_ic_limit_adjustment),
+                  const CreditMenu(
+                    'Ajustar limites',
+                    NuIcons.cc_ic_limit_adjustment,
+                  ),
                   Container(width: 0.3, height: 100, color: kLineColor),
-                  CreditMenu('Cartão virtual', NuIcons.ic_virtual_card),
+                  const CreditMenu('Cartão virtual', NuIcons.ic_virtual_card),
                   Container(width: 0.3, height: 100, color: kLineColor),
-                  CreditMenu(
-                      'Bloquear cartão', NuIcons.ic_virtual_card_blocked),
+                  const CreditMenu(
+                    'Bloquear cartão',
+                    NuIcons.ic_virtual_card_blocked,
+                  ),
                   Container(width: 0.3, height: 100, color: kLineColor),
-                  CreditMenu('Indicar amigos', NuIcons.ic_refer_friend),
+                  const CreditMenu('Indicar amigos', NuIcons.ic_refer_friend),
                 ],
               ),
             ),
@@ -134,13 +147,19 @@ class CreditScreen extends StatelessWidget {
             Container(
               color: kLabelButtonColor,
               child: Column(
-                children: [
+                children: const [
                   SizedBox(height: 20),
-                  HistoricCard('Pagamento recebido', r'Você pagou R$ 50,00',
-                      Mdi.cubeSend),
+                  HistoricCard(
+                    'Pagamento recebido',
+                    r'Você pagou R$ 50,00',
+                    Mdi.cubeSend,
+                  ),
                   HistoricCard('Supermecado', 'Ricardo Dalarme', Mdi.cubeSend),
                   HistoricCard(
-                      'Transferência enviada', 'Ricardo Dalarme', Mdi.cubeSend),
+                    'Transferência enviada',
+                    'Ricardo Dalarme',
+                    Mdi.cubeSend,
+                  ),
                 ],
               ),
             ),

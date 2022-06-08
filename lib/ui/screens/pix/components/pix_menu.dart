@@ -7,7 +7,12 @@ class PixMenu extends StatelessWidget {
   final IconData icon;
   final Function()? onTap;
 
-  const PixMenu(this.text, this.icon, {Key? key, this.onTap}) : super(key: key);
+  const PixMenu(
+    this.text,
+    this.icon, {
+    this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +20,7 @@ class PixMenu extends StatelessWidget {
       onTap: () {},
       child: Container(
         color: kLabelButtonColor,
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         height: 72,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -23,15 +28,17 @@ class PixMenu extends StatelessWidget {
             Row(
               children: <Widget>[
                 Icon(icon, color: kSecondaryTextColor),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 Text(
                   text,
                   style: Theme.of(context).textTheme.button,
                 ),
               ],
             ),
-            Icon(NuIcons.abc_ic_go_search_api_material,
-                color: kSecondaryTextColor),
+            const Icon(
+              NuIcons.abc_ic_go_search_api_material,
+              color: kSecondaryTextColor,
+            ),
           ],
         ),
       ),

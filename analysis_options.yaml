@@ -1,3 +1,25 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  plugins:
+    - dart_code_metrics
+
+  exclude:
+    - lib/**.graphql.dart
+    - lib/**.g.dart
+
+  errors:
+    annotate_overrides: error
+    avoid_shadowing_type_parameters: warning
+    exhaustive_cases: warning
+    literal_only_boolean_expressions: warning
+    missing_required_param: warning
+    missing_return: warning
+    no_duplicate_case_values: error
+    only_throw_errors: error
+    override_on_non_overriding_member: error
+    unnecessary_overrides: error
+
 linter:
   rules:
     - always_declare_return_types
@@ -6,19 +28,24 @@ linter:
     - always_use_package_imports
     - annotate_overrides
     - avoid_bool_literals_in_conditional_expressions
-    - avoid_classes_with_only_static_members
-    - avoid_dynamic_calls
+    - avoid_catching_errors
     - avoid_empty_else
-    - avoid_equals_and_hash_code_on_mutable_classes
+    - avoid_final_parameters
     - avoid_escaping_inner_quotes
     - avoid_field_initializers_in_const_classes
     - avoid_function_literals_in_foreach_calls
+    - avoid_implementing_value_types
     - avoid_init_to_null
     - avoid_null_checks_in_equality_operators
+    - avoid_print
+    - avoid_private_typedef_functions
+    - avoid_redundant_argument_values
     - avoid_relative_lib_imports
     - avoid_renaming_method_parameters
     - avoid_return_types_on_setters
+    - avoid_returning_null_for_future
     - avoid_returning_null_for_void
+    - avoid_setters_without_getters
     - avoid_shadowing_type_parameters
     - avoid_single_cascade_in_expression_statements
     - avoid_slow_async_io
@@ -27,12 +54,19 @@ linter:
     - avoid_unnecessary_containers
     - avoid_unused_constructor_parameters
     - avoid_void_async
+    - avoid_web_libraries_in_flutter
     - await_only_futures
     - camel_case_extensions
     - camel_case_types
     - cancel_subscriptions
+    - cascade_invocations
     - cast_nullable_to_non_nullable
+    - close_sinks
+    - comment_references
+    - constant_identifier_names
     - control_flow_in_finally
+    - curly_braces_in_flow_control_structures
+    - depend_on_referenced_packages
     - deprecated_consistency
     - directives_ordering
     - empty_catches
@@ -40,37 +74,50 @@ linter:
     - empty_statements
     - exhaustive_cases
     - file_names
-    - flutter_style_todos
     - hash_and_equals
     - implementation_imports
+    - invariant_booleans
     - iterable_contains_unrelated_type
+    - join_return_with_assignment
     - leading_newlines_in_multiline_strings
     - library_names
     - library_prefixes
+    - library_private_types_in_public_api
     - list_remove_unrelated_type
+    - literal_only_boolean_expressions
     - missing_whitespace_between_adjacent_strings
     - no_adjacent_strings_in_list
     - no_duplicate_case_values
+    - no_leading_underscores_for_library_prefixes
+    - no_leading_underscores_for_local_identifiers
     - no_logic_in_create_state
+    - no_runtimeType_toString
     - non_constant_identifier_names
     - null_check_on_nullable_type_parameter
     - null_closures
     - omit_local_variable_types
+    - only_throw_errors
     - overridden_fields
     - package_api_docs
     - package_names
     - package_prefixed_library_names
+    - parameter_assignments
     - prefer_adjacent_string_concatenation
     - prefer_asserts_in_initializer_lists
+    - prefer_asserts_with_message
     - prefer_collection_literals
     - prefer_conditional_assignment
+    - prefer_const_constructors
+    - prefer_const_constructors_in_immutables
+    - prefer_const_declarations
+    - prefer_const_literals_to_create_immutables
+    - prefer_constructors_over_static_methods
     - prefer_contains
     - prefer_equal_for_default_values
     - prefer_final_fields
     - prefer_final_in_for_each
     - prefer_final_locals
     - prefer_for_elements_to_map_fromIterable
-    - prefer_foreach
     - prefer_function_declarations_over_variables
     - prefer_generic_function_type_aliases
     - prefer_if_elements_to_conditional_expressions
@@ -89,15 +136,24 @@ linter:
     - prefer_void_to_null
     - provide_deprecation_message
     - recursive_getters
+    - require_trailing_commas
+    - sized_box_for_whitespace
+    - sized_box_shrink_expand
     - slash_for_doc_comments
+    - sort_child_properties_last
+    - sort_unnamed_constructors_first
     - test_types_in_equals
     - throw_in_finally
     - tighten_type_of_initializing_formals
+    - type_annotate_public_apis
     - type_init_formals
     - unnecessary_await_in_return
     - unnecessary_brace_in_string_interps
     - unnecessary_const
+    - unnecessary_constructor_name
     - unnecessary_getters_setters
+    - unnecessary_lambdas
+    - unnecessary_late
     - unnecessary_new
     - unnecessary_null_aware_assignments
     - unnecessary_null_checks
@@ -105,17 +161,46 @@ linter:
     - unnecessary_nullable_for_final_variable_declarations
     - unnecessary_overrides
     - unnecessary_parenthesis
+    - unnecessary_raw_strings
     - unnecessary_statements
     - unnecessary_string_escapes
     - unnecessary_string_interpolations
     - unnecessary_this
+    - unsafe_html
     - unrelated_type_equality_checks
+    - use_build_context_synchronously
+    - use_decorated_box
     - use_full_hex_values_for_flutter_colors
     - use_function_type_syntax_for_parameters
+    - use_key_in_widget_constructors
     - use_is_even_rather_than_modulo
     - use_late_for_private_fields_and_variables
     - use_named_constants
     - use_raw_strings
     - use_rethrow_when_possible
+    - use_setters_to_change_properties
+    - use_string_buffers
+    - use_to_and_as_if_applicable
     - valid_regexps
     - void_checks
+
+dart_code_metrics:
+  rules:
+    - avoid-collection-methods-with-unrelated-types
+    - avoid-global-state
+    - avoid-unnecessary-setstate
+    - avoid-unnecessary-type-assertions
+    - avoid-unnecessary-type-casts
+    - avoid-unrelated-type-assertions:
+        severity: error
+    - avoid-unused-parameters
+    - no-boolean-literal-compare
+    - no-equal-then-else
+    - prefer-const-border-radius
+    - prefer-first
+    - prefer-immediate-return
+    - prefer-last
+
+  metrics-exclude:
+    - lib/**
+    - test/**

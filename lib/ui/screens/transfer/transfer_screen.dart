@@ -5,14 +5,15 @@ import 'package:nubank_clone/ui/shared/nu_input_field.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 
 class TransferScreen extends StatelessWidget {
+  TransferScreen({super.key});
+
   final valueTextController = MoneyMaskedTextController(
     leftSymbol: r'R$ ',
-    decimalSeparator: ',',
   );
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height - 50,
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -20,12 +21,12 @@ class TransferScreen extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(
-            icon: Icon(Icons.close, color: kSecondaryTextColor),
+            icon: const Icon(Icons.close, color: kSecondaryTextColor),
             onPressed: () => Navigator.of(context).pop(),
           ),
           actions: [
             IconButton(
-              icon: Icon(Icons.qr_code, color: kPrimaryColor),
+              icon: const Icon(Icons.qr_code, color: kPrimaryColor),
               onPressed: () {},
             ),
           ],
@@ -39,7 +40,7 @@ class TransferScreen extends StatelessWidget {
                 'Qual é o valor da transferência?',
                 style: Theme.of(context).textTheme.headline4,
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
               Text.rich(
                 TextSpan(
                   text: 'Saldo disponível em conta ',
@@ -52,7 +53,7 @@ class TransferScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 32),
+              const SizedBox(height: 32),
               NuInputField(
                 autoFocus: true,
                 textInputType: TextInputType.number,

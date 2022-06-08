@@ -5,7 +5,11 @@ class CircleButton extends StatelessWidget {
   final IconData icon;
   final Function() onTap;
 
-  CircleButton(this.icon, this.onTap);
+  const CircleButton(
+    this.icon,
+    this.onTap, {
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +18,9 @@ class CircleButton extends StatelessWidget {
       child: Container(
         height: 48,
         width: 48,
-        margin: EdgeInsets.only(left: 8),
+        margin: const EdgeInsets.only(left: 8),
         decoration:
-            BoxDecoration(color: kSecondaryColor, shape: BoxShape.circle),
+            const BoxDecoration(color: kSecondaryColor, shape: BoxShape.circle),
         child: Icon(
           icon,
           color: Colors.white,

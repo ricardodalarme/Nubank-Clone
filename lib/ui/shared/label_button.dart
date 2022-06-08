@@ -7,15 +7,20 @@ class LabelButton extends StatelessWidget {
   final Function()? onPressed;
   final String? tag;
 
-  LabelButton(this.label, this.icon, {required this.onPressed, this.tag});
+  const LabelButton(
+    this.label,
+    this.icon, {
+    required this.onPressed,
+    this.tag,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 5),
+      margin: const EdgeInsets.only(right: 5),
       width: 82,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Stack(
             children: [
@@ -23,8 +28,8 @@ class LabelButton extends StatelessWidget {
                 onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
                   primary: kLabelButtonColor,
-                  shape: CircleBorder(),
-                  fixedSize: Size(72, 72),
+                  shape: const CircleBorder(),
+                  fixedSize: const Size(72, 72),
                   elevation: 0,
                 ),
                 child: Icon(
@@ -38,29 +43,34 @@ class LabelButton extends StatelessWidget {
                   right: 18,
                   left: 18,
                   child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                        color: kPrimaryColor),
-                    padding: EdgeInsets.symmetric(horizontal: 2, vertical: 1),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(5)),
+                      color: kPrimaryColor,
+                    ),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
                     child: Text(
                       tag!,
                       textAlign: TextAlign.center,
                       style: Theme.of(context).textTheme.caption!.copyWith(
-                          color: Colors.white,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w600),
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w600,
+                          ),
                     ),
                   ),
                 )
             ],
           ),
-          SizedBox(height: 12),
-          Text(label,
-              textAlign: TextAlign.center,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyText2!
-                  .copyWith(fontWeight: FontWeight.w500, fontSize: 13)),
+          const SizedBox(height: 12),
+          Text(
+            label,
+            textAlign: TextAlign.center,
+            style: Theme.of(context)
+                .textTheme
+                .bodyText2!
+                .copyWith(fontWeight: FontWeight.w500, fontSize: 13),
+          ),
         ],
       ),
     );

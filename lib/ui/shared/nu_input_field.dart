@@ -8,12 +8,12 @@ class NuInputField extends StatelessWidget {
   final String? hint;
 
   const NuInputField({
-    Key? key,
     this.controller,
     this.textInputType = TextInputType.text,
     this.autoFocus = false,
     this.hint,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class NuInputField extends StatelessWidget {
               border: InputBorder.none,
             ),
           ),
-          Divider(
+          const Divider(
             height: 1,
             thickness: 1,
           ),

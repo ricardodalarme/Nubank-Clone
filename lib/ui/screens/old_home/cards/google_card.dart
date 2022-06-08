@@ -4,6 +4,8 @@ import 'package:nubank_clone/ui/shared/nu_outlined_button.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
 class GoogleCard extends StatelessWidget {
+  const GoogleCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MainCard(
@@ -14,8 +16,8 @@ class GoogleCard extends StatelessWidget {
           'Use o Google Pay com seus cartões Nubank',
           style: Theme.of(context).textTheme.bodyText2,
         ),
-        SizedBox(height: 15),
-        NuOutlinedButton('Registrar meu cartão'),
+        const SizedBox(height: 15),
+        const NuOutlinedButton('Registrar meu cartão'),
       ],
     );
   }

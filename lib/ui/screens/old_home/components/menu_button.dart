@@ -6,7 +6,12 @@ class MenuButton extends StatelessWidget {
   final IconData icon;
   final Function()? onTap;
 
-  MenuButton(this.title, this.icon, {this.onTap});
+  const MenuButton(
+    this.title,
+    this.icon, {
+    this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +20,11 @@ class MenuButton extends StatelessWidget {
       child: Container(
         width: 88,
         height: 96,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(3)),
           color: kSecondaryColor,
         ),
-        margin: EdgeInsets.only(right: 8, top: 15),
+        margin: const EdgeInsets.only(right: 8, top: 15),
         child: Padding(
           padding: const EdgeInsets.all(8),
           child: Column(

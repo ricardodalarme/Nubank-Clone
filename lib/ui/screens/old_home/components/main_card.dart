@@ -8,18 +8,25 @@ class MainCard extends StatelessWidget {
   final bool highlight;
   final Function()? onTap;
 
-  MainCard(this.title, this.icon, this.body,
-      {this.highlight = false, this.onTap});
+  const MainCard(
+    this.title,
+    this.icon,
+    this.body, {
+    this.highlight = false,
+    this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(3)),
-            color: Colors.white),
-        margin: EdgeInsets.only(bottom: 16),
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(3)),
+          color: Colors.white,
+        ),
+        margin: const EdgeInsets.only(bottom: 16),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 23, horizontal: 24),
           child: Column(
@@ -28,17 +35,19 @@ class MainCard extends StatelessWidget {
               Row(
                 children: [
                   Icon(icon, color: kSecondaryTextColor),
-                  SizedBox(width: 16),
-                  Text(title,
-                      style: highlight
-                          ? Theme.of(context)
-                              .textTheme
-                              .headline6!
-                              .copyWith(color: kPrimaryColor)
-                          : Theme.of(context).textTheme.subtitle2!),
+                  const SizedBox(width: 16),
+                  Text(
+                    title,
+                    style: highlight
+                        ? Theme.of(context)
+                            .textTheme
+                            .headline6!
+                            .copyWith(color: kPrimaryColor)
+                        : Theme.of(context).textTheme.subtitle2!,
+                  ),
                 ],
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               ...body,
             ],
           ),

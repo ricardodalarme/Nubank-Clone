@@ -12,8 +12,11 @@ class MyRouter {
     );
   }
 
-  static Future showBottomSheet(BuildContext context, Widget page,
-      {bool isScrollControlled = true}) {
+  static Future showBottomSheet(
+    BuildContext context,
+    Widget page, {
+    bool isScrollControlled = true,
+  }) {
     return showModalBottomSheet(
       isScrollControlled: isScrollControlled,
       context: context,

@@ -26,17 +26,19 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
+  HomeScreen({super.key});
+
   final _cards = [
-    CreditCard(),
-    LoanCard(),
-    InvestmentsCard(),
-    InsuranceCard(),
+    const CreditCard(),
+    const LoanCard(),
+    const InvestmentsCard(),
+    const InsuranceCard(),
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
+    return DecoratedBox(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -48,7 +50,7 @@ class HomeScreen extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -67,7 +69,7 @@ class HomeScreen extends StatelessWidget {
 
     return Container(
       color: kPrimaryColor,
-      padding: EdgeInsets.fromLTRB(18, 20, 16, 25),
+      padding: const EdgeInsets.fromLTRB(18, 20, 16, 25),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -79,27 +81,30 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   IconButton(
                     icon: Icon(
-                        state.viewValues
-                            ? Icons.visibility_outlined
-                            : Icons.visibility_off_outlined,
-                        color: Colors.white),
-                    onPressed: () => state.switchView(),
+                      state.viewValues
+                          ? Icons.visibility_outlined
+                          : Icons.visibility_off_outlined,
+                      color: Colors.white,
+                    ),
+                    onPressed: state.switchView,
                   ),
                   IconButton(
-                    icon: Icon(Icons.help_outline, color: Colors.white),
+                    icon: const Icon(Icons.help_outline, color: Colors.white),
                     onPressed: () {},
                   ),
                   IconButton(
-                    icon: Icon(Icons.forward_to_inbox_outlined,
-                        color: Colors.white),
+                    icon: const Icon(
+                      Icons.forward_to_inbox_outlined,
+                      color: Colors.white,
+                    ),
                     onPressed: () =>
-                        MyRouter.showBottomSheet(context, ReferScreen()),
+                        MyRouter.showBottomSheet(context, const ReferScreen()),
                   ),
                 ],
               )
             ],
           ),
-          SizedBox(height: 30),
+          const SizedBox(height: 30),
           Text(
             'Olá, $kUsername',
             style: Theme.of(context)
@@ -114,31 +119,31 @@ class HomeScreen extends StatelessWidget {
 
   Widget _body(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(bottom: 24),
+      padding: const EdgeInsets.only(bottom: 24),
       color: Colors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AccountCard(),
-          SizedBox(height: 10),
+          const AccountCard(),
+          const SizedBox(height: 10),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 LabelButton(
                   'Pix',
                   NuIcons.rewards_ic_empty_state_other,
                   onPressed: () =>
-                      MyRouter.showBottomSheet(context, PixScreen()),
+                      MyRouter.showBottomSheet(context, const PixScreen()),
                 ),
                 LabelButton(
                   'Pagar',
                   NuIcons.ic_savings_global_action_pay,
                   onPressed: () =>
-                      MyRouter.showBottomSheet(context, PaymentScreen()),
+                      MyRouter.showBottomSheet(context, const PaymentScreen()),
                 ),
                 LabelButton(
                   'Transferir',
@@ -150,17 +155,19 @@ class HomeScreen extends StatelessWidget {
                   'Depositar',
                   NuIcons.ic_savings_global_action_transfer_in,
                   onPressed: () =>
-                      MyRouter.showBottomSheet(context, DepositScreen()),
+                      MyRouter.showBottomSheet(context, const DepositScreen()),
                 ),
                 LabelButton(
                   'Empréstimos',
                   NuIcons.nuds_ic_personal_loan,
                   onPressed: () => Navigator.push(
-                      context,
-                      PageTransition(
-                          type: PageTransitionType.rightToLeft,
-                          duration: Duration(milliseconds: 400),
-                          child: LoanScreen())),
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.rightToLeft,
+                      duration: const Duration(milliseconds: 400),
+                      child: const LoanScreen(),
+                    ),
+                  ),
                 ),
                 LabelButton(
                   'Recarga de celular',
@@ -185,37 +192,40 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {},
                   tag: 'Dica',
                 ),
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
               ],
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: kLabelButtonColor),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+            child: DecoratedBox(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+                color: kLabelButtonColor,
+              ),
               child: Material(
                 color: Colors.transparent,
                 child: InkWell(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
                   onTap: () {},
                   child: Padding(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     child: Row(
                       children: [
-                        Icon(
+                        const Icon(
                           NuIcons.ic_card_nu,
                           color: kTextColor,
                         ),
-                        SizedBox(width: 12),
-                        Text('Meus cartões',
-                            textAlign: TextAlign.center,
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyText2!
-                                .copyWith(
-                                    fontWeight: FontWeight.w500, fontSize: 13)),
+                        const SizedBox(width: 12),
+                        Text(
+                          'Meus cartões',
+                          textAlign: TextAlign.center,
+                          style:
+                              Theme.of(context).textTheme.bodyText2!.copyWith(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 13,
+                                  ),
+                        ),
                       ],
                     ),
                   ),
@@ -225,46 +235,50 @@ class HomeScreen extends StatelessWidget {
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Row(
               children: [
-                SizedBox(width: 24),
+                const SizedBox(width: 24),
                 TextCard(
                   text: 'Você tem R\$ $kLoan disponíveis para ',
                   highlightText: 'empréstimo.',
                   onTap: () => Navigator.push(
-                      context,
-                      PageTransition(
-                          type: PageTransitionType.rightToLeft,
-                          duration: Duration(milliseconds: 400),
-                          child: LoanScreen())),
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.rightToLeft,
+                      duration: const Duration(milliseconds: 400),
+                      child: const LoanScreen(),
+                    ),
+                  ),
                 ),
                 TextCard(
                   text: 'Conquiste planos futuros: conheça as opções para ',
                   highlightText: 'guardar dinheiro.',
                   onTap: () {},
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
               ],
             ),
           ),
-          SizedBox(height: 20),
-          Divider(height: 2, thickness: 0.5),
+          const SizedBox(height: 20),
+          const Divider(height: 2, thickness: 0.5),
           ..._cards,
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
-            child: Text('Descubra mais',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6!
-                    .copyWith(fontWeight: FontWeight.w500)),
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+            child: Text(
+              'Descubra mais',
+              style: Theme.of(context)
+                  .textTheme
+                  .headline6!
+                  .copyWith(fontWeight: FontWeight.w500),
+            ),
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: Row(
               children: [
-                SizedBox(width: 24),
+                const SizedBox(width: 24),
                 DiscoverCard(
                   title: 'WhatsApp',
                   content:
@@ -278,9 +292,10 @@ class HomeScreen extends StatelessWidget {
                   content:
                       'Mostre aos seus amigos como é fácil ter uma vida sem burocracia.',
                   buttonText: 'Indicar amigos',
-                  onTap: () => MyRouter.showBottomSheet(context, ReferScreen()),
+                  onTap: () =>
+                      MyRouter.showBottomSheet(context, const ReferScreen()),
                 ),
-                SizedBox(width: 14),
+                const SizedBox(width: 14),
               ],
             ),
           ),

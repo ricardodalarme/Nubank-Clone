@@ -4,7 +4,10 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 class NuOutlinedButton extends StatelessWidget {
   final String value;
 
-  NuOutlinedButton(this.value);
+  const NuOutlinedButton(
+    this.value, {
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +15,8 @@ class NuOutlinedButton extends StatelessWidget {
       onPressed: null,
       style: OutlinedButton.styleFrom(
         primary: Colors.white,
-        side: BorderSide(color: kPrimaryColor, width: 0.5),
-        padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        side: const BorderSide(color: kPrimaryColor, width: 0.5),
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       ),
       child: Text(
         value.toUpperCase(),

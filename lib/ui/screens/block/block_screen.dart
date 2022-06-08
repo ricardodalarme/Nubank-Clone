@@ -5,6 +5,8 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
 class BlockScreen extends StatelessWidget {
+  const BlockScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,9 +14,12 @@ class BlockScreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SizedBox(height: 40),
-          Icon(NuIcons.ic_virtual_card_blocked, color: kSecondaryTextColor),
-          SizedBox(height: 20),
+          const SizedBox(height: 40),
+          const Icon(
+            NuIcons.ic_virtual_card_blocked,
+            color: kSecondaryTextColor,
+          ),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: RichText(
@@ -25,7 +30,7 @@ class BlockScreen extends StatelessWidget {
                     .textTheme
                     .bodyText2!
                     .copyWith(height: 1.8),
-                children: <TextSpan>[
+                children: const <TextSpan>[
                   TextSpan(
                     text: 'bloquear temporariamente ',
                     style: TextStyle(fontWeight: FontWeight.bold),
@@ -35,7 +40,7 @@ class BlockScreen extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 40),
+          const SizedBox(height: 40),
           Container(height: 1, color: kLineColor),
           Row(
             children: [
@@ -45,11 +50,12 @@ class BlockScreen extends StatelessWidget {
                 color: kSecondaryTextColor,
               ),
               Container(
-                  margin: EdgeInsets.symmetric(vertical: 1),
-                  width: 1,
-                  height: 62,
-                  color: kLineColor),
-              ExpandedButton(
+                margin: const EdgeInsets.symmetric(vertical: 1),
+                width: 1,
+                height: 62,
+                color: kLineColor,
+              ),
+              const ExpandedButton(
                 'Bloquear',
                 color: kPrimaryColor,
               ),

@@ -9,6 +9,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class CreditCard extends StatelessWidget {
+  const CreditCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     final viewValues = Provider.of<AppState>(context).viewValues;
@@ -23,7 +25,7 @@ class CreditCard extends StatelessWidget {
               .subtitle2!
               .copyWith(fontWeight: FontWeight.w600),
         ),
-        SizedBox(height: 13),
+        const SizedBox(height: 13),
         if (!viewValues)
           Container(
             color: kUnviewColor,
@@ -34,24 +36,30 @@ class CreditCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('R\$ $kInvoce',
-                  style: Theme.of(context).textTheme.headline5),
-              SizedBox(height: 5),
-              Text('Limite disponível R\$ $kLimit',
-                  style: Theme.of(context)
-                      .textTheme
-                      .caption!
-                      .copyWith(fontWeight: FontWeight.w500)),
+              Text(
+                'R\$ $kInvoce',
+                style: Theme.of(context).textTheme.headline5,
+              ),
+              const SizedBox(height: 5),
+              Text(
+                'Limite disponível R\$ $kLimit',
+                style: Theme.of(context)
+                    .textTheme
+                    .caption!
+                    .copyWith(fontWeight: FontWeight.w500),
+              ),
             ],
           ),
       ],
       icon: NuIcons.ic_card_nu,
       onTap: () => Navigator.push(
-          context,
-          PageTransition(
-              type: PageTransitionType.rightToLeft,
-              duration: Duration(milliseconds: 400),
-              child: CreditScreen())),
+        context,
+        PageTransition(
+          type: PageTransitionType.rightToLeft,
+          duration: const Duration(milliseconds: 400),
+          child: const CreditScreen(),
+        ),
+      ),
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/core/router.dart';
@@ -17,6 +16,8 @@ import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
 
 class AccountScreen extends StatelessWidget {
+  const AccountScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,27 +26,30 @@ class AccountScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(NuIcons.nuds_ic_chevron_left, color: kSecondaryTextColor),
+          icon: const Icon(
+            NuIcons.nuds_ic_chevron_left,
+            color: kSecondaryTextColor,
+          ),
           onPressed: () => MyRouter.popPage(context),
         ),
         actions: [
           IconButton(
-            icon: Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
+            icon: const Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
             onPressed: () {},
           )
         ],
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     'Saldo disponível',
                     style: Theme.of(context)
@@ -53,12 +57,12 @@ class AccountScreen extends StatelessWidget {
                         .subtitle2!
                         .copyWith(fontWeight: FontWeight.w500),
                   ),
-                  SizedBox(height: 7),
+                  const SizedBox(height: 7),
                   Text(
                     'R\$ $kBalance',
                     style: Theme.of(context).textTheme.headline3,
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   AccountMenu(
                     'Dinheiro guardado',
                     Text(
@@ -70,7 +74,7 @@ class AccountScreen extends StatelessWidget {
                     ),
                     BootstrapIcons.piggy_bank,
                   ),
-                  SizedBox(height: 38),
+                  const SizedBox(height: 38),
                   AccountMenu(
                     'Rendimento total da conta',
                     RichText(
@@ -80,7 +84,7 @@ class AccountScreen extends StatelessWidget {
                               color: kLimitColor,
                               fontWeight: FontWeight.w500,
                             ),
-                        children: <TextSpan>[
+                        children: const <TextSpan>[
                           TextSpan(
                             text: ' este mês',
                             style: TextStyle(
@@ -96,26 +100,30 @@ class AccountScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             Padding(
               padding: const EdgeInsets.only(left: 20),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     LabelButton(
                       'Depositar',
                       BootstrapIcons.cash,
-                      onPressed: () =>
-                          MyRouter.showBottomSheet(context, DepositScreen()),
+                      onPressed: () => MyRouter.showBottomSheet(
+                        context,
+                        const DepositScreen(),
+                      ),
                     ),
                     LabelButton(
                       'Pagar',
                       Mdi.barcode,
-                      onPressed: () =>
-                          MyRouter.showBottomSheet(context, PaymentScreen()),
+                      onPressed: () => MyRouter.showBottomSheet(
+                        context,
+                        const PaymentScreen(),
+                      ),
                     ),
                     LabelButton(
                       'Transferir',
@@ -127,11 +135,13 @@ class AccountScreen extends StatelessWidget {
                       'Empréstimos',
                       BootstrapIcons.bank,
                       onPressed: () => Navigator.push(
-                          context,
-                          PageTransition(
-                              type: PageTransitionType.rightToLeft,
-                              duration: Duration(milliseconds: 400),
-                              child: LoanScreen())),
+                        context,
+                        PageTransition(
+                          type: PageTransitionType.rightToLeft,
+                          duration: const Duration(milliseconds: 400),
+                          child: const LoanScreen(),
+                        ),
+                      ),
                     ),
                     LabelButton(
                       'Cobrar',
@@ -139,29 +149,40 @@ class AccountScreen extends StatelessWidget {
                       onPressed: () =>
                           MyRouter.showBottomSheet(context, ChargeScreen()),
                     ),
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
             Container(height: 1, color: kLineColor),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Text('Histórico',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline6!
-                      .copyWith(fontWeight: FontWeight.w500)),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                'Histórico',
+                style: Theme.of(context)
+                    .textTheme
+                    .headline6!
+                    .copyWith(fontWeight: FontWeight.w500),
+              ),
             ),
-            SizedBox(height: 30),
-            HistoricCard('Transferência enviada',
-                'Ricardo Dalarme de Oliveira Filho', Mdi.cubeSend),
-            HistoricCard(
-                'Transferência enviada', 'Ricardo Dalarme', Mdi.cubeSend),
-            HistoricCard(
-                'Transferência enviada', 'Ricardo Dalarme', Mdi.cubeSend),
+            const SizedBox(height: 30),
+            const HistoricCard(
+              'Transferência enviada',
+              'Ricardo Dalarme de Oliveira Filho',
+              Mdi.cubeSend,
+            ),
+            const HistoricCard(
+              'Transferência enviada',
+              'Ricardo Dalarme',
+              Mdi.cubeSend,
+            ),
+            const HistoricCard(
+              'Transferência enviada',
+              'Ricardo Dalarme',
+              Mdi.cubeSend,
+            ),
           ],
         ),
       ),

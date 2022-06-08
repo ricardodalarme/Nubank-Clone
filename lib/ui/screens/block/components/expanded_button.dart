@@ -5,8 +5,12 @@ class ExpandedButton extends StatelessWidget {
   final Color? color;
   final Function()? onTap;
 
-  const ExpandedButton(this.text, {Key? key, this.onTap, this.color})
-      : super(key: key);
+  const ExpandedButton(
+    this.text, {
+    this.onTap,
+    this.color,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,13 +18,14 @@ class ExpandedButton extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Center(
-            child: Text(
-          text.toUpperCase(),
-          style: Theme.of(context)
-              .textTheme
-              .bodyText1!
-              .copyWith(color: color, fontWeight: FontWeight.bold),
-        )),
+          child: Text(
+            text.toUpperCase(),
+            style: Theme.of(context)
+                .textTheme
+                .bodyText1!
+                .copyWith(color: color, fontWeight: FontWeight.bold),
+          ),
+        ),
       ),
     );
   }

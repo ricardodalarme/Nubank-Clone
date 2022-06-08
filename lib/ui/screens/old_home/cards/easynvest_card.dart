@@ -6,6 +6,8 @@ import 'package:nubank_clone/ui/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
 
 class EasynvestCard extends StatelessWidget {
+  const EasynvestCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MainCard(
@@ -16,15 +18,17 @@ class EasynvestCard extends StatelessWidget {
           'Conheça a Easynvest e invista com taxa zero de corretagem e sem burocracias!',
           style: Theme.of(context).textTheme.bodyText2,
         ),
-        SizedBox(height: 15),
-        NuOutlinedButton('Conhecer'),
+        const SizedBox(height: 15),
+        const NuOutlinedButton('Conhecer'),
       ],
       onTap: () => Navigator.push(
-          context,
-          PageTransition(
-              type: PageTransitionType.rightToLeft,
-              duration: Duration(milliseconds: 400),
-              child: EasyInvestScreen())),
+        context,
+        PageTransition(
+          type: PageTransitionType.rightToLeft,
+          duration: const Duration(milliseconds: 400),
+          child: const EasyInvestScreen(),
+        ),
+      ),
     );
   }
 }

@@ -8,7 +8,13 @@ class DepositMenu extends StatelessWidget {
   final IconData icon;
   final Function()? onTap;
 
-  const DepositMenu(this.title, this.subTitle, this.icon, {this.onTap});
+  const DepositMenu(
+    this.title,
+    this.subTitle,
+    this.icon, {
+    this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +23,8 @@ class DepositMenu extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            margin: EdgeInsets.symmetric(vertical: 15),
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(vertical: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             height: 80,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,8 +32,8 @@ class DepositMenu extends StatelessWidget {
                 Row(
                   children: <Widget>[
                     Icon(icon, color: kSecondaryTextColor),
-                    SizedBox(width: 20),
-                    Container(
+                    const SizedBox(width: 20),
+                    SizedBox(
                       width: MediaQuery.of(context).size.width - 125,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -40,7 +46,7 @@ class DepositMenu extends StatelessWidget {
                                 .bodyText2!
                                 .copyWith(fontWeight: FontWeight.bold),
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
                             subTitle,
                             style: Theme.of(context).textTheme.caption,
@@ -50,8 +56,10 @@ class DepositMenu extends StatelessWidget {
                     ),
                   ],
                 ),
-                Icon(NuIcons.abc_ic_go_search_api_material,
-                    color: kSecondaryTextColor),
+                const Icon(
+                  NuIcons.abc_ic_go_search_api_material,
+                  color: kSecondaryTextColor,
+                ),
               ],
             ),
           ),

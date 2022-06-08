@@ -8,6 +8,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class AccountCard extends StatelessWidget {
+  const AccountCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     final viewValues = Provider.of<AppState>(context).viewValues;
@@ -26,11 +28,13 @@ class AccountCard extends StatelessWidget {
       ],
       hideDivider: true,
       onTap: () => Navigator.push(
-          context,
-          PageTransition(
-              type: PageTransitionType.rightToLeft,
-              duration: Duration(milliseconds: 400),
-              child: AccountScreen())),
+        context,
+        PageTransition(
+          type: PageTransitionType.rightToLeft,
+          duration: const Duration(milliseconds: 400),
+          child: const AccountScreen(),
+        ),
+      ),
     );
   }
 }

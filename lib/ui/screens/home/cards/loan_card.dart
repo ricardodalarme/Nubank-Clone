@@ -9,6 +9,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class LoanCard extends StatelessWidget {
+  const LoanCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     final viewValues = Provider.of<AppState>(context).viewValues;
@@ -33,22 +35,26 @@ class LoanCard extends StatelessWidget {
                     .caption!
                     .copyWith(fontWeight: FontWeight.w500),
               ),
-              SizedBox(height: 5),
-              Text('R\$ $kLoan',
-                  style: Theme.of(context)
-                      .textTheme
-                      .caption!
-                      .copyWith(fontWeight: FontWeight.w500)),
+              const SizedBox(height: 5),
+              Text(
+                'R\$ $kLoan',
+                style: Theme.of(context)
+                    .textTheme
+                    .caption!
+                    .copyWith(fontWeight: FontWeight.w500),
+              ),
             ],
           ),
       ],
       icon: NuIcons.nuds_ic_personal_loan,
       onTap: () => Navigator.push(
-          context,
-          PageTransition(
-              type: PageTransitionType.rightToLeft,
-              duration: Duration(milliseconds: 400),
-              child: LoanScreen())),
+        context,
+        PageTransition(
+          type: PageTransitionType.rightToLeft,
+          duration: const Duration(milliseconds: 400),
+          child: const LoanScreen(),
+        ),
+      ),
     );
   }
 }

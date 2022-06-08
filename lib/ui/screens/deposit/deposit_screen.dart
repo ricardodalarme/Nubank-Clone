@@ -5,6 +5,8 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
 class DepositScreen extends StatelessWidget {
+  const DepositScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,9 +16,10 @@ class DepositScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           IconButton(
-              onPressed: () => MyRouter.popPage(context),
-              icon: Icon(NuIcons.close, color: kSecondaryTextColor)),
-          SizedBox(height: 15),
+            onPressed: () => MyRouter.popPage(context),
+            icon: const Icon(NuIcons.close, color: kSecondaryTextColor),
+          ),
+          const SizedBox(height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Text(
@@ -24,23 +27,23 @@ class DepositScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.headline4,
             ),
           ),
-          SizedBox(height: 10),
-          DepositMenu(
+          const SizedBox(height: 10),
+          const DepositMenu(
             'Pix',
             'Sem custo e cai na hora, mesmo de madrugada e fim de semana.',
             NuIcons.rewards_ic_empty_state_other,
           ),
-          DepositMenu(
+          const DepositMenu(
             'Boleto',
             'Sem custo e pode levar 3 dias úteis para o dinheiro cair.',
             NuIcons.ic_savings_global_action_pay,
           ),
-          DepositMenu(
+          const DepositMenu(
             'TED/DOC',
             'Pode ter custo e cai somente em horário comercial de dias úteis.',
             NuIcons.nuds_ic_receipt,
           ),
-          DepositMenu(
+          const DepositMenu(
             'Trazer seu salário',
             'Receba todo mês direto aqui na sua conta, sem custo.',
             NuIcons.ic_savings_global_action_transfer_in,

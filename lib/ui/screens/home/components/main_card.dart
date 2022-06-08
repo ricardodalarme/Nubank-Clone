@@ -8,8 +8,14 @@ class MainCard extends StatelessWidget {
   final bool? hideDivider;
   final Function()? onTap;
 
-  MainCard(this.title, this.body,
-      {this.icon, this.onTap, this.hideDivider = false});
+  const MainCard(
+    this.title,
+    this.body, {
+    this.icon,
+    this.onTap,
+    this.hideDivider = false,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,23 +35,25 @@ class MainCard extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(title,
-                          style: Theme.of(context)
-                              .textTheme
-                              .headline6!
-                              .copyWith(fontWeight: FontWeight.w500)),
-                      SizedBox(height: 50),
-                      Icon(NuIcons.abc_ic_go_search_api_material)
+                      Text(
+                        title,
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline6!
+                            .copyWith(fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(height: 50),
+                      const Icon(NuIcons.abc_ic_go_search_api_material)
                     ],
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   ...body,
                 ],
               ),
             ),
             Visibility(
               visible: !hideDivider!,
-              child: Divider(height: 2, thickness: 0.5),
+              child: const Divider(height: 2, thickness: 0.5),
             ),
           ],
         ),

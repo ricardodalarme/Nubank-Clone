@@ -6,13 +6,18 @@ class CreditMenu extends StatelessWidget {
   final IconData icon;
   final Function()? onTap;
 
-  CreditMenu(this.title, this.icon, {this.onTap});
+  const CreditMenu(
+    this.title,
+    this.icon, {
+    this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
+      child: SizedBox(
         width: 104,
         height: 104,
         child: Padding(
@@ -22,11 +27,13 @@ class CreditMenu extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Icon(icon, color: kPrimaryColor, size: 25),
-              Text(title,
-                  style: Theme.of(context)
-                      .textTheme
-                      .button!
-                      .copyWith(fontWeight: FontWeight.normal)),
+              Text(
+                title,
+                style: Theme.of(context)
+                    .textTheme
+                    .button!
+                    .copyWith(fontWeight: FontWeight.normal),
+              ),
             ],
           ),
         ),

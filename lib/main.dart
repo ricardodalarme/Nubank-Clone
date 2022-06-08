@@ -6,23 +6,27 @@ import 'package:nubank_clone/ui/theme/texts.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-    create: (context) => AppState(),
-    child: MaterialApp(
-      title: 'Nubank Clone',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: 'Gotham-SSm', textTheme: customTextTheme),
-      home: HomeScreen(),
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => AppState(),
+      child: MaterialApp(
+        title: 'Nubank Clone',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(fontFamily: 'Gotham-SSm', textTheme: customTextTheme),
+        home: HomeScreen(),
+      ),
     ),
-  ));
+  );
 
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitDown,
     DeviceOrientation.portraitUp,
   ]);
 
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
-    statusBarBrightness: Brightness.light,
-  ));
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light,
+    ),
+  );
 }

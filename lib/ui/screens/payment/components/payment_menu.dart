@@ -8,23 +8,29 @@ class PaymentMenu extends StatelessWidget {
   final IconData icon;
   final Function()? onTap;
 
-  const PaymentMenu(this.title, this.subTitle, this.icon, {this.onTap});
+  const PaymentMenu(
+    this.title,
+    this.subTitle,
+    this.icon, {
+    this.onTap,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 15),
-        padding: EdgeInsets.symmetric(horizontal: 20),
+        margin: const EdgeInsets.symmetric(vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: <Widget>[
                 Icon(icon, color: kPrimaryColor),
-                SizedBox(width: 20),
-                Container(
+                const SizedBox(width: 20),
+                SizedBox(
                   width: MediaQuery.of(context).size.width - 125,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +43,7 @@ class PaymentMenu extends StatelessWidget {
                             .bodyText2!
                             .copyWith(fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Text(
                         subTitle,
                         style: Theme.of(context).textTheme.caption,
@@ -47,8 +53,10 @@ class PaymentMenu extends StatelessWidget {
                 ),
               ],
             ),
-            Icon(NuIcons.abc_ic_go_search_api_material,
-                color: kSecondaryTextColor),
+            const Icon(
+              NuIcons.abc_ic_go_search_api_material,
+              color: kSecondaryTextColor,
+            ),
           ],
         ),
       ),

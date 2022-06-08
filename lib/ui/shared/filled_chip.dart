@@ -4,13 +4,16 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 class FilledButton extends StatelessWidget {
   final String value;
 
-  FilledButton(this.value);
+  const FilledButton(
+    this.value, {
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Chip(
       backgroundColor: kPrimaryColor,
-      padding: EdgeInsets.symmetric(horizontal: 5, vertical: 11),
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 11),
       label: Text(
         value,
         style: Theme.of(context)

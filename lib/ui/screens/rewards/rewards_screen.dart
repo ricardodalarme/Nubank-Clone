@@ -5,6 +5,8 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
 class EasyInvestScreen extends StatelessWidget {
+  const EasyInvestScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,17 +15,20 @@ class EasyInvestScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(NuIcons.nuds_ic_chevron_left, color: kSecondaryTextColor),
+          icon: const Icon(
+            NuIcons.nuds_ic_chevron_left,
+            color: kSecondaryTextColor,
+          ),
           onPressed: () => MyRouter.popPage(context),
         ),
         actions: [
           IconButton(
-            icon: Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
+            icon: const Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
             onPressed: () {},
           )
         ],
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: const FloatingActionButton(
         onPressed: null,
         elevation: 0,
         backgroundColor: kPrimaryColor,
@@ -102,7 +107,7 @@ class EasyInvestScreen extends StatelessWidget {
                 const SizedBox(height: 25),
               ],
             ),
-            Container(
+            SizedBox(
               height: 80,
               child: Text(
                 'Experimente por 30 dias grátis'.toUpperCase(),

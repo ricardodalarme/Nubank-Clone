@@ -7,6 +7,8 @@ import 'package:nubank_clone/ui/theme/colors.dart';
 import 'package:nubank_clone/ui/theme/icons.dart';
 
 class LoanScreen extends StatelessWidget {
+  const LoanScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,18 +17,21 @@ class LoanScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(NuIcons.nuds_ic_chevron_left, color: kSecondaryTextColor),
+          icon: const Icon(
+            NuIcons.nuds_ic_chevron_left,
+            color: kSecondaryTextColor,
+          ),
           onPressed: () => MyRouter.popPage(context),
         ),
         actions: [
           IconButton(
-            icon: Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
+            icon: const Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
             onPressed: () {},
           )
         ],
       ),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             Padding(
@@ -34,12 +39,12 @@ class LoanScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 30),
+                  const SizedBox(height: 30),
                   Text(
                     'O valor disponível no momento é de R\$ $kLoan',
                     style: Theme.of(context).textTheme.headline6,
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Text(
                     'Este valor pode mudar diariamente devido à nossa análise de crédito.',
                     style: Theme.of(context)
@@ -47,7 +52,7 @@ class LoanScreen extends StatelessWidget {
                         .subtitle2!
                         .copyWith(height: 1.3),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     'Entenda como funciona >',
                     style: Theme.of(context)
@@ -55,14 +60,14 @@ class LoanScreen extends StatelessWidget {
                         .bodyText2!
                         .copyWith(color: kPrimaryColor),
                   ),
-                  SizedBox(height: 45),
-                  NuOutlinedButton('Novo empréstimo'),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 45),
+                  const NuOutlinedButton('Novo empréstimo'),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
             Container(height: 1, color: kLineColor),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Center(
               child: Text(
                 'Você não possui nenhum empréstimo ativo.',

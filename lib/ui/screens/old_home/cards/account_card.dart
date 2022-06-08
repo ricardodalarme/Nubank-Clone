@@ -9,6 +9,8 @@ import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class AccountCard extends StatelessWidget {
+  const AccountCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     final viewValues = Provider.of<AppState>(context).viewValues;
@@ -21,7 +23,7 @@ class AccountCard extends StatelessWidget {
           'Saldo disponível',
           style: Theme.of(context).textTheme.caption,
         ),
-        SizedBox(height: 13),
+        const SizedBox(height: 13),
         if (viewValues)
           Container(
             color: kUnviewColor,
@@ -32,11 +34,13 @@ class AccountCard extends StatelessWidget {
           Text('R\$ $kBalance', style: Theme.of(context).textTheme.headline5),
       ],
       onTap: () => Navigator.push(
-          context,
-          PageTransition(
-              type: PageTransitionType.rightToLeft,
-              duration: Duration(milliseconds: 400),
-              child: AccountScreen())),
+        context,
+        PageTransition(
+          type: PageTransitionType.rightToLeft,
+          duration: const Duration(milliseconds: 400),
+          child: const AccountScreen(),
+        ),
+      ),
     );
   }
 }

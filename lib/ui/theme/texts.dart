@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/ui/theme/colors.dart';
 
-final customTextTheme = TextTheme(
+const customTextTheme = TextTheme(
   subtitle1: TextStyle(
     fontSize: 17,
     color: kSecondaryTextColor,
