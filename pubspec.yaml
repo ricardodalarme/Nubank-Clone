@@ -1,24 +1,24 @@
 name: nubank_clone
 description: A new Flutter project.
-publish_to: 'none'
+publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.1 <3.0.0"
 
 dependencies:
-  provider: ^5.0.0
-  mdi: ^5.0.0-nullsafety.0
-  page_transition: ^2.0.2
-  bootstrap_icons: ^1.5.0
+  bootstrap_icons: ^1.8.1
   flutter_masked_text2: ^0.9.1
+  mdi: ^5.0.0-nullsafety.0
+  page_transition: ^2.0.5
+  provider: ^6.0.3
 
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  pedantic: ^1.11.1
-  
+  flutter_lints: ^2.0.1
+
   flutter_test:
     sdk: flutter
 
@@ -29,7 +29,7 @@ flutter:
     - assets/images/
 
   fonts:
-    - family:  NuIcons
+    - family: NuIcons
       fonts:
         - asset: assets/fonts/NuIcons.ttf
 
@@ -40,19 +40,19 @@ flutter:
         - asset: assets/fonts/Gotham-SSm/GothamSSm-XLightItalic.ttf
           weight: 200
           style: italic
-          
+
         - asset: assets/fonts/Gotham-SSm/GothamSSm-Light.ttf
           weight: 300
         - asset: assets/fonts/Gotham-SSm/GothamSSm-LightItalic.ttf
           weight: 300
           style: italic
-          
+
         - asset: assets/fonts/Gotham-SSm/GothamSSm-Book.ttf
           weight: 400
         - asset: assets/fonts/Gotham-SSm/GothamSSm-BookItalic.ttf
           weight: 400
           style: italic
-          
+
         - asset: assets/fonts/Gotham-SSm/GothamSSm-Medium.ttf
           weight: 500
         - asset: assets/fonts/Gotham-SSm/GothamSSm-MediumItalic.ttf
