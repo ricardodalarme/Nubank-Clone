@@ -1,4 +1,4 @@
-name: Flutter CI
+name: Flutter CIhttps://github.com/ricardodalarme/Nubank-Clone
 
 # This workflow is triggered on pushes to the repository.
 
@@ -11,7 +11,14 @@ jobs:
     # This job will run on ubuntu virtual machine
     runs-on: ubuntu-latest
     steps:
-    
+    - name: Generate list using Markdown
+      run: |
+        echo "This is the lead in sentence for the list" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
+        echo "- Lets add a bullet point" >> $GITHUB_STEP_SUMMARY
+        echo "- Lets add a second bullet point" >> $GITHUB_STEP_SUMMARY
+        echo "- How about a third one?" >> $GITHUB_STEP_SUMMARY
+
     # Setup Java environment in order to build the Android app.
     - uses: actions/checkout@v1
     - uses: actions/setup-java@v1
