@@ -40,8 +40,8 @@ class PaymentMenu extends StatelessWidget {
                         title,
                         style: Theme.of(context)
                             .textTheme
-                            .bodyText2!
-                            .copyWith(fontWeight: FontWeight.bold),
+                            .bodyText2
+                            ?.copyWith(fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 5),
                       Text(

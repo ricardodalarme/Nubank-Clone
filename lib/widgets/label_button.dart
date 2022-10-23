@@ -52,7 +52,7 @@ class LabelButton extends StatelessWidget {
                     child: Text(
                       tag!,
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.caption!.copyWith(
+                      style: Theme.of(context).textTheme.caption?.copyWith(
                             color: Colors.white,
                             fontSize: 11,
                             fontWeight: FontWeight.w600,
@@ -68,8 +68,8 @@ class LabelButton extends StatelessWidget {
             textAlign: TextAlign.center,
             style: Theme.of(context)
                 .textTheme
-                .bodyText2!
-                .copyWith(fontWeight: FontWeight.w500, fontSize: 13),
+                .bodyText2
+                ?.copyWith(fontWeight: FontWeight.w500, fontSize: 13),
           ),
         ],
       ),

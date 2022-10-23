@@ -109,8 +109,8 @@ class HomeScreen extends StatelessWidget {
             'Olá, $kUsername',
             style: Theme.of(context)
                 .textTheme
-                .subtitle1!
-                .copyWith(color: Colors.white, fontWeight: FontWeight.w600),
+                .subtitle1
+                ?.copyWith(color: Colors.white, fontWeight: FontWeight.w600),
           ),
         ],
       ),
@@ -221,7 +221,7 @@ class HomeScreen extends StatelessWidget {
                           'Meus cartões',
                           textAlign: TextAlign.center,
                           style:
-                              Theme.of(context).textTheme.bodyText2!.copyWith(
+                              Theme.of(context).textTheme.bodyText2?.copyWith(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 13,
                                   ),
@@ -269,8 +269,8 @@ class HomeScreen extends StatelessWidget {
               'Descubra mais',
               style: Theme.of(context)
                   .textTheme
-                  .headline6!
-                  .copyWith(fontWeight: FontWeight.w500),
+                  .headline6
+                  ?.copyWith(fontWeight: FontWeight.w500),
             ),
           ),
           SingleChildScrollView(

@@ -22,8 +22,8 @@ class NuOutlinedButton extends StatelessWidget {
         value.toUpperCase(),
         style: Theme.of(context)
             .textTheme
-            .caption!
-            .copyWith(color: kPrimaryColor, fontWeight: FontWeight.bold),
+            .caption
+            ?.copyWith(color: kPrimaryColor, fontWeight: FontWeight.bold),
       ),
     );
   }

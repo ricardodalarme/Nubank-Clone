@@ -22,8 +22,8 @@ class CreditCard extends StatelessWidget {
           'Fatura atual',
           style: Theme.of(context)
               .textTheme
-              .subtitle2!
-              .copyWith(fontWeight: FontWeight.w600),
+              .subtitle2
+              ?.copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 13),
         if (!viewValues)
@@ -45,8 +45,8 @@ class CreditCard extends StatelessWidget {
                 'Limite disponível R\$ $kLimit',
                 style: Theme.of(context)
                     .textTheme
-                    .caption!
-                    .copyWith(fontWeight: FontWeight.w500),
+                    .caption
+                    ?.copyWith(fontWeight: FontWeight.w500),
               ),
             ],
           ),

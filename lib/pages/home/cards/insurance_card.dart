@@ -14,8 +14,8 @@ class InsuranceCard extends StatelessWidget {
           'Conheça Nubank Vida: um seguro simples e que cabe no bolso.',
           style: Theme.of(context)
               .textTheme
-              .caption!
-              .copyWith(fontWeight: FontWeight.w500),
+              .caption
+              ?.copyWith(fontWeight: FontWeight.w500),
         ),
       ],
       onTap: () {},

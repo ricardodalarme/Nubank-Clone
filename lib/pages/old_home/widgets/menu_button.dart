@@ -36,8 +36,8 @@ class MenuButton extends StatelessWidget {
                 title,
                 style: Theme.of(context)
                     .textTheme
-                    .caption!
-                    .copyWith(color: Colors.white),
+                    .caption
+                    ?.copyWith(color: Colors.white),
               ),
             ],
           ),

@@ -22,8 +22,8 @@ class ExpandedButton extends StatelessWidget {
             text.toUpperCase(),
             style: Theme.of(context)
                 .textTheme
-                .bodyText1!
-                .copyWith(color: color, fontWeight: FontWeight.bold),
+                .bodyText1
+                ?.copyWith(color: color, fontWeight: FontWeight.bold),
           ),
         ),
       ),

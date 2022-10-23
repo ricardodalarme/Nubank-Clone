@@ -55,8 +55,8 @@ class EasyInvestScreen extends StatelessWidget {
                   'Acumule pontos que não expiram sempre que você usar seu cartão de crédito.',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1!
-                      .copyWith(height: 1.35, fontWeight: FontWeight.w300),
+                      .subtitle1
+                      ?.copyWith(height: 1.35, fontWeight: FontWeight.w300),
                 ),
                 const SizedBox(height: 25),
               ],
@@ -78,8 +78,8 @@ class EasyInvestScreen extends StatelessWidget {
                   'Resgate passagens aéreas c ompradas em qualquer site.',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1!
-                      .copyWith(height: 1.35, fontWeight: FontWeight.w300),
+                      .subtitle1
+                      ?.copyWith(height: 1.35, fontWeight: FontWeight.w300),
                 ),
                 const SizedBox(height: 25),
               ],
@@ -101,8 +101,8 @@ class EasyInvestScreen extends StatelessWidget {
                   'Compre nos parceiros e depois use seus pontos para tirar esses gastos da sua fatura.',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1!
-                      .copyWith(height: 1.35, fontWeight: FontWeight.w300),
+                      .subtitle1
+                      ?.copyWith(height: 1.35, fontWeight: FontWeight.w300),
                 ),
                 const SizedBox(height: 25),
               ],
@@ -113,8 +113,8 @@ class EasyInvestScreen extends StatelessWidget {
                 'Experimente por 30 dias grátis'.toUpperCase(),
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText2!
-                    .copyWith(color: kPrimaryColor),
+                    .bodyText2
+                    ?.copyWith(color: kPrimaryColor),
               ),
             )
           ],

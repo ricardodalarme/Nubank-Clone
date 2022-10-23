@@ -40,8 +40,8 @@ class LoanCard extends StatelessWidget {
                 'R\$ $kLoan',
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText2!
-                    .copyWith(fontWeight: FontWeight.bold),
+                    .bodyText2
+                    ?.copyWith(fontWeight: FontWeight.bold),
               ),
             ],
           ),

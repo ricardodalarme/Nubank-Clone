@@ -41,7 +41,7 @@ class DiscoverCard extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
                             color: kTextColor,
                             fontWeight: FontWeight.w500,
                           ),
@@ -59,8 +59,8 @@ class DiscoverCard extends StatelessWidget {
                           'Novo',
                           style: Theme.of(context)
                               .textTheme
-                              .caption!
-                              .copyWith(color: Colors.white),
+                              .caption
+                              ?.copyWith(color: Colors.white),
                         ),
                       ),
                     )

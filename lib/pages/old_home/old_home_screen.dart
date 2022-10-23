@@ -63,8 +63,8 @@ class OldHomeScreen extends StatelessWidget {
                             'Olá, $kUsername',
                             style: Theme.of(context)
                                 .textTheme
-                                .headline5!
-                                .copyWith(color: Colors.white),
+                                .headline5
+                                ?.copyWith(color: Colors.white),
                           ),
                           Row(
                             children: [

@@ -39,8 +39,8 @@ class MainCard extends StatelessWidget {
                         title,
                         style: Theme.of(context)
                             .textTheme
-                            .headline6!
-                            .copyWith(fontWeight: FontWeight.w500),
+                            .headline6
+                            ?.copyWith(fontWeight: FontWeight.w500),
                       ),
                       const SizedBox(height: 50),
                       const Icon(NuIcons.abc_ic_go_search_api_material)

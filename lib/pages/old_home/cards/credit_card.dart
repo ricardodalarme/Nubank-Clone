@@ -38,8 +38,8 @@ class CreditCard extends StatelessWidget {
                 'R\$ $kInvoce',
                 style: Theme.of(context)
                     .textTheme
-                    .headline5!
-                    .copyWith(color: kInvoiceColor),
+                    .headline5
+                    ?.copyWith(color: kInvoiceColor),
               ),
               const SizedBox(height: 5),
               RichText(

@@ -49,8 +49,8 @@ class HistoricCard extends StatelessWidget {
                             title,
                             style: Theme.of(context)
                                 .textTheme
-                                .bodyText2!
-                                .copyWith(fontWeight: FontWeight.w500),
+                                .bodyText2
+                                ?.copyWith(fontWeight: FontWeight.w500),
                           ),
                           Text(
                             'Ontem',
@@ -63,8 +63,8 @@ class HistoricCard extends StatelessWidget {
                         subTitle.toUpperCase(),
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle2!
-                            .copyWith(height: 1.6),
+                            .subtitle2
+                            ?.copyWith(height: 1.6),
                       ),
                       const SizedBox(height: 5),
                       Text(

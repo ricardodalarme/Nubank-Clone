@@ -18,8 +18,8 @@ class FilledButton extends StatelessWidget {
         value,
         style: Theme.of(context)
             .textTheme
-            .bodyText2!
-            .copyWith(color: Colors.white, fontWeight: FontWeight.w500),
+            .bodyText2
+            ?.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
       ),
     );
   }

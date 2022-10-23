@@ -49,16 +49,16 @@ class LoanScreen extends StatelessWidget {
                     'Este valor pode mudar diariamente devido à nossa análise de crédito.',
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle2!
-                        .copyWith(height: 1.3),
+                        .subtitle2
+                        ?.copyWith(height: 1.3),
                   ),
                   const SizedBox(height: 20),
                   Text(
                     'Entenda como funciona >',
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2!
-                        .copyWith(color: kPrimaryColor),
+                        .bodyText2
+                        ?.copyWith(color: kPrimaryColor),
                   ),
                   const SizedBox(height: 45),
                   const NuOutlinedButton('Novo empréstimo'),

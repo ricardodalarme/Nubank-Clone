@@ -31,8 +31,8 @@ class CreditMenu extends StatelessWidget {
                 title,
                 style: Theme.of(context)
                     .textTheme
-                    .button!
-                    .copyWith(fontWeight: FontWeight.normal),
+                    .button
+                    ?.copyWith(fontWeight: FontWeight.normal),
               ),
             ],
           ),

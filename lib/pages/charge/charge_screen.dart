@@ -47,8 +47,8 @@ class ChargeScreen extends StatelessWidget {
                     'Não especificar um valor >',
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2!
-                        .copyWith(color: kPrimaryColor),
+                        .bodyText2
+                        ?.copyWith(color: kPrimaryColor),
                   ),
                 ],
               ),

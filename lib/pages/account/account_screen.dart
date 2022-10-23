@@ -54,8 +54,8 @@ class AccountScreen extends StatelessWidget {
                     'Saldo disponível',
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle2!
-                        .copyWith(fontWeight: FontWeight.w500),
+                        .subtitle2
+                        ?.copyWith(fontWeight: FontWeight.w500),
                   ),
                   const SizedBox(height: 7),
                   Text(
@@ -69,8 +69,8 @@ class AccountScreen extends StatelessWidget {
                       'R\$ $kSaved',
                       style: Theme.of(context)
                           .textTheme
-                          .bodyText2!
-                          .copyWith(fontWeight: FontWeight.w500, fontSize: 16),
+                          .bodyText2
+                          ?.copyWith(fontWeight: FontWeight.w500, fontSize: 16),
                     ),
                     BootstrapIcons.piggy_bank,
                   ),
@@ -80,7 +80,7 @@ class AccountScreen extends StatelessWidget {
                     RichText(
                       text: TextSpan(
                         text: '+R\$ $kIcome',
-                        style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
                               color: kLimitColor,
                               fontWeight: FontWeight.w500,
                             ),
@@ -163,8 +163,8 @@ class AccountScreen extends StatelessWidget {
                 'Histórico',
                 style: Theme.of(context)
                     .textTheme
-                    .headline6!
-                    .copyWith(fontWeight: FontWeight.w500),
+                    .headline6
+                    ?.copyWith(fontWeight: FontWeight.w500),
               ),
             ),
             const SizedBox(height: 30),

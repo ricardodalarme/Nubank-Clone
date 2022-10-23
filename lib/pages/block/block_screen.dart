@@ -28,8 +28,8 @@ class BlockScreen extends StatelessWidget {
                 text: 'Você quer ',
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText2!
-                    .copyWith(height: 1.8),
+                    .bodyText2
+                    ?.copyWith(height: 1.8),
                 children: const <TextSpan>[
                   TextSpan(
                     text: 'bloquear temporariamente ',

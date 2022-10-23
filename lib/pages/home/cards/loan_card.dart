@@ -32,16 +32,16 @@ class LoanCard extends StatelessWidget {
                 'Valor disponível de até',
                 style: Theme.of(context)
                     .textTheme
-                    .caption!
-                    .copyWith(fontWeight: FontWeight.w500),
+                    .caption
+                    ?.copyWith(fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: 5),
               Text(
                 'R\$ $kLoan',
                 style: Theme.of(context)
                     .textTheme
-                    .caption!
-                    .copyWith(fontWeight: FontWeight.w500),
+                    .caption
+                    ?.copyWith(fontWeight: FontWeight.w500),
               ),
             ],
           ),

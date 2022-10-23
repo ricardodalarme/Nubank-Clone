@@ -41,8 +41,8 @@ class MainCard extends StatelessWidget {
                     style: highlight
                         ? Theme.of(context)
                             .textTheme
-                            .headline6!
-                            .copyWith(color: kPrimaryColor)
+                            .headline6
+                            ?.copyWith(color: kPrimaryColor)
                         : Theme.of(context).textTheme.subtitle2!,
                   ),
                 ],
