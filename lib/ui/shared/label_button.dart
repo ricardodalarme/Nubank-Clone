@@ -27,7 +27,7 @@ class LabelButton extends StatelessWidget {
               ElevatedButton(
                 onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
-                  primary: kLabelButtonColor,
+                  backgroundColor: kLabelButtonColor,
                   shape: const CircleBorder(),
                   fixedSize: const Size(72, 72),
                   elevation: 0,

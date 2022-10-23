@@ -14,7 +14,7 @@ class NuOutlinedButton extends StatelessWidget {
     return OutlinedButton(
       onPressed: null,
       style: OutlinedButton.styleFrom(
-        primary: Colors.white,
+        foregroundColor: Colors.white,
         side: const BorderSide(color: kPrimaryColor, width: 0.5),
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       ),
