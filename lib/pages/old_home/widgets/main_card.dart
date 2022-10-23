@@ -1,0 +1,58 @@
+import 'package:flutter/material.dart';
+import 'package:nubank_clone/theme/colors.dart';
+
+class MainCard extends StatelessWidget {
+  final String title;
+  final IconData icon;
+  final List<Widget> body;
+  final bool highlight;
+  final Function()? onTap;
+
+  const MainCard(
+    this.title,
+    this.icon,
+    this.body, {
+    this.highlight = false,
+    this.onTap,
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(3)),
+          color: Colors.white,
+        ),
+        margin: const EdgeInsets.only(bottom: 16),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 23, horizontal: 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Icon(icon, color: kSecondaryTextColor),
+                  const SizedBox(width: 16),
+                  Text(
+                    title,
+                    style: highlight
+                        ? Theme.of(context)
+                            .textTheme
+                            .headline6!
+                            .copyWith(color: kPrimaryColor)
+                        : Theme.of(context).textTheme.subtitle2!,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              ...body,
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

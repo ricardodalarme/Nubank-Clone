@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'package:nubank_clone/core/router.dart';
+import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/icons.dart';
+import 'package:nubank_clone/widgets/nu_outlined_button.dart';
+
+class ReferScreen extends StatelessWidget {
+  const ReferScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      height: MediaQuery.of(context).size.height - 50,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          IconButton(
+            onPressed: () => MyRouter.popPage(context),
+            icon: const Icon(NuIcons.close, color: kSecondaryTextColor),
+          ),
+          const SizedBox(height: 15),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Resgate seus amigos da fila do banco',
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+                const SizedBox(height: 10),
+                Text(
+                  'Para cada indicação aceita, um amigo salvo da burocracia',
+                  style: Theme.of(context).textTheme.subtitle2,
+                ),
+                const SizedBox(height: 20),
+                const NuOutlinedButton('Indicar amigos'),
+                Image.asset('assets/images/refer_friend.jpg'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

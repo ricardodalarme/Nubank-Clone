@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:nubank_clone/core/app_state.dart';
-import 'package:nubank_clone/ui/screens/home/home_screen.dart';
-import 'package:nubank_clone/ui/theme/texts.dart';
+import 'package:nubank_clone/pages/home/home_screen.dart';
+import 'package:nubank_clone/theme/texts.dart';
 import 'package:provider/provider.dart';
 
 void main() {

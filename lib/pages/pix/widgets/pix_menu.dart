@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/icons.dart';
+
+class PixMenu extends StatelessWidget {
+  final String text;
+  final IconData icon;
+  final Function()? onTap;
+
+  const PixMenu(
+    this.text,
+    this.icon, {
+    this.onTap,
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        color: kLabelButtonColor,
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        height: 72,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: <Widget>[
+                Icon(icon, color: kSecondaryTextColor),
+                const SizedBox(width: 20),
+                Text(
+                  text,
+                  style: Theme.of(context).textTheme.button,
+                ),
+              ],
+            ),
+            const Icon(
+              NuIcons.abc_ic_go_search_api_material,
+              color: kSecondaryTextColor,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
