@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
+import 'package:nubank_clone/constants/app_images.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/pix/widgets/pix_menu.dart';
 import 'package:nubank_clone/theme/app_colors.dart';
@@ -29,7 +30,7 @@ class PixScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.asset(
-                    'assets/images/pix.jpg',
+                    AppImages.pix,
                     height: 150,
                   ),
                   const SizedBox(height: 30),

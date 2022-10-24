@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/constants/app_images.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
@@ -36,7 +37,7 @@ class ReferScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 const NuOutlinedButton('Indicar amigos'),
-                Image.asset('assets/images/refer_friend.jpg'),
+                Image.asset(AppImages.referFriend),
               ],
             ),
           ),
