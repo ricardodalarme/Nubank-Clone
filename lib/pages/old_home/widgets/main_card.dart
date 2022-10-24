@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 class MainCard extends StatelessWidget {
   final String title;
@@ -34,7 +34,7 @@ class MainCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Icon(icon, color: kSecondaryTextColor),
+                  Icon(icon, color: AppColors.secondaryText),
                   const SizedBox(width: 16),
                   Text(
                     title,
@@ -42,7 +42,7 @@ class MainCard extends StatelessWidget {
                         ? Theme.of(context)
                             .textTheme
                             .headline6
-                            ?.copyWith(color: kPrimaryColor)
+                            ?.copyWith(color: AppColors.primary)
                         : Theme.of(context).textTheme.subtitle2!,
                   ),
                 ],

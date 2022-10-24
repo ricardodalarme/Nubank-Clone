@@ -10,7 +10,7 @@ import 'package:nubank_clone/pages/deposit/deposit_screen.dart';
 import 'package:nubank_clone/pages/loan/loan_screen.dart';
 import 'package:nubank_clone/pages/payment/payment_screen.dart';
 import 'package:nubank_clone/pages/transfer/transfer_screen.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/label_button.dart';
 import 'package:page_transition/page_transition.dart';
@@ -28,13 +28,16 @@ class AccountScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(
             NuIcons.nuds_ic_chevron_left,
-            color: kSecondaryTextColor,
+            color: AppColors.secondaryText,
           ),
           onPressed: () => MyRouter.popPage(context),
         ),
         actions: [
           IconButton(
-            icon: const Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
+            icon: const Icon(
+              Mdi.helpCircleOutline,
+              color: AppColors.secondaryText,
+            ),
             onPressed: () {},
           )
         ],
@@ -81,7 +84,7 @@ class AccountScreen extends StatelessWidget {
                       text: TextSpan(
                         text: '+R\$ $kIcome',
                         style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              color: kLimitColor,
+                              color: AppColors.limit,
                               fontWeight: FontWeight.w500,
                             ),
                         children: const <TextSpan>[
@@ -89,7 +92,7 @@ class AccountScreen extends StatelessWidget {
                             text: ' este mês',
                             style: TextStyle(
                               fontWeight: FontWeight.normal,
-                              color: kTextColor,
+                              color: AppColors.text,
                             ),
                           ),
                         ],
@@ -155,7 +158,7 @@ class AccountScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 25),
-            Container(height: 1, color: kLineColor),
+            Container(height: 1, color: AppColors.line),
             const SizedBox(height: 50),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),

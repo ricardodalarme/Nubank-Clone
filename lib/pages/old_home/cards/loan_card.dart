@@ -3,7 +3,7 @@ import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/pages/loan/loan_screen.dart';
 import 'package:nubank_clone/pages/old_home/widgets/main_card.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/nu_outlined_button.dart';
 import 'package:page_transition/page_transition.dart';
@@ -23,7 +23,7 @@ class LoanCard extends StatelessWidget {
         const SizedBox(height: 12),
         if (viewValues)
           Container(
-            color: kUnviewColor,
+            color: AppColors.unview,
             height: 39,
             width: double.infinity,
           )

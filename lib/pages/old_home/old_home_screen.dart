@@ -19,7 +19,7 @@ import 'package:nubank_clone/pages/pix/pix_screen.dart';
 import 'package:nubank_clone/pages/recharge/recharge_screen.dart';
 import 'package:nubank_clone/pages/refer/refer_screen.dart';
 import 'package:nubank_clone/pages/transfer/transfer_screen.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/circle_button.dart';
 import 'package:page_transition/page_transition.dart';
@@ -43,10 +43,10 @@ class OldHomeScreen extends StatelessWidget {
     final state = Provider.of<AppState>(context);
 
     return Container(
-      color: kPrimaryColor,
+      color: AppColors.primary,
       child: SafeArea(
         child: Scaffold(
-          backgroundColor: kPrimaryColor,
+          backgroundColor: AppColors.primary,
           body: Column(
             children: [
               Expanded(

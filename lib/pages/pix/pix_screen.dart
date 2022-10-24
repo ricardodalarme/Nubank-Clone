@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/pix/widgets/pix_menu.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/label_button.dart';
 
@@ -19,7 +19,7 @@ class PixScreen extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () => MyRouter.popPage(context),
-            icon: const Icon(NuIcons.close, color: kSecondaryTextColor),
+            icon: const Icon(NuIcons.close, color: AppColors.secondaryText),
           ),
           const SizedBox(height: 15),
           Expanded(
@@ -68,7 +68,7 @@ class PixScreen extends StatelessWidget {
               ),
             ),
           ),
-          Container(height: 1, color: kLineColor),
+          Container(height: 1, color: AppColors.line),
           Column(
             children: const [
               PixMenu('Minhas chaves', Mdi.keyChain),

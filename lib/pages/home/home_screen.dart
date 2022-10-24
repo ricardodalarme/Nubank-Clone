@@ -18,7 +18,7 @@ import 'package:nubank_clone/pages/pix/pix_screen.dart';
 import 'package:nubank_clone/pages/recharge/recharge_screen.dart';
 import 'package:nubank_clone/pages/refer/refer_screen.dart';
 import 'package:nubank_clone/pages/transfer/transfer_screen.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/circle_button.dart';
 import 'package:nubank_clone/widgets/label_button.dart';
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [kPrimaryColor, Colors.white],
+          colors: [AppColors.primary, Colors.white],
           stops: [0.5, 0.5],
         ),
       ),
@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
     final state = Provider.of<AppState>(context);
 
     return Container(
-      color: kPrimaryColor,
+      color: AppColors.primary,
       padding: const EdgeInsets.fromLTRB(18, 20, 16, 25),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -201,7 +201,7 @@ class HomeScreen extends StatelessWidget {
             child: DecoratedBox(
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
-                color: kLabelButtonColor,
+                color: AppColors.labelButton,
               ),
               child: Material(
                 color: Colors.transparent,
@@ -214,7 +214,7 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         const Icon(
                           NuIcons.ic_card_nu,
-                          color: kTextColor,
+                          color: AppColors.text,
                         ),
                         const SizedBox(width: 12),
                         Text(

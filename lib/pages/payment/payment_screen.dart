@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/payment/widgets/payment_menu.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 
 class PaymentScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class PaymentScreen extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () => MyRouter.popPage(context),
-            icon: const Icon(NuIcons.close, color: kSecondaryTextColor),
+            icon: const Icon(NuIcons.close, color: AppColors.secondaryText),
           ),
           const SizedBox(height: 10),
           Expanded(
@@ -29,13 +29,13 @@ class PaymentScreen extends StatelessWidget {
                   'Leia um QR Code ou cole o código.',
                   NuIcons.rewards_ic_empty_state_other,
                 ),
-                Container(height: 1, color: kUnviewColor),
+                Container(height: 1, color: AppColors.unview),
                 const PaymentMenu(
                   'Pagar fatura do cartão',
                   'Libera o limite do seu Cartão de Crédito.',
                   NuIcons.ic_savings_global_action_pay,
                 ),
-                Container(height: 1, color: kUnviewColor),
+                Container(height: 1, color: AppColors.unview),
                 const PaymentMenu(
                   'Pagar um boleto',
                   'Contas de luz, água, etc.',

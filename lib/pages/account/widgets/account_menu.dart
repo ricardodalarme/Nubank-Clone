@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 
 class AccountMenu extends StatelessWidget {
@@ -43,7 +43,7 @@ class AccountMenu extends StatelessWidget {
           GestureDetector(
             child: const Icon(
               NuIcons.abc_ic_go_search_api_material,
-              color: kSecondaryTextColor,
+              color: AppColors.secondaryText,
             ),
           ),
         ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/core/router.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 
 class EasyInvestScreen extends StatelessWidget {
@@ -17,13 +17,16 @@ class EasyInvestScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(
             NuIcons.nuds_ic_chevron_left,
-            color: kSecondaryTextColor,
+            color: AppColors.secondaryText,
           ),
           onPressed: () => MyRouter.popPage(context),
         ),
         actions: [
           IconButton(
-            icon: const Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
+            icon: const Icon(
+              Mdi.helpCircleOutline,
+              color: AppColors.secondaryText,
+            ),
             onPressed: () {},
           )
         ],
@@ -31,7 +34,7 @@ class EasyInvestScreen extends StatelessWidget {
       floatingActionButton: const FloatingActionButton(
         onPressed: null,
         elevation: 0,
-        backgroundColor: kPrimaryColor,
+        backgroundColor: AppColors.primary,
         child: Icon(Mdi.arrowRight),
       ),
       body: Padding(
@@ -114,7 +117,7 @@ class EasyInvestScreen extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .bodyText2
-                    ?.copyWith(color: kPrimaryColor),
+                    ?.copyWith(color: AppColors.primary),
               ),
             )
           ],

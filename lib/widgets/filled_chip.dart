@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 class FilledButton extends StatelessWidget {
   final String value;
@@ -12,7 +12,7 @@ class FilledButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Chip(
-      backgroundColor: kPrimaryColor,
+      backgroundColor: AppColors.primary,
       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 11),
       label: Text(
         value,

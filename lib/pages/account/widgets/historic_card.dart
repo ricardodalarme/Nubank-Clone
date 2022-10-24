@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 class HistoricCard extends StatelessWidget {
   final String title;
@@ -32,7 +32,7 @@ class HistoricCard extends StatelessWidget {
                   width: 48,
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,
-                    color: kLabelButtonColor,
+                    color: AppColors.labelButton,
                   ),
                   child: Icon(icon),
                 ),
@@ -85,7 +85,7 @@ class HistoricCard extends StatelessWidget {
           const SizedBox(height: 5),
           Container(
             height: 1,
-            color: kUnviewColor,
+            color: AppColors.unview,
           )
         ],
       ),

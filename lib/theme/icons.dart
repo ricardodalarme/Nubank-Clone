@@ -2,7 +2,7 @@
 
 import 'package:flutter/widgets.dart';
 
-class NuIcons {
+abstract class NuIcons {
   static const _kFontFamily = 'NuIcons';
 
   static const IconData nuds_ic_category_store =

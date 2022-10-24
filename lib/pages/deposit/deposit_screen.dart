@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/deposit/widgets/deposit_menu.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 
 class DepositScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class DepositScreen extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () => MyRouter.popPage(context),
-            icon: const Icon(NuIcons.close, color: kSecondaryTextColor),
+            icon: const Icon(NuIcons.close, color: AppColors.secondaryText),
           ),
           const SizedBox(height: 15),
           Padding(

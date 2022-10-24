@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 class CircleButton extends StatelessWidget {
   final IconData icon;
@@ -19,8 +19,10 @@ class CircleButton extends StatelessWidget {
         height: 48,
         width: 48,
         margin: const EdgeInsets.only(left: 8),
-        decoration:
-            const BoxDecoration(color: kSecondaryColor, shape: BoxShape.circle),
+        decoration: const BoxDecoration(
+          color: AppColors.secondary,
+          shape: BoxShape.circle,
+        ),
         child: Icon(
           icon,
           color: Colors.white,

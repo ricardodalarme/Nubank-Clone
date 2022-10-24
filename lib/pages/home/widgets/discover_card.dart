@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/widgets/filled_chip.dart';
 
 class DiscoverCard extends StatelessWidget {
@@ -25,7 +25,7 @@ class DiscoverCard extends StatelessWidget {
       margin: const EdgeInsets.only(right: 15),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10)),
-        color: kLabelButtonColor,
+        color: AppColors.labelButton,
       ),
       child: Material(
         color: Colors.transparent,
@@ -42,7 +42,7 @@ class DiscoverCard extends StatelessWidget {
                     Text(
                       title,
                       style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                            color: kTextColor,
+                            color: AppColors.text,
                             fontWeight: FontWeight.w500,
                           ),
                     ),
@@ -52,7 +52,7 @@ class DiscoverCard extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.all(3),
                         decoration: const BoxDecoration(
-                          color: kPrimaryColor,
+                          color: AppColors.primary,
                           borderRadius: BorderRadius.all(Radius.circular(5)),
                         ),
                         child: Text(

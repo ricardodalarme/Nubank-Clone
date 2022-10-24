@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 
 class PixMenu extends StatelessWidget {
@@ -19,7 +19,7 @@ class PixMenu extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        color: kLabelButtonColor,
+        color: AppColors.labelButton,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         height: 72,
         child: Row(
@@ -27,7 +27,7 @@ class PixMenu extends StatelessWidget {
           children: [
             Row(
               children: <Widget>[
-                Icon(icon, color: kSecondaryTextColor),
+                Icon(icon, color: AppColors.secondaryText),
                 const SizedBox(width: 20),
                 Text(
                   text,
@@ -37,7 +37,7 @@ class PixMenu extends StatelessWidget {
             ),
             const Icon(
               NuIcons.abc_ic_go_search_api_material,
-              color: kSecondaryTextColor,
+              color: AppColors.secondaryText,
             ),
           ],
         ),

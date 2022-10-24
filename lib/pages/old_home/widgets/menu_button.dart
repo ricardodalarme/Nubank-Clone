@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 class MenuButton extends StatelessWidget {
   final String title;
@@ -22,7 +22,7 @@ class MenuButton extends StatelessWidget {
         height: 96,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(3)),
-          color: kSecondaryColor,
+          color: AppColors.secondary,
         ),
         margin: const EdgeInsets.only(right: 8, top: 15),
         child: Padding(

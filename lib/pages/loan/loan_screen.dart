@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/core/router.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/nu_outlined_button.dart';
 
@@ -19,13 +19,16 @@ class LoanScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(
             NuIcons.nuds_ic_chevron_left,
-            color: kSecondaryTextColor,
+            color: AppColors.secondaryText,
           ),
           onPressed: () => MyRouter.popPage(context),
         ),
         actions: [
           IconButton(
-            icon: const Icon(Mdi.helpCircleOutline, color: kSecondaryTextColor),
+            icon: const Icon(
+              Mdi.helpCircleOutline,
+              color: AppColors.secondaryText,
+            ),
             onPressed: () {},
           )
         ],
@@ -58,7 +61,7 @@ class LoanScreen extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .bodyText2
-                        ?.copyWith(color: kPrimaryColor),
+                        ?.copyWith(color: AppColors.primary),
                   ),
                   const SizedBox(height: 45),
                   const NuOutlinedButton('Novo empréstimo'),
@@ -66,7 +69,7 @@ class LoanScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Container(height: 1, color: kLineColor),
+            Container(height: 1, color: AppColors.line),
             const SizedBox(height: 30),
             Center(
               child: Text(

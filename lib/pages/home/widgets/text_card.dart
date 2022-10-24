@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 class TextCard extends StatelessWidget {
   final String text;
@@ -20,7 +20,7 @@ class TextCard extends StatelessWidget {
       width: 280,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(10)),
-        color: kLabelButtonColor,
+        color: AppColors.labelButton,
       ),
       child: Material(
         color: Colors.transparent,
@@ -41,7 +41,7 @@ class TextCard extends StatelessWidget {
                     style: Theme.of(context)
                         .textTheme
                         .bodyText2
-                        ?.copyWith(color: kPrimaryColor),
+                        ?.copyWith(color: AppColors.primary),
                   )
                 ],
               ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 
 class DepositMenu extends StatelessWidget {
@@ -31,7 +31,7 @@ class DepositMenu extends StatelessWidget {
               children: [
                 Row(
                   children: <Widget>[
-                    Icon(icon, color: kSecondaryTextColor),
+                    Icon(icon, color: AppColors.secondaryText),
                     const SizedBox(width: 20),
                     SizedBox(
                       width: MediaQuery.of(context).size.width - 125,
@@ -58,14 +58,14 @@ class DepositMenu extends StatelessWidget {
                 ),
                 const Icon(
                   NuIcons.abc_ic_go_search_api_material,
-                  color: kSecondaryTextColor,
+                  color: AppColors.secondaryText,
                 ),
               ],
             ),
           ),
           Container(
             height: 1,
-            color: kUnviewColor,
+            color: AppColors.unview,
           )
         ],
       ),

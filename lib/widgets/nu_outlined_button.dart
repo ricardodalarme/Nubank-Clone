@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 class NuOutlinedButton extends StatelessWidget {
   final String value;
@@ -15,7 +15,7 @@ class NuOutlinedButton extends StatelessWidget {
       onPressed: null,
       style: OutlinedButton.styleFrom(
         foregroundColor: Colors.white,
-        side: const BorderSide(color: kPrimaryColor, width: 0.5),
+        side: const BorderSide(color: AppColors.primary, width: 0.5),
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
       ),
       child: Text(
@@ -23,7 +23,7 @@ class NuOutlinedButton extends StatelessWidget {
         style: Theme.of(context)
             .textTheme
             .caption
-            ?.copyWith(color: kPrimaryColor, fontWeight: FontWeight.bold),
+            ?.copyWith(color: AppColors.primary, fontWeight: FontWeight.bold),
       ),
     );
   }

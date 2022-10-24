@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text2/flutter_masked_text2.dart';
 import 'package:nubank_clone/core/constants.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/widgets/nu_input_field.dart';
 
 class TransferScreen extends StatelessWidget {
@@ -21,12 +21,12 @@ class TransferScreen extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(
-            icon: const Icon(Icons.close, color: kSecondaryTextColor),
+            icon: const Icon(Icons.close, color: AppColors.secondaryText),
             onPressed: () => Navigator.of(context).pop(),
           ),
           actions: [
             IconButton(
-              icon: const Icon(Icons.qr_code, color: kPrimaryColor),
+              icon: const Icon(Icons.qr_code, color: AppColors.primary),
               onPressed: () {},
             ),
           ],

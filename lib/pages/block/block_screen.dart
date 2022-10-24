@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/block/widgets/expanded_button.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:nubank_clone/theme/icons.dart';
 
 class BlockScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class BlockScreen extends StatelessWidget {
           const SizedBox(height: 40),
           const Icon(
             NuIcons.ic_virtual_card_blocked,
-            color: kSecondaryTextColor,
+            color: AppColors.secondaryText,
           ),
           const SizedBox(height: 20),
           Padding(
@@ -41,23 +41,23 @@ class BlockScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 40),
-          Container(height: 1, color: kLineColor),
+          Container(height: 1, color: AppColors.line),
           Row(
             children: [
               ExpandedButton(
                 'Cancelar',
                 onTap: () => MyRouter.popPage(context),
-                color: kSecondaryTextColor,
+                color: AppColors.secondaryText,
               ),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 1),
                 width: 1,
                 height: 62,
-                color: kLineColor,
+                color: AppColors.line,
               ),
               const ExpandedButton(
                 'Bloquear',
-                color: kPrimaryColor,
+                color: AppColors.primary,
               ),
             ],
           ),

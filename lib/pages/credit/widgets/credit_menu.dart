@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 class CreditMenu extends StatelessWidget {
   final String title;
@@ -26,7 +26,7 @@ class CreditMenu extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(icon, color: kPrimaryColor, size: 25),
+              Icon(icon, color: AppColors.primary, size: 25),
               Text(
                 title,
                 style: Theme.of(context)

@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 const customTextTheme = TextTheme(
   subtitle1: TextStyle(
     fontSize: 17,
-    color: kSecondaryTextColor,
+    color: AppColors.secondaryText,
     fontWeight: FontWeight.w300,
     letterSpacing: -1,
   ),
   subtitle2: TextStyle(
-    color: kSecondaryTextColor,
+    color: AppColors.secondaryText,
     fontWeight: FontWeight.normal,
   ),
   headline3: TextStyle(
     fontSize: 35,
-    color: kTextColor,
+    color: AppColors.text,
     fontWeight: FontWeight.w500,
     letterSpacing: -1.5,
   ),
   headline4: TextStyle(
     fontSize: 30,
-    color: kTextColor,
+    color: AppColors.text,
     fontWeight: FontWeight.w500,
     letterSpacing: -1.5,
   ),

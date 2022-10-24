@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/colors.dart';
+import 'package:nubank_clone/theme/app_colors.dart';
 
 class LabelButton extends StatelessWidget {
   final String label;
@@ -27,14 +27,14 @@ class LabelButton extends StatelessWidget {
               ElevatedButton(
                 onPressed: onPressed,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: kLabelButtonColor,
+                  backgroundColor: AppColors.labelButton,
                   shape: const CircleBorder(),
                   fixedSize: const Size(72, 72),
                   elevation: 0,
                 ),
                 child: Icon(
                   icon,
-                  color: kTextColor,
+                  color: AppColors.text,
                 ),
               ),
               if (tag != null)
@@ -45,7 +45,7 @@ class LabelButton extends StatelessWidget {
                   child: Container(
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: kPrimaryColor,
+                      color: AppColors.primary,
                     ),
                     padding:
                         const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
