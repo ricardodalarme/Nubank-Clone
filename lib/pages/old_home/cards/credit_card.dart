@@ -35,7 +35,7 @@ class CreditCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'R\$ $kInvoce',
+                'R\$ $kInvoice',
                 style: Theme.of(context)
                     .textTheme
                     .headline5

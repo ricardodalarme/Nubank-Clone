@@ -60,7 +60,7 @@ class CreditScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 13),
                         Text(
-                          'R\$ $kInvoce',
+                          'R\$ $kInvoice',
                           style: Theme.of(context)
                               .textTheme
                               .headline5
@@ -160,7 +160,7 @@ class CreditScreen extends StatelessWidget {
                     r'Você pagou R$ 50,00',
                     Mdi.cubeSend,
                   ),
-                  HistoricCard('Supermecado', 'Ricardo Dalarme', Mdi.cubeSend),
+                  HistoricCard('Supermercado', 'Ricardo Dalarme', Mdi.cubeSend),
                   HistoricCard(
                     'Transferência enviada',
                     'Ricardo Dalarme',

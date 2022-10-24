@@ -78,7 +78,7 @@ class EasyInvestScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  'Resgate passagens aéreas c ompradas em qualquer site.',
+                  'Resgate passagens aéreas compradas em qualquer site.',
                   style: Theme.of(context)
                       .textTheme
                       .subtitle1

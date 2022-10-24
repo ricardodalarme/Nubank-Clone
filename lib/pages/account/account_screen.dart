@@ -82,7 +82,7 @@ class AccountScreen extends StatelessWidget {
                     'Rendimento total da conta',
                     RichText(
                       text: TextSpan(
-                        text: '+R\$ $kIcome',
+                        text: '+R\$ $kIncome',
                         style: Theme.of(context).textTheme.subtitle1?.copyWith(
                               color: AppColors.limit,
                               fontWeight: FontWeight.w500,
