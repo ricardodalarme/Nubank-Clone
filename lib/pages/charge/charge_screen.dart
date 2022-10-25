@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text2/flutter_masked_text2.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/widgets/nu_input_field.dart';
 
 class ChargeScreen extends StatelessWidget {

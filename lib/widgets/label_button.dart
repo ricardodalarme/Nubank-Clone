@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
 
 class LabelButton extends StatelessWidget {
   final String label;

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text2/flutter_masked_text2.dart';
-import 'package:nubank_clone/core/constants.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/widgets/nu_input_field.dart';
 
 class TransferScreen extends StatelessWidget {
@@ -47,7 +47,7 @@ class TransferScreen extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyText2,
                   children: [
                     TextSpan(
-                      text: 'R\$ $kBalance',
+                      text: 'R\$ ${MockedValues.balance}',
                       style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ],

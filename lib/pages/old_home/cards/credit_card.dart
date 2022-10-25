@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/mocked_values.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/app_state.dart';
-import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/pages/credit/credit_screen.dart';
 import 'package:nubank_clone/pages/old_home/widgets/main_card.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
@@ -35,7 +35,7 @@ class CreditCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'R\$ $kInvoice',
+                'R\$ ${MockedValues.invoice}',
                 style: Theme.of(context)
                     .textTheme
                     .headline5
@@ -48,7 +48,7 @@ class CreditCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyText2,
                   children: const <TextSpan>[
                     TextSpan(
-                      text: 'R\$ $kLimit',
+                      text: 'R\$ ${MockedValues.limit}',
                       style: TextStyle(
                         color: AppColors.limit,
                         fontWeight: FontWeight.bold,

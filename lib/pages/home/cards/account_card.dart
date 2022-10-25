@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/core/app_state.dart';
-import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/pages/account/account_screen.dart';
 import 'package:nubank_clone/pages/home/widgets/main_card.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
@@ -24,7 +24,10 @@ class AccountCard extends StatelessWidget {
             width: double.infinity,
           )
         else
-          Text('R\$ $kBalance', style: Theme.of(context).textTheme.headline5),
+          Text(
+            'R\$ ${MockedValues.balance}',
+            style: Theme.of(context).textTheme.headline5,
+          ),
       ],
       hideDivider: true,
       onTap: () => Navigator.push(

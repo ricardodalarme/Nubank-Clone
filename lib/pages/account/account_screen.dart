@@ -1,7 +1,9 @@
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
-import 'package:nubank_clone/core/constants.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/mocked_values.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/account/widgets/account_menu.dart';
 import 'package:nubank_clone/pages/account/widgets/historic_card.dart';
@@ -10,8 +12,6 @@ import 'package:nubank_clone/pages/deposit/deposit_screen.dart';
 import 'package:nubank_clone/pages/loan/loan_screen.dart';
 import 'package:nubank_clone/pages/payment/payment_screen.dart';
 import 'package:nubank_clone/pages/transfer/transfer_screen.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/label_button.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -62,14 +62,14 @@ class AccountScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 7),
                   Text(
-                    'R\$ $kBalance',
+                    'R\$ ${MockedValues.balance}',
                     style: Theme.of(context).textTheme.headline3,
                   ),
                   const SizedBox(height: 50),
                   AccountMenu(
                     'Dinheiro guardado',
                     Text(
-                      'R\$ $kSaved',
+                      'R\$ ${MockedValues.saved}',
                       style: Theme.of(context)
                           .textTheme
                           .bodyText2
@@ -82,7 +82,7 @@ class AccountScreen extends StatelessWidget {
                     'Rendimento total da conta',
                     RichText(
                       text: TextSpan(
-                        text: '+R\$ $kIncome',
+                        text: '+R\$ ${MockedValues.income}',
                         style: Theme.of(context).textTheme.subtitle1?.copyWith(
                               color: AppColors.limit,
                               fontWeight: FontWeight.w500,

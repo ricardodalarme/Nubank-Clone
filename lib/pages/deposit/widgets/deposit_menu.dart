@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 
 class DepositMenu extends StatelessWidget {
   final String title;

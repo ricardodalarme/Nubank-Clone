@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/app_images.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/pix/widgets/pix_menu.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/label_button.dart';
 
 class PixScreen extends StatelessWidget {

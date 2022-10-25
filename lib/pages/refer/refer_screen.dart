@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/app_images.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/router.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/nu_outlined_button.dart';
 
 class ReferScreen extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/deposit/widgets/deposit_menu.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
 
 class DepositScreen extends StatelessWidget {
   const DepositScreen({super.key});

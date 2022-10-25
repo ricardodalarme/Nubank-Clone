@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
-import 'package:nubank_clone/core/constants.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/mocked_values.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/router.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/nu_outlined_button.dart';
 
 class LoanScreen extends StatelessWidget {
@@ -44,7 +44,7 @@ class LoanScreen extends StatelessWidget {
                 children: [
                   const SizedBox(height: 30),
                   Text(
-                    'O valor disponível no momento é de R\$ $kLoan',
+                    'O valor disponível no momento é de R\$ ${MockedValues.loan}',
                     style: Theme.of(context).textTheme.headline6,
                   ),
                   const SizedBox(height: 15),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
-import 'package:nubank_clone/core/constants.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/mocked_values.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/account/widgets/historic_card.dart';
 import 'package:nubank_clone/pages/credit/widgets/credit_menu.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
 
 class CreditScreen extends StatelessWidget {
   const CreditScreen({super.key});
@@ -60,7 +60,7 @@ class CreditScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 13),
                         Text(
-                          'R\$ $kInvoice',
+                          'R\$ ${MockedValues.invoice}',
                           style: Theme.of(context)
                               .textTheme
                               .headline5
@@ -73,7 +73,7 @@ class CreditScreen extends StatelessWidget {
                             style: Theme.of(context).textTheme.bodyText2,
                             children: const <TextSpan>[
                               TextSpan(
-                                text: 'R\$ $kLimit',
+                                text: 'R\$ ${MockedValues.limit}',
                                 style: TextStyle(
                                   color: AppColors.limit,
                                   fontWeight: FontWeight.bold,

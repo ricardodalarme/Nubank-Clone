@@ -1,7 +1,9 @@
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/mocked_values.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/app_state.dart';
-import 'package:nubank_clone/core/constants.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/charge/charge_screen.dart';
 import 'package:nubank_clone/pages/deposit/deposit_screen.dart';
@@ -18,8 +20,6 @@ import 'package:nubank_clone/pages/pix/pix_screen.dart';
 import 'package:nubank_clone/pages/recharge/recharge_screen.dart';
 import 'package:nubank_clone/pages/refer/refer_screen.dart';
 import 'package:nubank_clone/pages/transfer/transfer_screen.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
 import 'package:nubank_clone/widgets/circle_button.dart';
 import 'package:nubank_clone/widgets/label_button.dart';
 import 'package:page_transition/page_transition.dart';
@@ -106,7 +106,7 @@ class HomeScreen extends StatelessWidget {
           ),
           const SizedBox(height: 30),
           Text(
-            'Olá, $kUsername',
+            'Olá, ${MockedValues.username}',
             style: Theme.of(context)
                 .textTheme
                 .subtitle1
@@ -240,7 +240,7 @@ class HomeScreen extends StatelessWidget {
               children: [
                 const SizedBox(width: 24),
                 TextCard(
-                  text: 'Você tem R\$ $kLoan disponíveis para ',
+                  text: 'Você tem R\$ ${MockedValues.loan} disponíveis para ',
                   highlightText: 'empréstimo.',
                   onTap: () => Navigator.push(
                     context,

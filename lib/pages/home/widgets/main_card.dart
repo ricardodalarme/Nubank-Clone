@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank_clone/theme/icons.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 
 class MainCard extends StatelessWidget {
   final String title;

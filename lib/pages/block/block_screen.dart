@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_clone/constants/app_colors.dart';
+import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/router.dart';
 import 'package:nubank_clone/pages/block/widgets/expanded_button.dart';
-import 'package:nubank_clone/theme/app_colors.dart';
-import 'package:nubank_clone/theme/icons.dart';
 
 class BlockScreen extends StatelessWidget {
   const BlockScreen({super.key});
