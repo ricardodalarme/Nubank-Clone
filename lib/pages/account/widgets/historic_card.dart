@@ -92,5 +92,3 @@ class HistoricCard extends StatelessWidget {
     );
   }
 }
-
-class Bowidth {}

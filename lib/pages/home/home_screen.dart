@@ -4,7 +4,7 @@ import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/app_state.dart';
-import 'package:nubank_clone/core/router.dart';
+import 'package:nubank_clone/core/router_utils.dart';
 import 'package:nubank_clone/pages/charge/charge_screen.dart';
 import 'package:nubank_clone/pages/deposit/deposit_screen.dart';
 import 'package:nubank_clone/pages/home/cards/account_card.dart';
@@ -97,8 +97,10 @@ class HomeScreen extends StatelessWidget {
                       Icons.forward_to_inbox_outlined,
                       color: Colors.white,
                     ),
-                    onPressed: () =>
-                        MyRouter.showBottomSheet(context, const ReferScreen()),
+                    onPressed: () => RouterUtils.showBottomSheet(
+                      context,
+                      const ReferScreen(),
+                    ),
                   ),
                 ],
               )
@@ -137,25 +139,29 @@ class HomeScreen extends StatelessWidget {
                   'Pix',
                   NuIcons.rewards_ic_empty_state_other,
                   onPressed: () =>
-                      MyRouter.showBottomSheet(context, const PixScreen()),
+                      RouterUtils.showBottomSheet(context, const PixScreen()),
                 ),
                 LabelButton(
                   'Pagar',
                   NuIcons.ic_savings_global_action_pay,
-                  onPressed: () =>
-                      MyRouter.showBottomSheet(context, const PaymentScreen()),
+                  onPressed: () => RouterUtils.showBottomSheet(
+                    context,
+                    const PaymentScreen(),
+                  ),
                 ),
                 LabelButton(
                   'Transferir',
                   NuIcons.ic_savings_global_action_transfer_out,
                   onPressed: () =>
-                      MyRouter.showBottomSheet(context, TransferScreen()),
+                      RouterUtils.showBottomSheet(context, TransferScreen()),
                 ),
                 LabelButton(
                   'Depositar',
                   NuIcons.ic_savings_global_action_transfer_in,
-                  onPressed: () =>
-                      MyRouter.showBottomSheet(context, const DepositScreen()),
+                  onPressed: () => RouterUtils.showBottomSheet(
+                    context,
+                    const DepositScreen(),
+                  ),
                 ),
                 LabelButton(
                   'Empréstimos',
@@ -173,13 +179,13 @@ class HomeScreen extends StatelessWidget {
                   'Recarga de celular',
                   NuIcons.ic_phone,
                   onPressed: () =>
-                      MyRouter.showBottomSheet(context, RechargeScreen()),
+                      RouterUtils.showBottomSheet(context, RechargeScreen()),
                 ),
                 LabelButton(
                   'Cobrar',
                   NuIcons.nuds_ic_request_money,
                   onPressed: () =>
-                      MyRouter.showBottomSheet(context, ChargeScreen()),
+                      RouterUtils.showBottomSheet(context, ChargeScreen()),
                 ),
                 LabelButton(
                   'Doação',
@@ -293,7 +299,7 @@ class HomeScreen extends StatelessWidget {
                       'Mostre aos seus amigos como é fácil ter uma vida sem burocracia.',
                   buttonText: 'Indicar amigos',
                   onTap: () =>
-                      MyRouter.showBottomSheet(context, const ReferScreen()),
+                      RouterUtils.showBottomSheet(context, const ReferScreen()),
                 ),
                 const SizedBox(width: 14),
               ],

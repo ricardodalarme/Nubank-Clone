@@ -21,7 +21,7 @@ class InvestmentsCard extends StatelessWidget {
               ?.copyWith(fontWeight: FontWeight.w500),
         ),
         const SizedBox(height: 15),
-        const FilledButton('Conhecer'),
+        const FilledChip('Conhecer'),
       ],
       icon: Mdi.signal,
       onTap: () => Navigator.push(

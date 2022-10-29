@@ -30,7 +30,7 @@ class DiscoverCard extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: const BorderRadius.all(Radius.circular(10)),
           onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.all(20),
@@ -74,7 +74,7 @@ class DiscoverCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyText2,
                 ),
                 const SizedBox(height: 10),
-                FilledButton(buttonText),
+                FilledChip(buttonText),
               ],
             ),
           ),

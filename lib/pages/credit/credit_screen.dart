@@ -3,7 +3,7 @@ import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
-import 'package:nubank_clone/core/router.dart';
+import 'package:nubank_clone/core/router_utils.dart';
 import 'package:nubank_clone/pages/account/widgets/historic_card.dart';
 import 'package:nubank_clone/pages/credit/widgets/credit_menu.dart';
 
@@ -22,7 +22,7 @@ class CreditScreen extends StatelessWidget {
             NuIcons.nuds_ic_chevron_left,
             color: AppColors.secondaryText,
           ),
-          onPressed: () => MyRouter.popPage(context),
+          onPressed: () => RouterUtils.popPage(context),
         ),
         actions: [
           IconButton(

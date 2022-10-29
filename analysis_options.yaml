@@ -4,10 +4,6 @@ analyzer:
   plugins:
     - dart_code_metrics
 
-  exclude:
-    - lib/**.graphql.dart
-    - lib/**.g.dart
-
   errors:
     annotate_overrides: error
     avoid_shadowing_type_parameters: warning
@@ -186,21 +182,29 @@ linter:
 
 dart_code_metrics:
   rules:
+    - always-remove-listener
+    - avoid-border-all
     - avoid-collection-methods-with-unrelated-types
     - avoid-global-state
+    - avoid-shrink-wrap-in-lists
     - avoid-unnecessary-setstate
-    - avoid-unnecessary-type-assertions
-    - avoid-unnecessary-type-casts
+    - avoid-unnecessary-setstate
     - avoid-unrelated-type-assertions:
         severity: error
+    - avoid-unnecessary-type-casts
     - avoid-unused-parameters
+    - avoid-use-expanded-as-spacer
+    - avoid-wrapping-in-padding
+    - consistent-update-render-object
     - no-boolean-literal-compare
     - no-equal-then-else
+    - prefer-const-border-radius
     - prefer-const-border-radius
     - prefer-first
     - prefer-immediate-return
     - prefer-last
+    - prefer-match-file-name
+    - prefer-single-widget-per-file
 
   metrics-exclude:
-    - lib/**
     - test/**

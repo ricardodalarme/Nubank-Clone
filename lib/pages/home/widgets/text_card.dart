@@ -42,7 +42,7 @@ class TextCard extends StatelessWidget {
                         .textTheme
                         .bodyText2
                         ?.copyWith(color: AppColors.primary),
-                  )
+                  ),
                 ],
               ),
             ),

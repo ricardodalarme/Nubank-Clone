@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
-import 'package:nubank_clone/core/router.dart';
+import 'package:nubank_clone/core/router_utils.dart';
 import 'package:nubank_clone/pages/block/widgets/expanded_button.dart';
 
 class BlockScreen extends StatelessWidget {
@@ -46,7 +46,7 @@ class BlockScreen extends StatelessWidget {
             children: [
               ExpandedButton(
                 'Cancelar',
-                onTap: () => MyRouter.popPage(context),
+                onTap: () => RouterUtils.popPage(context),
                 color: AppColors.secondaryText,
               ),
               Container(

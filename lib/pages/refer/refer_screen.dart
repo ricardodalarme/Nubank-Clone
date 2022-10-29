@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/app_images.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
-import 'package:nubank_clone/core/router.dart';
+import 'package:nubank_clone/core/router_utils.dart';
 import 'package:nubank_clone/widgets/nu_outlined_button.dart';
 
 class ReferScreen extends StatelessWidget {
@@ -17,7 +17,7 @@ class ReferScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           IconButton(
-            onPressed: () => MyRouter.popPage(context),
+            onPressed: () => RouterUtils.popPage(context),
             icon: const Icon(NuIcons.close, color: AppColors.secondaryText),
           ),
           const SizedBox(height: 15),

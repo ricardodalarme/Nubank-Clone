@@ -4,7 +4,7 @@ import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
-import 'package:nubank_clone/core/router.dart';
+import 'package:nubank_clone/core/router_utils.dart';
 import 'package:nubank_clone/pages/account/widgets/account_menu.dart';
 import 'package:nubank_clone/pages/account/widgets/historic_card.dart';
 import 'package:nubank_clone/pages/charge/charge_screen.dart';
@@ -30,7 +30,7 @@ class AccountScreen extends StatelessWidget {
             NuIcons.nuds_ic_chevron_left,
             color: AppColors.secondaryText,
           ),
-          onPressed: () => MyRouter.popPage(context),
+          onPressed: () => RouterUtils.popPage(context),
         ),
         actions: [
           IconButton(
@@ -115,7 +115,7 @@ class AccountScreen extends StatelessWidget {
                     LabelButton(
                       'Depositar',
                       BootstrapIcons.cash,
-                      onPressed: () => MyRouter.showBottomSheet(
+                      onPressed: () => RouterUtils.showBottomSheet(
                         context,
                         const DepositScreen(),
                       ),
@@ -123,7 +123,7 @@ class AccountScreen extends StatelessWidget {
                     LabelButton(
                       'Pagar',
                       Mdi.barcode,
-                      onPressed: () => MyRouter.showBottomSheet(
+                      onPressed: () => RouterUtils.showBottomSheet(
                         context,
                         const PaymentScreen(),
                       ),
@@ -131,8 +131,10 @@ class AccountScreen extends StatelessWidget {
                     LabelButton(
                       'Transferir',
                       Mdi.cubeSend,
-                      onPressed: () =>
-                          MyRouter.showBottomSheet(context, TransferScreen()),
+                      onPressed: () => RouterUtils.showBottomSheet(
+                        context,
+                        TransferScreen(),
+                      ),
                     ),
                     LabelButton(
                       'Empréstimos',
@@ -150,7 +152,7 @@ class AccountScreen extends StatelessWidget {
                       'Cobrar',
                       Mdi.messageAlertOutline,
                       onPressed: () =>
-                          MyRouter.showBottomSheet(context, ChargeScreen()),
+                          RouterUtils.showBottomSheet(context, ChargeScreen()),
                     ),
                     const SizedBox(width: 20),
                   ],

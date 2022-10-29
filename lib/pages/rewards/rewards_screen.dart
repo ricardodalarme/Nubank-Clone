@@ -3,10 +3,10 @@ import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/app_images.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
-import 'package:nubank_clone/core/router.dart';
+import 'package:nubank_clone/core/router_utils.dart';
 
-class EasyInvestScreen extends StatelessWidget {
-  const EasyInvestScreen({super.key});
+class RewardsScreen extends StatelessWidget {
+  const RewardsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class EasyInvestScreen extends StatelessWidget {
             NuIcons.nuds_ic_chevron_left,
             color: AppColors.secondaryText,
           ),
-          onPressed: () => MyRouter.popPage(context),
+          onPressed: () => RouterUtils.popPage(context),
         ),
         actions: [
           IconButton(

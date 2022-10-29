@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 
-class FilledButton extends StatelessWidget {
+class FilledChip extends StatelessWidget {
   final String value;
 
-  const FilledButton(
+  const FilledChip(
     this.value, {
     super.key,
   });
