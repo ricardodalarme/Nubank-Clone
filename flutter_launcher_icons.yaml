@@ -13,7 +13,7 @@ flutter_icons:
     generate: true
 
   # The location of the image file which you want to use as the app launcher icon
-  image_path: "assets/icons/logo_background.png"
+  image_path: "assets/images/logo_background.png"
 
   # The location of the icon image file specific for a specific platform
   # (optional - if not defined then the image_path is used)
