@@ -5,7 +5,7 @@ import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/pages/credit/credit_screen.dart';
 import 'package:nubank_clone/pages/old_home/widgets/main_card.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:nubank_clone/utils/extensions/router_context_extension.dart';
 import 'package:provider/provider.dart';
 
 class CreditCard extends StatelessWidget {
@@ -60,13 +60,8 @@ class CreditCard extends StatelessWidget {
             ],
           ),
       ],
-      onTap: () => Navigator.push(
-        context,
-        PageTransition(
-          type: PageTransitionType.rightToLeft,
-          duration: const Duration(milliseconds: 400),
-          child: const CreditScreen(),
-        ),
+      onTap: () => context.push(
+        const CreditScreen(),
       ),
     );
   }

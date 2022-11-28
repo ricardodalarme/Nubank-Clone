@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/pages/easyinvest/easyinvest_screen.dart';
 import 'package:nubank_clone/pages/home/widgets/main_card.dart';
+import 'package:nubank_clone/utils/extensions/router_context_extension.dart';
 import 'package:nubank_clone/widgets/filled_chip.dart';
-import 'package:page_transition/page_transition.dart';
 
 class InvestmentsCard extends StatelessWidget {
   const InvestmentsCard({super.key});
@@ -24,13 +24,8 @@ class InvestmentsCard extends StatelessWidget {
         const FilledChip('Conhecer'),
       ],
       icon: Mdi.signal,
-      onTap: () => Navigator.push(
-        context,
-        PageTransition(
-          type: PageTransitionType.rightToLeft,
-          duration: const Duration(milliseconds: 400),
-          child: const EasyInvestScreen(),
-        ),
+      onTap: () => context.push(
+        const EasyInvestScreen(),
       ),
     );
   }

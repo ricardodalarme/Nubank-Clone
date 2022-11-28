@@ -3,8 +3,8 @@ import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/app_images.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
-import 'package:nubank_clone/core/router_utils.dart';
 import 'package:nubank_clone/pages/pix/widgets/pix_menu.dart';
+import 'package:nubank_clone/utils/extensions/router_context_extension.dart';
 import 'package:nubank_clone/widgets/label_button.dart';
 
 class PixScreen extends StatelessWidget {
@@ -19,7 +19,7 @@ class PixScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           IconButton(
-            onPressed: () => RouterUtils.popPage(context),
+            onPressed: () => context.pop(),
             icon: const Icon(NuIcons.close, color: AppColors.secondaryText),
           ),
           const SizedBox(height: 15),

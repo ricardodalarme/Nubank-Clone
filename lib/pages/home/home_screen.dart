@@ -4,7 +4,6 @@ import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/app_state.dart';
-import 'package:nubank_clone/core/router_utils.dart';
 import 'package:nubank_clone/pages/charge/charge_screen.dart';
 import 'package:nubank_clone/pages/deposit/deposit_screen.dart';
 import 'package:nubank_clone/pages/home/cards/account_card.dart';
@@ -20,9 +19,9 @@ import 'package:nubank_clone/pages/pix/pix_screen.dart';
 import 'package:nubank_clone/pages/recharge/recharge_screen.dart';
 import 'package:nubank_clone/pages/refer/refer_screen.dart';
 import 'package:nubank_clone/pages/transfer/transfer_screen.dart';
+import 'package:nubank_clone/utils/extensions/router_context_extension.dart';
 import 'package:nubank_clone/widgets/circle_button.dart';
 import 'package:nubank_clone/widgets/label_button.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -97,8 +96,7 @@ class HomeScreen extends StatelessWidget {
                       Icons.forward_to_inbox_outlined,
                       color: Colors.white,
                     ),
-                    onPressed: () => RouterUtils.showBottomSheet(
-                      context,
+                    onPressed: () => context.showBottomSheet(
                       const ReferScreen(),
                     ),
                   ),
@@ -138,54 +136,43 @@ class HomeScreen extends StatelessWidget {
                 LabelButton(
                   'Pix',
                   NuIcons.rewards_ic_empty_state_other,
-                  onPressed: () =>
-                      RouterUtils.showBottomSheet(context, const PixScreen()),
+                  onPressed: () => context.showBottomSheet(const PixScreen()),
                 ),
                 LabelButton(
                   'Pagar',
                   NuIcons.ic_savings_global_action_pay,
-                  onPressed: () => RouterUtils.showBottomSheet(
-                    context,
+                  onPressed: () => context.showBottomSheet(
                     const PaymentScreen(),
                   ),
                 ),
                 LabelButton(
                   'Transferir',
                   NuIcons.ic_savings_global_action_transfer_out,
-                  onPressed: () =>
-                      RouterUtils.showBottomSheet(context, TransferScreen()),
+                  onPressed: () => context.showBottomSheet(TransferScreen()),
                 ),
                 LabelButton(
                   'Depositar',
                   NuIcons.ic_savings_global_action_transfer_in,
-                  onPressed: () => RouterUtils.showBottomSheet(
-                    context,
+                  onPressed: () => context.showBottomSheet(
                     const DepositScreen(),
                   ),
                 ),
                 LabelButton(
                   'Empréstimos',
                   NuIcons.nuds_ic_personal_loan,
-                  onPressed: () => Navigator.push(
-                    context,
-                    PageTransition(
-                      type: PageTransitionType.rightToLeft,
-                      duration: const Duration(milliseconds: 400),
-                      child: const LoanScreen(),
-                    ),
+                  onPressed: () => context.push(
+                    const LoanScreen(),
                   ),
                 ),
                 LabelButton(
                   'Recarga de celular',
                   NuIcons.ic_phone,
-                  onPressed: () =>
-                      RouterUtils.showBottomSheet(context, RechargeScreen()),
+                  onPressed: () => context.showBottomSheet(RechargeScreen()),
                 ),
                 LabelButton(
                   'Cobrar',
                   NuIcons.nuds_ic_request_money,
-                  onPressed: () =>
-                      RouterUtils.showBottomSheet(context, ChargeScreen()),
+                  onPressed: () => context.showBottomSheet(ChargeScreen()),
                 ),
                 LabelButton(
                   'Doação',
@@ -248,13 +235,8 @@ class HomeScreen extends StatelessWidget {
                 TextCard(
                   text: 'Você tem R\$ ${MockedValues.loan} disponíveis para ',
                   highlightText: 'empréstimo.',
-                  onTap: () => Navigator.push(
-                    context,
-                    PageTransition(
-                      type: PageTransitionType.rightToLeft,
-                      duration: const Duration(milliseconds: 400),
-                      child: const LoanScreen(),
-                    ),
+                  onTap: () => context.push(
+                    const LoanScreen(),
                   ),
                 ),
                 TextCard(
@@ -298,8 +280,7 @@ class HomeScreen extends StatelessWidget {
                   content:
                       'Mostre aos seus amigos como é fácil ter uma vida sem burocracia.',
                   buttonText: 'Indicar amigos',
-                  onTap: () =>
-                      RouterUtils.showBottomSheet(context, const ReferScreen()),
+                  onTap: () => context.showBottomSheet(const ReferScreen()),
                 ),
                 const SizedBox(width: 14),
               ],

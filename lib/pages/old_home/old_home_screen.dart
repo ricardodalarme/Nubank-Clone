@@ -3,7 +3,6 @@ import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/core/app_state.dart';
-import 'package:nubank_clone/core/router_utils.dart';
 import 'package:nubank_clone/pages/block/block_screen.dart';
 import 'package:nubank_clone/pages/charge/charge_screen.dart';
 import 'package:nubank_clone/pages/deposit/deposit_screen.dart';
@@ -21,8 +20,8 @@ import 'package:nubank_clone/pages/pix/pix_screen.dart';
 import 'package:nubank_clone/pages/recharge/recharge_screen.dart';
 import 'package:nubank_clone/pages/refer/refer_screen.dart';
 import 'package:nubank_clone/pages/transfer/transfer_screen.dart';
+import 'package:nubank_clone/utils/extensions/router_context_extension.dart';
 import 'package:nubank_clone/widgets/circle_button.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
 class OldHomeScreen extends StatelessWidget {
@@ -100,53 +99,43 @@ class OldHomeScreen extends StatelessWidget {
                       MenuButton(
                         'Pix',
                         NuIcons.rewards_ic_empty_state_other,
-                        onTap: () => RouterUtils.showBottomSheet(
-                          context,
+                        onTap: () => context.showBottomSheet(
                           const PixScreen(),
                         ),
                       ),
                       MenuButton(
                         'Pagar',
                         NuIcons.ic_savings_global_action_pay,
-                        onTap: () => RouterUtils.showBottomSheet(
-                          context,
+                        onTap: () => context.showBottomSheet(
                           const PaymentScreen(),
                         ),
                       ),
                       MenuButton(
                         'Indicar amigos',
                         NuIcons.ic_refer_friend,
-                        onTap: () => RouterUtils.showBottomSheet(
-                          context,
+                        onTap: () => context.showBottomSheet(
                           const ReferScreen(),
                         ),
                       ),
                       MenuButton(
                         'Transferir',
                         NuIcons.ic_savings_global_action_transfer_out,
-                        onTap: () => RouterUtils.showBottomSheet(
-                          context,
+                        onTap: () => context.showBottomSheet(
                           TransferScreen(),
                         ),
                       ),
                       MenuButton(
                         'Depositar',
                         NuIcons.ic_savings_global_action_transfer_in,
-                        onTap: () => RouterUtils.showBottomSheet(
-                          context,
+                        onTap: () => context.showBottomSheet(
                           const DepositScreen(),
                         ),
                       ),
                       MenuButton(
                         'Empréstimos',
                         NuIcons.nuds_ic_personal_loan,
-                        onTap: () => Navigator.push(
-                          context,
-                          PageTransition(
-                            type: PageTransitionType.rightToLeft,
-                            duration: const Duration(milliseconds: 400),
-                            child: const LoanScreen(),
-                          ),
+                        onTap: () => context.push(
+                          const LoanScreen(),
                         ),
                       ),
                       const MenuButton(
@@ -156,8 +145,7 @@ class OldHomeScreen extends StatelessWidget {
                       MenuButton(
                         'Recarga de celular',
                         NuIcons.ic_phone,
-                        onTap: () => RouterUtils.showBottomSheet(
-                          context,
+                        onTap: () => context.showBottomSheet(
                           RechargeScreen(),
                         ),
                       ),
@@ -168,8 +156,7 @@ class OldHomeScreen extends StatelessWidget {
                       MenuButton(
                         'Bloquear cartão',
                         NuIcons.ic_virtual_card_blocked,
-                        onTap: () => RouterUtils.showBottomSheet(
-                          context,
+                        onTap: () => context.showBottomSheet(
                           const BlockScreen(),
                           isScrollControlled: false,
                         ),
@@ -177,8 +164,7 @@ class OldHomeScreen extends StatelessWidget {
                       MenuButton(
                         'Cobrar',
                         NuIcons.nuds_ic_request_money,
-                        onTap: () => RouterUtils.showBottomSheet(
-                          context,
+                        onTap: () => context.showBottomSheet(
                           ChargeScreen(),
                         ),
                       ),

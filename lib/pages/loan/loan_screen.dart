@@ -3,7 +3,7 @@ import 'package:mdi/mdi.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
-import 'package:nubank_clone/core/router_utils.dart';
+import 'package:nubank_clone/utils/extensions/router_context_extension.dart';
 import 'package:nubank_clone/widgets/nu_outlined_button.dart';
 
 class LoanScreen extends StatelessWidget {
@@ -21,7 +21,7 @@ class LoanScreen extends StatelessWidget {
             NuIcons.nuds_ic_chevron_left,
             color: AppColors.secondaryText,
           ),
-          onPressed: () => RouterUtils.popPage(context),
+          onPressed: () => context.pop(),
         ),
         actions: [
           IconButton(
