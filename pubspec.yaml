@@ -10,7 +10,7 @@ dependencies:
   bootstrap_icons: ^1.10.2
   flutter_masked_text2: ^0.9.1
   flutter_native_splash: ^2.2.16
-  mdi: ^5.0.0-nullsafety.0
+  material_design_icons_flutter: ^6.0.7096
   page_transition: ^2.0.9
   provider: ^6.0.5
 

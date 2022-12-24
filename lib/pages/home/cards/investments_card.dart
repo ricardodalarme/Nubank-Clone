@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mdi/mdi.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:nubank_clone/pages/easyinvest/easyinvest_screen.dart';
 import 'package:nubank_clone/pages/home/widgets/main_card.dart';
 import 'package:nubank_clone/utils/extensions/router_context_extension.dart';
@@ -23,7 +23,7 @@ class InvestmentsCard extends StatelessWidget {
         const SizedBox(height: 15),
         const FilledChip('Conhecer'),
       ],
-      icon: Mdi.signal,
+      icon: MdiIcons.signal,
       onTap: () => context.push(
         const EasyInvestScreen(),
       ),

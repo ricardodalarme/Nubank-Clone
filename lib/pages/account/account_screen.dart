@@ -1,6 +1,6 @@
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:mdi/mdi.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
@@ -34,7 +34,7 @@ class AccountScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(
-              Mdi.helpCircleOutline,
+              MdiIcons.helpCircleOutline,
               color: AppColors.secondaryText,
             ),
             onPressed: () {},
@@ -97,7 +97,7 @@ class AccountScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Mdi.signal,
+                    MdiIcons.signal,
                   ),
                 ],
               ),
@@ -120,14 +120,14 @@ class AccountScreen extends StatelessWidget {
                     ),
                     LabelButton(
                       'Pagar',
-                      Mdi.barcode,
+                      MdiIcons.barcode,
                       onPressed: () => context.showBottomSheet(
                         const PaymentScreen(),
                       ),
                     ),
                     LabelButton(
                       'Transferir',
-                      Mdi.cubeSend,
+                      MdiIcons.cubeSend,
                       onPressed: () => context.showBottomSheet(
                         TransferScreen(),
                       ),
@@ -141,7 +141,7 @@ class AccountScreen extends StatelessWidget {
                     ),
                     LabelButton(
                       'Cobrar',
-                      Mdi.messageAlertOutline,
+                      MdiIcons.messageAlertOutline,
                       onPressed: () => context.showBottomSheet(ChargeScreen()),
                     ),
                     const SizedBox(width: 20),
@@ -166,17 +166,17 @@ class AccountScreen extends StatelessWidget {
             const HistoricCard(
               'Transferência enviada',
               'Ricardo Dalarme de Oliveira Filho',
-              Mdi.cubeSend,
+              MdiIcons.cubeSend,
             ),
             const HistoricCard(
               'Transferência enviada',
               'Ricardo Dalarme',
-              Mdi.cubeSend,
+              MdiIcons.cubeSend,
             ),
             const HistoricCard(
               'Transferência enviada',
               'Ricardo Dalarme',
-              Mdi.cubeSend,
+              MdiIcons.cubeSend,
             ),
           ],
         ),

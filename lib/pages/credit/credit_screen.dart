@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mdi/mdi.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
@@ -158,13 +158,17 @@ class CreditScreen extends StatelessWidget {
                   HistoricCard(
                     'Pagamento recebido',
                     r'Você pagou R$ 50,00',
-                    Mdi.cubeSend,
+                    MdiIcons.cubeSend,
                   ),
-                  HistoricCard('Supermercado', 'Ricardo Dalarme', Mdi.cubeSend),
+                  HistoricCard(
+                    'Supermercado',
+                    'Ricardo Dalarme',
+                    MdiIcons.cubeSend,
+                  ),
                   HistoricCard(
                     'Transferência enviada',
                     'Ricardo Dalarme',
-                    Mdi.cubeSend,
+                    MdiIcons.cubeSend,
                   ),
                 ],
               ),

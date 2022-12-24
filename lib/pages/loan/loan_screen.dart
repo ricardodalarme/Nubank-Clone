@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mdi/mdi.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
 import 'package:nubank_clone/constants/mocked_values.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
@@ -26,7 +26,7 @@ class LoanScreen extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(
-              Mdi.helpCircleOutline,
+              MdiIcons.helpCircleOutline,
               color: AppColors.secondaryText,
             ),
             onPressed: () {},
