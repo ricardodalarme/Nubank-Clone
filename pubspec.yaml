@@ -4,22 +4,22 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.18.2 <3.0.0"
+  sdk: ">=2.18.6 <3.0.0"
 
 dependencies:
-  bootstrap_icons: ^1.9.1
+  bootstrap_icons: ^1.10.2
   flutter_masked_text2: ^0.9.1
-  flutter_native_splash: ^2.2.12
+  flutter_native_splash: ^2.2.16
   mdi: ^5.0.0-nullsafety.0
   page_transition: ^2.0.9
-  provider: ^6.0.4
+  provider: ^6.0.5
 
   flutter:
     sdk: flutter
 
 dev_dependencies:
-  dart_code_metrics: ^4.21.3
-  flutter_launcher_icons: ^0.10.0
+  dart_code_metrics: ^5.3.0
+  flutter_launcher_icons: ^0.11.0
   flutter_lints: ^2.0.1
 
   flutter_test:
