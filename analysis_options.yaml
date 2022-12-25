@@ -184,24 +184,36 @@ dart_code_metrics:
   rules:
     - always-remove-listener
     - avoid-border-all
+    - avoid-cascade-after-if-null
     - avoid-collection-methods-with-unrelated-types
+    - avoid-duplicate-exports
+    - avoid-dynamic
+    - avoid-expanded-as-spacer
     - avoid-global-state
+    - avoid-missing-enum-constant-in-map
+    - avoid-nested-conditional-expressions
+    - avoid-redundant-async
     - avoid-shrink-wrap-in-lists
     - avoid-unnecessary-setstate
-    - avoid-unnecessary-setstate
+    - avoid-unnecessary-type-casts
     - avoid-unrelated-type-assertions:
         severity: error
-    - avoid-unnecessary-type-casts
     - avoid-unused-parameters
-    - avoid-use-expanded-as-spacer
     - avoid-wrapping-in-padding
+    - check-for-equals-in-render-object-setters
     - consistent-update-render-object
+    - double-literal-format
     - no-boolean-literal-compare
     - no-equal-then-else
+    - no-object-declaration
+    - prefer-async-await
     - prefer-const-border-radius
-    - prefer-const-border-radius
+    - prefer-correct-test-file-name
+    - prefer-enums-by-name
+    - prefer-extracting-callbacks
     - prefer-first
     - prefer-immediate-return
+    - prefer-iterable-of
     - prefer-last
     - prefer-match-file-name
     - prefer-single-widget-per-file
