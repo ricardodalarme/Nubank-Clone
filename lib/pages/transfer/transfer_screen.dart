@@ -38,17 +38,17 @@ class TransferScreen extends StatelessWidget {
             children: [
               Text(
                 'Qual é o valor da transferência?',
-                style: Theme.of(context).textTheme.headline4,
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: 15),
               Text.rich(
                 TextSpan(
                   text: 'Saldo disponível em conta ',
-                  style: Theme.of(context).textTheme.bodyText2,
+                  style: Theme.of(context).textTheme.bodyMedium,
                   children: [
                     TextSpan(
                       text: 'R\$ ${MockedValues.balance}',
-                      style: Theme.of(context).textTheme.bodyText1,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
                   ],
                 ),

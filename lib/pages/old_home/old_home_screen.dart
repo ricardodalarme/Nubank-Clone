@@ -41,7 +41,7 @@ class OldHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = Provider.of<AppState>(context);
 
-    return Container(
+    return ColoredBox(
       color: AppColors.primary,
       child: SafeArea(
         child: Scaffold(
@@ -62,7 +62,7 @@ class OldHomeScreen extends StatelessWidget {
                             'Olá, ${MockedValues.username}',
                             style: Theme.of(context)
                                 .textTheme
-                                .headline5
+                                .headlineSmall
                                 ?.copyWith(color: Colors.white),
                           ),
                           Row(
@@ -75,7 +75,7 @@ class OldHomeScreen extends StatelessWidget {
                               ),
                               CircleButton(NuIcons.nuds_ic_settings, () {}),
                             ],
-                          )
+                          ),
                         ],
                       ),
                       const SizedBox(height: 24),

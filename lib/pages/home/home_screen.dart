@@ -101,7 +101,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
             ],
           ),
           const SizedBox(height: 30),
@@ -109,7 +109,7 @@ class HomeScreen extends StatelessWidget {
             'Olá, ${MockedValues.username}',
             style: Theme.of(context)
                 .textTheme
-                .subtitle1
+                .titleMedium
                 ?.copyWith(color: Colors.white, fontWeight: FontWeight.w600),
           ),
         ],
@@ -214,7 +214,7 @@ class HomeScreen extends StatelessWidget {
                           'Meus cartões',
                           textAlign: TextAlign.center,
                           style:
-                              Theme.of(context).textTheme.bodyText2?.copyWith(
+                              Theme.of(context).textTheme.bodyMedium?.copyWith(
                                     fontWeight: FontWeight.w500,
                                     fontSize: 13,
                                   ),
@@ -257,7 +257,7 @@ class HomeScreen extends StatelessWidget {
               'Descubra mais',
               style: Theme.of(context)
                   .textTheme
-                  .headline6
+                  .titleLarge
                   ?.copyWith(fontWeight: FontWeight.w500),
             ),
           ),

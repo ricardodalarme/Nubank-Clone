@@ -38,7 +38,7 @@ class AccountScreen extends StatelessWidget {
               color: AppColors.secondaryText,
             ),
             onPressed: () {},
-          )
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -56,13 +56,13 @@ class AccountScreen extends StatelessWidget {
                     'Saldo disponível',
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle2
+                        .titleSmall
                         ?.copyWith(fontWeight: FontWeight.w500),
                   ),
                   const SizedBox(height: 7),
                   Text(
                     'R\$ ${MockedValues.balance}',
-                    style: Theme.of(context).textTheme.headline3,
+                    style: Theme.of(context).textTheme.displaySmall,
                   ),
                   const SizedBox(height: 50),
                   AccountMenu(
@@ -71,7 +71,7 @@ class AccountScreen extends StatelessWidget {
                       'R\$ ${MockedValues.saved}',
                       style: Theme.of(context)
                           .textTheme
-                          .bodyText2
+                          .bodyMedium
                           ?.copyWith(fontWeight: FontWeight.w500, fontSize: 16),
                     ),
                     BootstrapIcons.piggy_bank,
@@ -82,10 +82,11 @@ class AccountScreen extends StatelessWidget {
                     RichText(
                       text: TextSpan(
                         text: '+R\$ ${MockedValues.income}',
-                        style: Theme.of(context).textTheme.subtitle1?.copyWith(
-                              color: AppColors.limit,
-                              fontWeight: FontWeight.w500,
-                            ),
+                        style:
+                            Theme.of(context).textTheme.titleMedium?.copyWith(
+                                  color: AppColors.limit,
+                                  fontWeight: FontWeight.w500,
+                                ),
                         children: const <TextSpan>[
                           TextSpan(
                             text: ' este mês',
@@ -158,7 +159,7 @@ class AccountScreen extends StatelessWidget {
                 'Histórico',
                 style: Theme.of(context)
                     .textTheme
-                    .headline6
+                    .titleLarge
                     ?.copyWith(fontWeight: FontWeight.w500),
               ),
             ),

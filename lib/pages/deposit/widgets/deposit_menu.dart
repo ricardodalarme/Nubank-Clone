@@ -6,7 +6,7 @@ class DepositMenu extends StatelessWidget {
   final String title;
   final String subTitle;
   final IconData icon;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const DepositMenu(
     this.title,
@@ -43,13 +43,13 @@ class DepositMenu extends StatelessWidget {
                             title,
                             style: Theme.of(context)
                                 .textTheme
-                                .bodyText2
+                                .bodyMedium
                                 ?.copyWith(fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(height: 10),
                           Text(
                             subTitle,
-                            style: Theme.of(context).textTheme.caption,
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
                         ],
                       ),
@@ -66,7 +66,7 @@ class DepositMenu extends StatelessWidget {
           Container(
             height: 1,
             color: AppColors.unview,
-          )
+          ),
         ],
       ),
     );

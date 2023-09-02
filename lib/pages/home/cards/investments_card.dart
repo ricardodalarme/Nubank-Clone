@@ -17,7 +17,7 @@ class InvestmentsCard extends StatelessWidget {
           'A revolução roxa começou. Invista de maneira simples, sem burocracia e 100% digital.',
           style: Theme.of(context)
               .textTheme
-              .caption
+              .bodySmall
               ?.copyWith(fontWeight: FontWeight.w500),
         ),
         const SizedBox(height: 15),

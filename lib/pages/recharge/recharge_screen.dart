@@ -30,7 +30,7 @@ class RechargeScreen extends StatelessWidget {
             children: [
               Text(
                 'Qual número você quer recarregar?',
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
               const SizedBox(height: 30),
               NuInputField(

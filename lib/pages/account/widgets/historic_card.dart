@@ -5,7 +5,7 @@ class HistoricCard extends StatelessWidget {
   final String title;
   final String subTitle;
   final IconData icon;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const HistoricCard(
     this.title,
@@ -49,12 +49,12 @@ class HistoricCard extends StatelessWidget {
                             title,
                             style: Theme.of(context)
                                 .textTheme
-                                .bodyText2
+                                .bodyMedium
                                 ?.copyWith(fontWeight: FontWeight.w500),
                           ),
                           Text(
                             'Ontem',
-                            style: Theme.of(context).textTheme.caption,
+                            style: Theme.of(context).textTheme.bodySmall,
                           ),
                         ],
                       ),
@@ -63,18 +63,18 @@ class HistoricCard extends StatelessWidget {
                         subTitle.toUpperCase(),
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle2
+                            .titleSmall
                             ?.copyWith(height: 1.6),
                       ),
                       const SizedBox(height: 5),
                       Text(
                         r'R$ 30,00',
-                        style: Theme.of(context).textTheme.subtitle2,
+                        style: Theme.of(context).textTheme.titleSmall,
                       ),
                       const SizedBox(height: 5),
                       Text(
                         'Pix',
-                        style: Theme.of(context).textTheme.caption,
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
                   ),
@@ -86,7 +86,7 @@ class HistoricCard extends StatelessWidget {
           Container(
             height: 1,
             color: AppColors.unview,
-          )
+          ),
         ],
       ),
     );

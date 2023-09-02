@@ -6,7 +6,7 @@ class DiscoverCard extends StatelessWidget {
   final String title;
   final String content;
   final String buttonText;
-  final Function() onTap;
+  final VoidCallback onTap;
   final bool isNew;
 
   const DiscoverCard({
@@ -41,7 +41,7 @@ class DiscoverCard extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             color: AppColors.text,
                             fontWeight: FontWeight.w500,
                           ),
@@ -59,11 +59,11 @@ class DiscoverCard extends StatelessWidget {
                           'Novo',
                           style: Theme.of(context)
                               .textTheme
-                              .caption
+                              .bodySmall
                               ?.copyWith(color: Colors.white),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
                 const SizedBox(height: 10),
@@ -71,7 +71,7 @@ class DiscoverCard extends StatelessWidget {
                   content,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 3,
-                  style: Theme.of(context).textTheme.bodyText2,
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 const SizedBox(height: 10),
                 FilledChip(buttonText),

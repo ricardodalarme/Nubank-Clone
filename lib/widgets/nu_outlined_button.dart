@@ -22,7 +22,7 @@ class NuOutlinedButton extends StatelessWidget {
         value.toUpperCase(),
         style: Theme.of(context)
             .textTheme
-            .caption
+            .bodySmall
             ?.copyWith(color: AppColors.primary, fontWeight: FontWeight.bold),
       ),
     );

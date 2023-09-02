@@ -32,7 +32,7 @@ class LoanCard extends StatelessWidget {
                 'Valor disponível de até',
                 style: Theme.of(context)
                     .textTheme
-                    .caption
+                    .bodySmall
                     ?.copyWith(fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: 5),
@@ -40,7 +40,7 @@ class LoanCard extends StatelessWidget {
                 'R\$ ${MockedValues.loan}',
                 style: Theme.of(context)
                     .textTheme
-                    .caption
+                    .bodySmall
                     ?.copyWith(fontWeight: FontWeight.w500),
               ),
             ],

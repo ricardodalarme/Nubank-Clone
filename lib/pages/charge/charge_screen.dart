@@ -34,7 +34,7 @@ class ChargeScreen extends StatelessWidget {
                 children: [
                   Text(
                     'Qual valor você quer receber?',
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   const SizedBox(height: 30),
                   NuInputField(
@@ -47,7 +47,7 @@ class ChargeScreen extends StatelessWidget {
                     'Não especificar um valor >',
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2
+                        .bodyMedium
                         ?.copyWith(color: AppColors.primary),
                   ),
                 ],

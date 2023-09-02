@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 extension RouterContextExtension on BuildContext {
-  Future push(Widget page) {
+  Future<void> push(Widget page) {
     return Navigator.push(
       this,
       PageTransition(
@@ -15,7 +15,7 @@ extension RouterContextExtension on BuildContext {
 
   void pop() => Navigator.pop(this);
 
-  Future showBottomSheet(
+  Future<void> showBottomSheet(
     Widget page, {
     bool isScrollControlled = true,
   }) {

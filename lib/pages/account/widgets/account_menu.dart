@@ -6,7 +6,7 @@ class AccountMenu extends StatelessWidget {
   final String title;
   final Widget information;
   final IconData icon;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const AccountMenu(
     this.title,
@@ -32,7 +32,7 @@ class AccountMenu extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: Theme.of(context).textTheme.subtitle2,
+                    style: Theme.of(context).textTheme.titleSmall,
                   ),
                   const SizedBox(height: 7),
                   information,

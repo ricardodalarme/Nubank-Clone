@@ -36,12 +36,12 @@ class PixScreen extends StatelessWidget {
                   const SizedBox(height: 30),
                   Text(
                     'Minha área Pix',
-                    style: Theme.of(context).textTheme.headline4,
+                    style: Theme.of(context).textTheme.headlineMedium,
                   ),
                   const SizedBox(height: 10),
                   Text(
                     'Tudo o que você precisa para pagar, transferir ou cobrar.',
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: Theme.of(context).textTheme.titleMedium,
                   ),
                   const SizedBox(height: 45),
                   Row(
@@ -70,8 +70,8 @@ class PixScreen extends StatelessWidget {
             ),
           ),
           Container(height: 1, color: AppColors.line),
-          Column(
-            children: const [
+          const Column(
+            children: [
               PixMenu('Minhas chaves', MdiIcons.keyChain),
               PixMenu('Meu limite Pix', MdiIcons.tuneVariant),
               PixMenu('Me ajuda', MdiIcons.helpCircleOutline),

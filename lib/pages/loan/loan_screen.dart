@@ -30,7 +30,7 @@ class LoanScreen extends StatelessWidget {
               color: AppColors.secondaryText,
             ),
             onPressed: () {},
-          )
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -45,14 +45,14 @@ class LoanScreen extends StatelessWidget {
                   const SizedBox(height: 30),
                   Text(
                     'O valor disponível no momento é de R\$ ${MockedValues.loan}',
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                   const SizedBox(height: 15),
                   Text(
                     'Este valor pode mudar diariamente devido à nossa análise de crédito.',
                     style: Theme.of(context)
                         .textTheme
-                        .subtitle2
+                        .titleSmall
                         ?.copyWith(height: 1.3),
                   ),
                   const SizedBox(height: 20),
@@ -60,7 +60,7 @@ class LoanScreen extends StatelessWidget {
                     'Entenda como funciona >',
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2
+                        .bodyMedium
                         ?.copyWith(color: AppColors.primary),
                   ),
                   const SizedBox(height: 45),
@@ -74,7 +74,7 @@ class LoanScreen extends StatelessWidget {
             Center(
               child: Text(
                 'Você não possui nenhum empréstimo ativo.',
-                style: Theme.of(context).textTheme.subtitle2,
+                style: Theme.of(context).textTheme.titleSmall,
               ),
             ),
           ],

@@ -21,7 +21,7 @@ class CreditCard extends StatelessWidget {
       [
         Text(
           'Fatura atual',
-          style: Theme.of(context).textTheme.caption,
+          style: Theme.of(context).textTheme.bodySmall,
         ),
         const SizedBox(height: 13),
         if (viewValues)
@@ -38,14 +38,14 @@ class CreditCard extends StatelessWidget {
                 'R\$ ${MockedValues.invoice}',
                 style: Theme.of(context)
                     .textTheme
-                    .headline5
+                    .headlineSmall
                     ?.copyWith(color: AppColors.invoice),
               ),
               const SizedBox(height: 5),
               RichText(
                 text: TextSpan(
                   text: 'Limite disponível ',
-                  style: Theme.of(context).textTheme.bodyText2,
+                  style: Theme.of(context).textTheme.bodyMedium,
                   children: const <TextSpan>[
                     TextSpan(
                       text: 'R\$ ${MockedValues.limit}',

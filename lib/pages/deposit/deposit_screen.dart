@@ -24,7 +24,7 @@ class DepositScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Text(
               'Como você quer depositar na sua conta do Nubank',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ),
           const SizedBox(height: 10),

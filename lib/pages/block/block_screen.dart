@@ -9,7 +9,7 @@ class BlockScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return ColoredBox(
       color: Colors.white,
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -28,7 +28,7 @@ class BlockScreen extends StatelessWidget {
                 text: 'Você quer ',
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText2
+                    .bodyMedium
                     ?.copyWith(height: 1.8),
                 children: const <TextSpan>[
                   TextSpan(

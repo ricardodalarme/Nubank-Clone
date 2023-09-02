@@ -6,7 +6,7 @@ class MainCard extends StatelessWidget {
   final IconData icon;
   final List<Widget> body;
   final bool highlight;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const MainCard(
     this.title,
@@ -41,9 +41,9 @@ class MainCard extends StatelessWidget {
                     style: highlight
                         ? Theme.of(context)
                             .textTheme
-                            .headline6
+                            .titleLarge
                             ?.copyWith(color: AppColors.primary)
-                        : Theme.of(context).textTheme.subtitle2!,
+                        : Theme.of(context).textTheme.titleSmall!,
                   ),
                 ],
               ),

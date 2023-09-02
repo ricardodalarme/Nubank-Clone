@@ -3,7 +3,7 @@ import 'package:nubank_clone/constants/app_colors.dart';
 
 class CircleButton extends StatelessWidget {
   final IconData icon;
-  final Function() onTap;
+  final VoidCallback onTap;
 
   const CircleButton(
     this.icon,

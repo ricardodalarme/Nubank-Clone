@@ -41,14 +41,14 @@ class EasyInvestScreen extends StatelessWidget {
             const SizedBox(height: 47),
             Text(
               'Invista sem taxas e burocracia!',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
             const SizedBox(height: 10),
             Text(
               'Estamos convidando alguns clientes do Nubank para serem os primeiros a fazer parte desta revolução roxa nos investimentos, e você é um deles!',
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1
+                  .titleMedium
                   ?.copyWith(height: 1.35, fontWeight: FontWeight.w300),
             ),
             const SizedBox(height: 25),
@@ -56,7 +56,7 @@ class EasyInvestScreen extends StatelessWidget {
               'Além de não pagar nada para abrir a conta, você terá taxa zero na corretagem de ações!',
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1
+                  .titleMedium
                   ?.copyWith(height: 1.35, fontWeight: FontWeight.w300),
             ),
           ],

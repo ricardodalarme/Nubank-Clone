@@ -18,7 +18,7 @@ class FilledChip extends StatelessWidget {
         value,
         style: Theme.of(context)
             .textTheme
-            .bodyText2
+            .bodyMedium
             ?.copyWith(color: Colors.white, fontWeight: FontWeight.w500),
       ),
     );

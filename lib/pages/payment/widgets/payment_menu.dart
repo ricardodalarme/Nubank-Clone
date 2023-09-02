@@ -6,7 +6,7 @@ class PaymentMenu extends StatelessWidget {
   final String title;
   final String subTitle;
   final IconData icon;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const PaymentMenu(
     this.title,
@@ -40,13 +40,13 @@ class PaymentMenu extends StatelessWidget {
                         title,
                         style: Theme.of(context)
                             .textTheme
-                            .bodyText2
+                            .bodyMedium
                             ?.copyWith(fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 5),
                       Text(
                         subTitle,
-                        style: Theme.of(context).textTheme.caption,
+                        style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ],
                   ),

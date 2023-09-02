@@ -13,7 +13,7 @@ class InsuranceCard extends StatelessWidget {
       [
         Text(
           'Conheça Nubank Vida: um seguro simples que cabe no seu bolso.',
-          style: Theme.of(context).textTheme.bodyText2,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
         const SizedBox(height: 15),
         const NuOutlinedButton('Conhecer'),

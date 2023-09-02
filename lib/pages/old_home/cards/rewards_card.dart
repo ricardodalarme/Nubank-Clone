@@ -13,7 +13,7 @@ class RewardsCard extends StatelessWidget {
       [
         Text(
           'Pague compras com pontos que nunca expiram.',
-          style: Theme.of(context).textTheme.bodyText2,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
         const SizedBox(height: 15),
         const NuOutlinedButton('Conhecer'),

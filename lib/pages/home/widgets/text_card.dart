@@ -34,13 +34,13 @@ class TextCard extends StatelessWidget {
               maxLines: 2,
               text: TextSpan(
                 text: text,
-                style: Theme.of(context).textTheme.bodyText2,
+                style: Theme.of(context).textTheme.bodyMedium,
                 children: [
                   TextSpan(
                     text: highlightText,
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText2
+                        .bodyMedium
                         ?.copyWith(color: AppColors.primary),
                   ),
                 ],

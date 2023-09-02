@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ExpandedButton extends StatelessWidget {
   final String text;
   final Color? color;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const ExpandedButton(
     this.text, {
@@ -22,7 +22,7 @@ class ExpandedButton extends StatelessWidget {
             text.toUpperCase(),
             style: Theme.of(context)
                 .textTheme
-                .bodyText1
+                .bodyLarge
                 ?.copyWith(color: color, fontWeight: FontWeight.bold),
           ),
         ),

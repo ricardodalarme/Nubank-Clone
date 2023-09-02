@@ -4,7 +4,7 @@ import 'package:nubank_clone/constants/app_colors.dart';
 class LabelButton extends StatelessWidget {
   final String label;
   final IconData icon;
-  final Function()? onPressed;
+  final VoidCallback? onPressed;
   final String? tag;
 
   const LabelButton(
@@ -52,14 +52,14 @@ class LabelButton extends StatelessWidget {
                     child: Text(
                       tag!,
                       textAlign: TextAlign.center,
-                      style: Theme.of(context).textTheme.caption?.copyWith(
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
                             color: Colors.white,
                             fontSize: 11,
                             fontWeight: FontWeight.w600,
                           ),
                     ),
                   ),
-                )
+                ),
             ],
           ),
           const SizedBox(height: 12),
@@ -68,7 +68,7 @@ class LabelButton extends StatelessWidget {
             textAlign: TextAlign.center,
             style: Theme.of(context)
                 .textTheme
-                .bodyText2
+                .bodyMedium
                 ?.copyWith(fontWeight: FontWeight.w500, fontSize: 13),
           ),
         ],

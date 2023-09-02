@@ -5,7 +5,7 @@ import 'package:nubank_clone/constants/nu_icons.dart';
 class PixMenu extends StatelessWidget {
   final String text;
   final IconData icon;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const PixMenu(
     this.text,
@@ -31,7 +31,7 @@ class PixMenu extends StatelessWidget {
                 const SizedBox(width: 20),
                 Text(
                   text,
-                  style: Theme.of(context).textTheme.button,
+                  style: Theme.of(context).textTheme.labelLarge,
                 ),
               ],
             ),

@@ -4,7 +4,7 @@ import 'package:nubank_clone/constants/app_colors.dart';
 class CreditMenu extends StatelessWidget {
   final String title;
   final IconData icon;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const CreditMenu(
     this.title,
@@ -31,7 +31,7 @@ class CreditMenu extends StatelessWidget {
                 title,
                 style: Theme.of(context)
                     .textTheme
-                    .button
+                    .labelLarge
                     ?.copyWith(fontWeight: FontWeight.normal),
               ),
             ],

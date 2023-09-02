@@ -27,11 +27,11 @@ class NuInputField extends StatelessWidget {
             keyboardType: textInputType,
             textAlign: TextAlign.left,
             controller: controller,
-            style: Theme.of(context).textTheme.headline3,
+            style: Theme.of(context).textTheme.displaySmall,
             textInputAction: TextInputAction.next,
             decoration: InputDecoration(
               hintText: hint,
-              hintStyle: Theme.of(context).textTheme.subtitle1,
+              hintStyle: Theme.of(context).textTheme.titleMedium,
               contentPadding: EdgeInsets.zero,
               border: InputBorder.none,
             ),

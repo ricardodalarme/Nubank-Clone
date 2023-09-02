@@ -14,7 +14,7 @@ class GoogleCard extends StatelessWidget {
       [
         Text(
           'Use o Google Pay com seus cartões Nubank',
-          style: Theme.of(context).textTheme.bodyText2,
+          style: Theme.of(context).textTheme.bodyMedium,
         ),
         const SizedBox(height: 15),
         const NuOutlinedButton('Registrar meu cartão'),

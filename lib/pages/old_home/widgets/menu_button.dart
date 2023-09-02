@@ -4,7 +4,7 @@ import 'package:nubank_clone/constants/app_colors.dart';
 class MenuButton extends StatelessWidget {
   final String title;
   final IconData icon;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const MenuButton(
     this.title,
@@ -36,7 +36,7 @@ class MenuButton extends StatelessWidget {
                 title,
                 style: Theme.of(context)
                     .textTheme
-                    .caption
+                    .bodySmall
                     ?.copyWith(color: Colors.white),
               ),
             ],

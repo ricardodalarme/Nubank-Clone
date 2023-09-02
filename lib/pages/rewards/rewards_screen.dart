@@ -29,7 +29,7 @@ class RewardsScreen extends StatelessWidget {
               color: AppColors.secondaryText,
             ),
             onPressed: () {},
-          )
+          ),
         ],
       ),
       floatingActionButton: const FloatingActionButton(
@@ -52,14 +52,14 @@ class RewardsScreen extends StatelessWidget {
                 const SizedBox(height: 47),
                 Text(
                   r'É fácil juntar: R$ 1 = 1 ponto',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 10),
                 Text(
                   'Acumule pontos que não expiram sempre que você usar seu cartão de crédito.',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1
+                      .titleMedium
                       ?.copyWith(height: 1.35, fontWeight: FontWeight.w300),
                 ),
                 const SizedBox(height: 25),
@@ -75,14 +75,14 @@ class RewardsScreen extends StatelessWidget {
                 const SizedBox(height: 47),
                 Text(
                   'Viaje pra onde você quiser',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 10),
                 Text(
                   'Resgate passagens aéreas compradas em qualquer site.',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1
+                      .titleMedium
                       ?.copyWith(height: 1.35, fontWeight: FontWeight.w300),
                 ),
                 const SizedBox(height: 25),
@@ -98,14 +98,14 @@ class RewardsScreen extends StatelessWidget {
                 const SizedBox(height: 47),
                 Text(
                   'Ganha recompensas',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 10),
                 Text(
                   'Compre nos parceiros e depois use seus pontos para tirar esses gastos da sua fatura.',
                   style: Theme.of(context)
                       .textTheme
-                      .subtitle1
+                      .titleMedium
                       ?.copyWith(height: 1.35, fontWeight: FontWeight.w300),
                 ),
                 const SizedBox(height: 25),
@@ -117,10 +117,10 @@ class RewardsScreen extends StatelessWidget {
                 'Experimente por 30 dias grátis'.toUpperCase(),
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText2
+                    .bodyMedium
                     ?.copyWith(color: AppColors.primary),
               ),
-            )
+            ),
           ],
         ),
       ),

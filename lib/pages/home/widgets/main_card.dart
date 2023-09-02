@@ -6,7 +6,7 @@ class MainCard extends StatelessWidget {
   final IconData? icon;
   final List<Widget> body;
   final bool? hideDivider;
-  final Function()? onTap;
+  final VoidCallback? onTap;
 
   const MainCard(
     this.title,
@@ -39,11 +39,11 @@ class MainCard extends StatelessWidget {
                         title,
                         style: Theme.of(context)
                             .textTheme
-                            .headline6
+                            .titleLarge
                             ?.copyWith(fontWeight: FontWeight.w500),
                       ),
                       const SizedBox(height: 50),
-                      const Icon(NuIcons.abc_ic_go_search_api_material)
+                      const Icon(NuIcons.abc_ic_go_search_api_material),
                     ],
                   ),
                   const SizedBox(height: 5),

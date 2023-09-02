@@ -56,21 +56,21 @@ class CreditScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Fatura atual',
-                          style: Theme.of(context).textTheme.caption,
+                          style: Theme.of(context).textTheme.bodySmall,
                         ),
                         const SizedBox(height: 13),
                         Text(
                           'R\$ ${MockedValues.invoice}',
                           style: Theme.of(context)
                               .textTheme
-                              .headline5
+                              .headlineSmall
                               ?.copyWith(color: AppColors.invoice),
                         ),
                         const SizedBox(height: 5),
                         RichText(
                           text: TextSpan(
                             text: 'Limite disponível ',
-                            style: Theme.of(context).textTheme.bodyText2,
+                            style: Theme.of(context).textTheme.bodyMedium,
                             children: const <TextSpan>[
                               TextSpan(
                                 text: 'R\$ ${MockedValues.limit}',
@@ -150,10 +150,10 @@ class CreditScreen extends StatelessWidget {
               ),
             ),
             Container(height: 0.3, color: AppColors.line),
-            Container(
+            const ColoredBox(
               color: AppColors.labelButton,
               child: Column(
-                children: const [
+                children: [
                   SizedBox(height: 20),
                   HistoricCard(
                     'Pagamento recebido',

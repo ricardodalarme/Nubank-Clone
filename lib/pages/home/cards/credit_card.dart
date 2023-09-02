@@ -22,7 +22,7 @@ class CreditCard extends StatelessWidget {
           'Fatura atual',
           style: Theme.of(context)
               .textTheme
-              .subtitle2
+              .titleSmall
               ?.copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 13),
@@ -38,14 +38,14 @@ class CreditCard extends StatelessWidget {
             children: [
               Text(
                 'R\$ ${MockedValues.invoice}',
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
               const SizedBox(height: 5),
               Text(
                 'Limite disponível R\$ ${MockedValues.limit}',
                 style: Theme.of(context)
                     .textTheme
-                    .caption
+                    .bodySmall
                     ?.copyWith(fontWeight: FontWeight.w500),
               ),
             ],

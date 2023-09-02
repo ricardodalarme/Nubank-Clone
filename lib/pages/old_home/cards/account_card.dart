@@ -21,7 +21,7 @@ class AccountCard extends StatelessWidget {
       [
         Text(
           'Saldo disponível',
-          style: Theme.of(context).textTheme.caption,
+          style: Theme.of(context).textTheme.bodySmall,
         ),
         const SizedBox(height: 13),
         if (viewValues)
@@ -33,7 +33,7 @@ class AccountCard extends StatelessWidget {
         else
           Text(
             'R\$ ${MockedValues.balance}',
-            style: Theme.of(context).textTheme.headline5,
+            style: Theme.of(context).textTheme.headlineSmall,
           ),
       ],
       onTap: () => context.push(
