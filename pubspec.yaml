@@ -7,11 +7,11 @@ environment:
   sdk: ">=3.1.0 <4.0.0"
 
 dependencies:
-  bootstrap_icons: ^1.10.5+2
+  bootstrap_icons: ^1.11.1
   flutter_masked_text2: ^0.9.1
-  flutter_native_splash: ^2.3.2
+  flutter_native_splash: ^2.3.4
   material_design_icons_flutter: ^6.0.7296
-  page_transition: ^2.0.9
+  page_transition: ^2.1.0
   provider: ^6.0.5
 
   flutter:
@@ -20,7 +20,7 @@ dependencies:
 dev_dependencies:
   dart_code_metrics: ^5.7.6
   flutter_launcher_icons: ^0.13.1
-  flutter_lints: ^2.0.3
+  flutter_lints: ^3.0.0
 
   flutter_test:
     sdk: flutter
