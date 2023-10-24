@@ -74,6 +74,7 @@ class DiscoverCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 const SizedBox(height: 10),
+                const Spacer(),
                 FilledChip(buttonText),
               ],
             ),

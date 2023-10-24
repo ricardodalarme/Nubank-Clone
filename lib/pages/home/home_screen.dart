@@ -264,26 +264,28 @@ class HomeScreen extends StatelessWidget {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             physics: const BouncingScrollPhysics(),
-            child: Row(
-              children: [
-                const SizedBox(width: 24),
-                DiscoverCard(
-                  title: 'WhatsApp',
-                  content:
-                      'Pagamentos seguros, rápidos e sem tarifa. A experiência Nubank sem nem sair da conversa.',
-                  buttonText: 'Quero conhecer',
-                  isNew: true,
-                  onTap: () {},
-                ),
-                DiscoverCard(
-                  title: 'Indique seus amigos',
-                  content:
-                      'Mostre aos seus amigos como é fácil ter uma vida sem burocracia.',
-                  buttonText: 'Indicar amigos',
-                  onTap: () => context.showBottomSheet(const ReferScreen()),
-                ),
-                const SizedBox(width: 14),
-              ],
+            child: IntrinsicHeight(
+              child: Row(
+                children: [
+                  const SizedBox(width: 24),
+                  DiscoverCard(
+                    title: 'WhatsApp',
+                    content:
+                        'Pagamentos seguros, rápidos e sem tarifa. A experiência Nubank sem nem sair da conversa.',
+                    buttonText: 'Quero conhecer',
+                    isNew: true,
+                    onTap: () {},
+                  ),
+                  DiscoverCard(
+                    title: 'Indique seus amigos',
+                    content:
+                        'Mostre aos seus amigos como é fácil ter uma vida sem burocracia.',
+                    buttonText: 'Indicar amigos',
+                    onTap: () => context.showBottomSheet(const ReferScreen()),
+                  ),
+                  const SizedBox(width: 14),
+                ],
+              ),
             ),
           ),
         ],
