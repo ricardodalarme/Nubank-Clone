@@ -1,9 +1,10 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:flutter/widgets.dart';
+import 'package:nubank_clone/constants/fonts.gen.dart';
 
 abstract class NuIcons {
-  static const _kFontFamily = 'NuIcons';
+  static const _kFontFamily = FontFamily.nuIcons;
 
   static const IconData nuds_ic_category_store =
       IconData(0xe800, fontFamily: _kFontFamily);

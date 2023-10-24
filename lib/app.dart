@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:nubank_clone/constants/fonts.gen.dart';
 import 'package:nubank_clone/core/app_state.dart';
 import 'package:nubank_clone/pages/home/home_screen.dart';
 import 'package:nubank_clone/theme/texts.dart';
@@ -26,7 +27,10 @@ class App extends StatelessWidget {
       child: MaterialApp(
         title: 'Nubank Clone',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(fontFamily: 'Gotham-SSm', textTheme: customTextTheme),
+        theme: ThemeData(
+          fontFamily: FontFamily.gothamSSm,
+          textTheme: customTextTheme,
+        ),
         home: HomeScreen(),
       ),
     );

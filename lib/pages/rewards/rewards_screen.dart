@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:nubank_clone/constants/app_colors.dart';
-import 'package:nubank_clone/constants/app_images.dart';
+import 'package:nubank_clone/constants/assets.gen.dart';
 import 'package:nubank_clone/constants/nu_icons.dart';
 import 'package:nubank_clone/utils/extensions/router_context_extension.dart';
 
@@ -45,8 +45,7 @@ class RewardsScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  AppImages.easyinvest,
+                Assets.images.referFriend.image(
                   height: 118,
                 ),
                 const SizedBox(height: 47),
@@ -68,8 +67,7 @@ class RewardsScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  AppImages.easyinvest,
+                Assets.images.easyinvest.image(
                   height: 118,
                 ),
                 const SizedBox(height: 47),
@@ -91,8 +89,7 @@ class RewardsScreen extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset(
-                  AppImages.easyinvest,
+                Assets.images.easyinvest.image(
                   height: 118,
                 ),
                 const SizedBox(height: 47),
