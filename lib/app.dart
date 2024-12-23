@@ -28,6 +28,7 @@ class App extends StatelessWidget {
         title: 'Nubank Clone',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          useMaterial3: false,
           fontFamily: FontFamily.gothamSSm,
           textTheme: customTextTheme,
         ),
