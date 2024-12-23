@@ -1,9 +1,6 @@
 include: package:flutter_lints/flutter.yaml
 
 analyzer:
-  plugins:
-    - dart_code_metrics
-
   exclude:
     - lib/firebase_options.dart
     - lib/**.g.dart
@@ -106,7 +103,6 @@ linter:
     - omit_local_variable_types
     - only_throw_errors
     - overridden_fields
-    - package_api_docs
     - package_names
     - package_prefixed_library_names
     - parameter_assignments
@@ -178,7 +174,6 @@ linter:
     - unnecessary_this
     - unnecessary_to_list_in_spreads
     - unrelated_type_equality_checks
-    - unsafe_html
     - use_build_context_synchronously
     - use_colored_box
     - use_decorated_box
@@ -197,47 +192,3 @@ linter:
     - use_to_and_as_if_applicable
     - valid_regexps
     - void_checks
-
-dart_code_metrics:
-  rules:
-    - always-remove-listener
-    - avoid-border-all
-    - avoid-cascade-after-if-null
-    - avoid-collection-methods-with-unrelated-types
-    - avoid-double-slash-imports
-    - avoid-duplicate-exports
-    - avoid-dynamic
-    - avoid-expanded-as-spacer
-    - avoid-global-state
-    - avoid-missing-enum-constant-in-map
-    - avoid-nested-conditional-expressions
-    - avoid-redundant-async
-    - avoid-shrink-wrap-in-lists
-    - avoid-unnecessary-conditionals
-    - avoid-unnecessary-setstate
-    - avoid-unnecessary-type-assertions
-    - avoid-unnecessary-type-casts
-    - avoid-unrelated-type-assertions:
-        severity: error
-    - avoid-unused-parameters
-    - avoid-wrapping-in-padding
-    - check-for-equals-in-render-object-setters
-    - consistent-update-render-object
-    - double-literal-format
-    - no-boolean-literal-compare
-    - no-equal-then-else
-    - no-object-declaration
-    - prefer-async-await
-    - prefer-const-border-radius
-    - prefer-correct-test-file-name
-    - prefer-enums-by-name
-    - prefer-extracting-callbacks
-    - prefer-first
-    - prefer-immediate-return
-    - prefer-iterable-of
-    - prefer-last
-    - prefer-match-file-name
-    - prefer-single-widget-per-file
-
-  metrics-exclude:
-    - test/**
